@@ -1,0 +1,506 @@
+[
+  {
+    "id": "m0-1-cara-komputer",
+    "trackId": "fondasi",
+    "order": 1,
+    "title": "Cara komputer menjalankan program",
+    "goal": "Memahami CPU, memori, stack/heap, proses/thread",
+    "miniProject": ""
+  },
+  {
+    "id": "m0-2-representasi",
+    "trackId": "fondasi",
+    "order": 2,
+    "title": "Representasi data",
+    "goal": "Bit/byte, integer, float, Unicode",
+    "miniProject": ""
+  },
+  {
+    "id": "m0-3-logika",
+    "trackId": "fondasi",
+    "order": 3,
+    "title": "Logika & pemecahan masalah",
+    "goal": "Pseudocode, alur kontrol, debugging",
+    "miniProject": ""
+  },
+  {
+    "id": "m0-4-terminal-git",
+    "trackId": "fondasi",
+    "order": 4,
+    "title": "Terminal, Git, membaca error",
+    "goal": "Bekerja nyaman di terminal & Git",
+    "miniProject": ""
+  },
+  {
+    "id": "m0-5-jaringan",
+    "trackId": "fondasi",
+    "order": 5,
+    "title": "Jaringan dasar",
+    "goal": "IP, DNS, TCP/UDP, HTTP, REST, WebSocket",
+    "miniProject": ""
+  },
+  {
+    "id": "a1-dasar",
+    "trackId": "python",
+    "order": 1,
+    "title": "A1 Dasar",
+    "goal": "Variabel, kondisi, loop, fungsi, struktur data",
+    "miniProject": "CLI todo"
+  },
+  {
+    "id": "a2-menengah",
+    "trackId": "python",
+    "order": 2,
+    "title": "A2 Menengah",
+    "goal": "OOP, exception, comprehension, generator, decorator, type hints",
+    "miniProject": ""
+  },
+  {
+    "id": "a3-praktik",
+    "trackId": "python",
+    "order": 3,
+    "title": "A3 Praktik",
+    "goal": "Testing, venv/pyproject, async, regex, HTTP",
+    "miniProject": "Scraper sederhana"
+  },
+  {
+    "id": "a4-ilmiah",
+    "trackId": "python",
+    "order": 4,
+    "title": "A4 Ilmiah",
+    "goal": "numpy, pandas, matplotlib di Pyodide",
+    "miniProject": "Analisis dataset kecil"
+  },
+  {
+    "id": "b1-dasar",
+    "trackId": "rust",
+    "order": 1,
+    "title": "B1 Dasar",
+    "goal": "Cargo, mutabilitas, tipe, fungsi, alur",
+    "miniProject": "CLI grep mini"
+  },
+  {
+    "id": "b2-inti-rust",
+    "trackId": "rust",
+    "order": 2,
+    "title": "B2 Inti Rust",
+    "goal": "Ownership, borrowing, lifetimes, struct/enum, Option/Result",
+    "miniProject": ""
+  },
+  {
+    "id": "b3-abstraksi",
+    "trackId": "rust",
+    "order": 3,
+    "title": "B3 Abstraksi",
+    "goal": "Trait, generics, closure, iterator, koleksi, modul",
+    "miniProject": ""
+  },
+  {
+    "id": "b4-keandalan",
+    "trackId": "rust",
+    "order": 4,
+    "title": "B4 Keandalan",
+    "goal": "Error handling, testing, dokumentasi",
+    "miniProject": "Key-value store"
+  },
+  {
+    "id": "b5-konkurensi",
+    "trackId": "rust",
+    "order": 5,
+    "title": "B5 Konkurensi",
+    "goal": "Thread, channel, Arc/Mutex, async Tokio, Send/Sync",
+    "miniProject": ""
+  },
+  {
+    "id": "b6-sistem-web",
+    "trackId": "rust",
+    "order": 6,
+    "title": "B6 Sistem & Web",
+    "goal": "Axum, serde, sqlx, WASM, FFI, unsafe",
+    "miniProject": "HTTP server / engine simulasi"
+  },
+  {
+    "id": "c1-dasar",
+    "trackId": "kotlin",
+    "order": 1,
+    "title": "C1 Dasar",
+    "goal": "val/var, null safety, fungsi, alur",
+    "miniProject": ""
+  },
+  {
+    "id": "c2-oop-fungsional",
+    "trackId": "kotlin",
+    "order": 2,
+    "title": "C2 OOP & Fungsional",
+    "goal": "Class, sealed, extension, lambda, koleksi",
+    "miniProject": ""
+  },
+  {
+    "id": "c3-lanjut",
+    "trackId": "kotlin",
+    "order": 3,
+    "title": "C3 Lanjut",
+    "goal": "Generics, delegation, DSL, coroutines & Flow",
+    "miniProject": ""
+  },
+  {
+    "id": "c4-praktik",
+    "trackId": "kotlin",
+    "order": 4,
+    "title": "C4 Praktik",
+    "goal": "Testing, Gradle, Ktor, KMP, jembatan Flutter",
+    "miniProject": "REST API Ktor"
+  },
+  {
+    "id": "c5-compose",
+    "trackId": "kotlin",
+    "order": 5,
+    "title": "C5 UI dengan Jetpack Compose",
+    "goal": "UI = fungsi dari state",
+    "miniProject": "App Compose daftar+detail"
+  },
+  {
+    "id": "d1-dart",
+    "trackId": "dart-flutter",
+    "order": 1,
+    "title": "D1 Dart",
+    "goal": "Sintaks, null safety, async, isolate",
+    "miniProject": ""
+  },
+  {
+    "id": "d2-flutter-inti",
+    "trackId": "dart-flutter",
+    "order": 2,
+    "title": "D2 Flutter Inti",
+    "goal": "Widget tree, layout, state, navigasi",
+    "miniProject": ""
+  },
+  {
+    "id": "d3-praktik",
+    "trackId": "dart-flutter",
+    "order": 3,
+    "title": "D3 Praktik",
+    "goal": "HTTP/JSON, penyimpanan lokal, testing, performa",
+    "miniProject": "App catatan offline-first"
+  },
+  {
+    "id": "d4-arsitektur",
+    "trackId": "dart-flutter",
+    "order": 4,
+    "title": "D4 Arsitektur App",
+    "goal": "Clean architecture, DI, platform channel, FFI",
+    "miniProject": ""
+  },
+  {
+    "id": "d5-ui-mendalam",
+    "trackId": "dart-flutter",
+    "order": 5,
+    "title": "D5 Flutter UI Mendalam",
+    "goal": "Constraints, sliver, painter, animasi, adaptif, golden test",
+    "miniProject": ""
+  },
+  {
+    "id": "d6-design-to-code",
+    "trackId": "dart-flutter",
+    "order": 6,
+    "title": "D6 Rancang UI (design-to-code)",
+    "goal": "Tokens, komponen, Figma ke layar nyata",
+    "miniProject": "Toolkit komponen UI"
+  },
+  {
+    "id": "e1-kompleksitas",
+    "trackId": "dsa",
+    "order": 1,
+    "title": "E1 Dasar Kompleksitas",
+    "goal": "Big-O waktu/ruang, amortized",
+    "miniProject": ""
+  },
+  {
+    "id": "e2-struktur-data",
+    "trackId": "dsa",
+    "order": 2,
+    "title": "E2 Struktur Data",
+    "goal": "Array sampai union-find",
+    "miniProject": "Mini-library struktur data"
+  },
+  {
+    "id": "e3-teknik",
+    "trackId": "dsa",
+    "order": 3,
+    "title": "E3 Teknik",
+    "goal": "Two pointers, DP, graf",
+    "miniProject": "Visualizer algoritma"
+  },
+  {
+    "id": "e4-pola-soal",
+    "trackId": "dsa",
+    "order": 4,
+    "title": "E4 Pola Soal",
+    "goal": "15 pola umum, soal terkurasi",
+    "miniProject": "30 soal pola"
+  },
+  {
+    "id": "e5-live-coding",
+    "trackId": "dsa",
+    "order": 5,
+    "title": "E5 Teknik Live Coding",
+    "goal": "Klarifikasi sampai analisis kompleksitas",
+    "miniProject": ""
+  },
+  {
+    "id": "f1-fondasi",
+    "trackId": "system-design",
+    "order": 1,
+    "title": "F1 Fondasi",
+    "goal": "Skala, latensi vs throughput, estimasi, SLO",
+    "miniProject": ""
+  },
+  {
+    "id": "f2-blok-bangunan",
+    "trackId": "system-design",
+    "order": 2,
+    "title": "F2 Blok Bangunan",
+    "goal": "DNS, CDN, LB, gateway, rate limiting",
+    "miniProject": ""
+  },
+  {
+    "id": "f3-data",
+    "trackId": "system-design",
+    "order": 3,
+    "title": "F3 Data",
+    "goal": "SQL/NoSQL, index, replikasi, sharding",
+    "miniProject": ""
+  },
+  {
+    "id": "f4-caching",
+    "trackId": "system-design",
+    "order": 4,
+    "title": "F4 Caching",
+    "goal": "Pola cache, invalidasi, stampede",
+    "miniProject": ""
+  },
+  {
+    "id": "f5-terdistribusi",
+    "trackId": "system-design",
+    "order": 5,
+    "title": "F5 Sistem Terdistribusi",
+    "goal": "CAP/PACELC, konsistensi, idempotensi, konsensus",
+    "miniProject": ""
+  },
+  {
+    "id": "f6-komunikasi",
+    "trackId": "system-design",
+    "order": 6,
+    "title": "F6 Komunikasi",
+    "goal": "REST/gRPC/GraphQL, queue, streaming",
+    "miniProject": ""
+  },
+  {
+    "id": "f7-keandalan",
+    "trackId": "system-design",
+    "order": 7,
+    "title": "F7 Keandalan",
+    "goal": "Circuit breaker, retry, DR, chaos",
+    "miniProject": ""
+  },
+  {
+    "id": "f8-observability",
+    "trackId": "system-design",
+    "order": 8,
+    "title": "F8 Observability & Operasi",
+    "goal": "Log/metrik/trace, SLO budget",
+    "miniProject": ""
+  },
+  {
+    "id": "f9-keamanan",
+    "trackId": "system-design",
+    "order": 9,
+    "title": "F9 Keamanan",
+    "goal": "AuthN/Z, OAuth2, OWASP, STRIDE",
+    "miniProject": ""
+  },
+  {
+    "id": "f10-kasus",
+    "trackId": "system-design",
+    "order": 10,
+    "title": "F10 Kasus Lengkap",
+    "goal": "8 skenario dengan alur interview",
+    "miniProject": "Desain lengkap + presentasi"
+  },
+  {
+    "id": "g1-peran",
+    "trackId": "arsitek",
+    "order": 1,
+    "title": "G1 Peran",
+    "goal": "EA, SA, software architect",
+    "miniProject": ""
+  },
+  {
+    "id": "g2-pemodelan",
+    "trackId": "arsitek",
+    "order": 2,
+    "title": "G2 Pemodelan & Dokumentasi",
+    "goal": "C4, UML, ADR, arc42",
+    "miniProject": ""
+  },
+  {
+    "id": "g3-gaya",
+    "trackId": "arsitek",
+    "order": 3,
+    "title": "G3 Gaya Arsitektur",
+    "goal": "Monolit modular, microservices, event-driven, CQRS",
+    "miniProject": ""
+  },
+  {
+    "id": "g4-domain",
+    "trackId": "arsitek",
+    "order": 4,
+    "title": "G4 Desain Domain",
+    "goal": "DDD, API design, OpenAPI",
+    "miniProject": ""
+  },
+  {
+    "id": "g5-nfr",
+    "trackId": "arsitek",
+    "order": 5,
+    "title": "G5 Atribut Kualitas",
+    "goal": "NFR dan analisis trade-off (ATAM)",
+    "miniProject": ""
+  },
+  {
+    "id": "g6-platform",
+    "trackId": "arsitek",
+    "order": 6,
+    "title": "G6 Rekayasa Platform",
+    "goal": "CI/CD, IaC, container, strategi rilis",
+    "miniProject": ""
+  },
+  {
+    "id": "g7-cloud",
+    "trackId": "arsitek",
+    "order": 7,
+    "title": "G7 Cloud",
+    "goal": "Shared responsibility, region/AZ, FinOps",
+    "miniProject": ""
+  },
+  {
+    "id": "g8-kepemimpinan",
+    "trackId": "arsitek",
+    "order": 8,
+    "title": "G8 Kepemimpinan Teknis",
+    "goal": "Stakeholder, utang teknis, review desain",
+    "miniProject": "Dokumen arsitektur arc42"
+  },
+  {
+    "id": "h1-matematika",
+    "trackId": "ml-cv",
+    "order": 1,
+    "title": "H1 Matematika Terapan",
+    "goal": "Vektor, probabilitas, gradien",
+    "miniProject": ""
+  },
+  {
+    "id": "h2-ml-klasik",
+    "trackId": "ml-cv",
+    "order": 2,
+    "title": "H2 ML Klasik",
+    "goal": "Regresi, klasifikasi, validasi, metrik",
+    "miniProject": "Klasifikasi gambar sederhana"
+  },
+  {
+    "id": "h3-deep-learning",
+    "trackId": "ml-cv",
+    "order": 3,
+    "title": "H3 Deep Learning",
+    "goal": "Backprop, CNN, transfer learning",
+    "miniProject": ""
+  },
+  {
+    "id": "h4-computer-vision",
+    "trackId": "ml-cv",
+    "order": 4,
+    "title": "H4 Computer Vision",
+    "goal": "Kernel, kontur, deteksi, segmentasi, OCR",
+    "miniProject": ""
+  },
+  {
+    "id": "h5-mlops",
+    "trackId": "ml-cv",
+    "order": 5,
+    "title": "H5 MLOps",
+    "goal": "ONNX, kuantisasi, inferensi di browser, drift",
+    "miniProject": "Demo CV di browser"
+  },
+  {
+    "id": "i1-interview",
+    "trackId": "interview",
+    "order": 1,
+    "title": "I1 Alur & Rubrik",
+    "goal": "Struktur interview coding & system design",
+    "miniProject": ""
+  },
+  {
+    "id": "i2-behavioral",
+    "trackId": "interview",
+    "order": 2,
+    "title": "I2 Behavioral",
+    "goal": "STAR, negosiasi",
+    "miniProject": ""
+  },
+  {
+    "id": "i3-simulasi",
+    "trackId": "interview",
+    "order": 3,
+    "title": "I3 Simulasi Penuh",
+    "goal": "45–60 menit berwaktu + umpan balik",
+    "miniProject": ""
+  },
+  {
+    "id": "j1-visual",
+    "trackId": "ui-ux",
+    "order": 1,
+    "title": "J1 Prinsip Visual",
+    "goal": "Hierarki, grid, tipografi, warna, kontras",
+    "miniProject": ""
+  },
+  {
+    "id": "j2-interaksi",
+    "trackId": "ui-ux",
+    "order": 2,
+    "title": "J2 Desain Interaksi",
+    "goal": "Alur, umpan balik, state kosong/error/loading",
+    "miniProject": ""
+  },
+  {
+    "id": "j3-sistem-desain",
+    "trackId": "ui-ux",
+    "order": 3,
+    "title": "J3 Sistem Desain",
+    "goal": "Tokens, komponen, varian",
+    "miniProject": ""
+  },
+  {
+    "id": "j4-figma",
+    "trackId": "ui-ux",
+    "order": 4,
+    "title": "J4 Rancang di Figma",
+    "goal": "Auto layout, prototipe, handoff",
+    "miniProject": ""
+  },
+  {
+    "id": "j5-platform",
+    "trackId": "ui-ux",
+    "order": 5,
+    "title": "J5 Platform",
+    "goal": "Material 3 vs HIG, adaptif, dark mode, lokalisasi",
+    "miniProject": ""
+  },
+  {
+    "id": "j6-evaluasi",
+    "trackId": "ui-ux",
+    "order": 6,
+    "title": "J6 Evaluasi",
+    "goal": "Uji kegunaan, heuristik, aksesibilitas",
+    "miniProject": "Satu desain → dua implementasi"
+  }
+]

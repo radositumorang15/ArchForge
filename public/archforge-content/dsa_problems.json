@@ -1,0 +1,787 @@
+[
+  {
+    "id": "dsa-two-pointers-01",
+    "pattern": "two-pointers",
+    "order": 1,
+    "tier": 2,
+    "level": "intermediate",
+    "title": "Dua Harga Pas Voucher",
+    "story": "Daftar harga terurut naik; cari dua barang yang total harganya tepat sama dengan nilai voucher.",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def pair_with_sum(prices, target):",
+    "rustSignature": "fn pair_with_sum(prices: &[i32], target: i32) -> Option<(i32, i32)>",
+    "starter": "def pair_with_sum(prices, target):\n    pass\n",
+    "solution": "def pair_with_sum(prices, target):\n    l, r = 0, len(prices) - 1\n    while l < r:\n        s = prices[l] + prices[r]\n        if s == target:\n            return (prices[l], prices[r])\n        if s < target:\n            l += 1\n        else:\n            r -= 1\n    return None\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "pair_with_sum([10, 20, 35, 50, 75], 85)",
+          "expect": "(10, 75)"
+        },
+        {
+          "name": "tes 2",
+          "call": "pair_with_sum([1, 2, 3], 10)",
+          "expect": "None"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "pair_with_sum([1, 2, 4, 7, 11, 15], 15)",
+          "expect": "(4, 11)"
+        },
+        {
+          "name": "tes 2",
+          "call": "pair_with_sum([], 5)",
+          "expect": "None"
+        },
+        {
+          "name": "tes 3",
+          "call": "pair_with_sum([5], 10)",
+          "expect": "None"
+        }
+      ]
+    },
+    "hints": [
+      "Array sudah terurut: manfaatkan.",
+      "Dua penunjuk dari ujung berlawanan.",
+      "Jumlah kecil → geser kiri; besar → geser kanan."
+    ],
+    "complexity": "waktu O(n), ruang O(1)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-sliding-window-01",
+    "pattern": "sliding-window",
+    "order": 2,
+    "tier": 2,
+    "level": "intermediate",
+    "title": "Streak Penjualan Terbaik",
+    "story": "Penjualan harian; cari total terbesar dari k hari berturut-turut (0 jika k > jumlah hari).",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def best_streak_sales(sales, k):",
+    "rustSignature": "fn best_streak_sales(sales: &[i64], k: usize) -> i64",
+    "starter": "def best_streak_sales(sales, k):\n    pass\n",
+    "solution": "def best_streak_sales(sales, k):\n    if k > len(sales) or k <= 0:\n        return 0\n    cur = sum(sales[:k])\n    best = cur\n    for i in range(k, len(sales)):\n        cur += sales[i] - sales[i - k]\n        best = max(best, cur)\n    return best\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "best_streak_sales([2, 1, 5, 1, 3, 2], 3)",
+          "expect": "9"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "best_streak_sales([4], 1)",
+          "expect": "4"
+        },
+        {
+          "name": "tes 2",
+          "call": "best_streak_sales([1, 2], 5)",
+          "expect": "0"
+        },
+        {
+          "name": "tes 3",
+          "call": "best_streak_sales([-1, -2, -3], 2)",
+          "expect": "-3"
+        }
+      ]
+    },
+    "hints": [
+      "Hitung jendela pertama.",
+      "Geser: tambah elemen masuk, kurangi yang keluar.",
+      "Simpan maksimum."
+    ],
+    "complexity": "waktu O(n), ruang O(1)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-binary-search-01",
+    "pattern": "binary-search",
+    "order": 3,
+    "tier": 3,
+    "level": "advanced",
+    "title": "Kecepatan Printer Minimal",
+    "story": "Ada beberapa tumpukan dokumen (loads). Printer dengan kecepatan r mencetak max r lembar/jam per tumpukan (satu tumpukan per jam). Cari r bulat minimal agar selesai dalam hours jam.",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def min_rate(loads, hours):",
+    "rustSignature": "fn min_rate(loads: &[u64], hours: u64) -> u64",
+    "starter": "def min_rate(loads, hours):\n    pass\n",
+    "solution": "def min_rate(loads, hours):\n    lo, hi = 1, max(loads)\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if sum(-(-x // mid) for x in loads) <= hours:\n            hi = mid\n        else:\n            lo = mid + 1\n    return lo\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "min_rate([3, 6, 7, 11], 8)",
+          "expect": "4"
+        },
+        {
+          "name": "tes 2",
+          "call": "min_rate([30, 11, 23, 4, 20], 5)",
+          "expect": "30"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "min_rate([30, 11, 23, 4, 20], 6)",
+          "expect": "23"
+        },
+        {
+          "name": "tes 2",
+          "call": "min_rate([1], 1)",
+          "expect": "1"
+        }
+      ]
+    },
+    "hints": [
+      "Cari jawaban, bukan indeks: binary search pada nilai r.",
+      "Fungsi cek: total jam dengan kecepatan r.",
+      "Monoton: r lebih besar → jam lebih sedikit."
+    ],
+    "complexity": "waktu O(n log max), ruang O(1)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-hash-map-01",
+    "pattern": "hash-map",
+    "order": 4,
+    "tier": 1,
+    "level": "beginner",
+    "title": "Karakter Pertama yang Unik",
+    "story": "Cari indeks karakter pertama yang hanya muncul sekali; -1 jika tak ada.",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def first_unique_char(s):",
+    "rustSignature": "fn first_unique_char(s: &str) -> i32",
+    "starter": "def first_unique_char(s):\n    pass\n",
+    "solution": "def first_unique_char(s):\n    from collections import Counter\n    c = Counter(s)\n    for i, ch in enumerate(s):\n        if c[ch] == 1:\n            return i\n    return -1\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "first_unique_char('belajar')",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "call": "first_unique_char('aabbc')",
+          "expect": "4"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "first_unique_char('kodekode')",
+          "expect": "-1"
+        },
+        {
+          "name": "tes 2",
+          "call": "first_unique_char('')",
+          "expect": "-1"
+        }
+      ]
+    },
+    "hints": [
+      "Hitung frekuensi dulu.",
+      "Lalu pindai berurutan.",
+      "Counter/dict cukup."
+    ],
+    "complexity": "waktu O(n), ruang O(k)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-stack-01",
+    "pattern": "stack",
+    "order": 5,
+    "tier": 1,
+    "level": "beginner",
+    "title": "Kurung Seimbang",
+    "story": "Periksa apakah kurung (), [], {} seimbang dan bersarang benar.",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def valid_brackets(s):",
+    "rustSignature": "fn valid_brackets(s: &str) -> bool",
+    "starter": "def valid_brackets(s):\n    pass\n",
+    "solution": "def valid_brackets(s):\n    pair = {')': '(', ']': '[', '}': '{'}\n    st = []\n    for ch in s:\n        if ch in '([{':\n            st.append(ch)\n        elif ch in pair:\n            if not st or st.pop() != pair[ch]:\n                return False\n    return not st\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "valid_brackets('([]{})')",
+          "expect": "True"
+        },
+        {
+          "name": "tes 2",
+          "call": "valid_brackets('([)]')",
+          "expect": "False"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "valid_brackets('((')",
+          "expect": "False"
+        },
+        {
+          "name": "tes 2",
+          "call": "valid_brackets('')",
+          "expect": "True"
+        },
+        {
+          "name": "tes 3",
+          "call": "valid_brackets(')')",
+          "expect": "False"
+        }
+      ]
+    },
+    "hints": [
+      "Buka → push.",
+      "Tutup → pop dan cocokkan.",
+      "Di akhir stack harus kosong."
+    ],
+    "complexity": "waktu O(n), ruang O(n)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-bfs-01",
+    "pattern": "bfs",
+    "order": 6,
+    "tier": 3,
+    "level": "advanced",
+    "title": "Jalan Tercepat di Labirin",
+    "story": "Grid string ('.' terbuka, '#' dinding), dari kiri-atas ke kanan-bawah (4 arah). Kembalikan jumlah langkah minimum atau -1.",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def min_steps(grid):",
+    "rustSignature": "fn min_steps(grid: &[String]) -> i32",
+    "starter": "def min_steps(grid):\n    pass\n",
+    "solution": "def min_steps(grid):\n    from collections import deque\n    R, C = len(grid), len(grid[0])\n    if grid[0][0] == '#' or grid[R-1][C-1] == '#':\n        return -1\n    q, seen = deque([(0, 0, 0)]), {(0, 0)}\n    while q:\n        r, c, d = q.popleft()\n        if (r, c) == (R - 1, C - 1):\n            return d\n        for dr, dc in ((1, 0), (-1, 0), (0, 1), (0, -1)):\n            nr, nc = r + dr, c + dc\n            if 0 <= nr < R and 0 <= nc < C and grid[nr][nc] == '.' and (nr, nc) not in seen:\n                seen.add((nr, nc))\n                q.append((nr, nc, d + 1))\n    return -1\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "min_steps(['..#', '#..', '...'])",
+          "expect": "4"
+        },
+        {
+          "name": "tes 2",
+          "call": "min_steps(['..', '.#'])",
+          "expect": "-1"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "min_steps(['.'])",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "call": "min_steps(['.#', '#.'])",
+          "expect": "-1"
+        }
+      ]
+    },
+    "hints": [
+      "BFS = jarak terpendek di graf tak berbobot.",
+      "Simpan (r, c, jarak) di queue.",
+      "Tandai sel yang sudah dikunjungi."
+    ],
+    "complexity": "waktu O(RC), ruang O(RC)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-dfs-01",
+    "pattern": "dfs",
+    "order": 7,
+    "tier": 2,
+    "level": "intermediate",
+    "title": "Hitung Pulau",
+    "story": "Grid string '1' tanah, '0' air. Hitung jumlah pulau (terhubung 4 arah).",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def count_islands(grid):",
+    "rustSignature": "fn count_islands(grid: &[String]) -> u32",
+    "starter": "def count_islands(grid):\n    pass\n",
+    "solution": "def count_islands(grid):\n    if not grid:\n        return 0\n    R, C = len(grid), len(grid[0])\n    seen = set()\n    def dfs(r, c):\n        stack = [(r, c)]\n        while stack:\n            a, b = stack.pop()\n            if (a, b) in seen or not (0 <= a < R and 0 <= b < C) or grid[a][b] != '1':\n                continue\n            seen.add((a, b))\n            stack += [(a + 1, b), (a - 1, b), (a, b + 1), (a, b - 1)]\n    n = 0\n    for r in range(R):\n        for c in range(C):\n            if grid[r][c] == '1' and (r, c) not in seen:\n                n += 1\n                dfs(r, c)\n    return n\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "count_islands(['110', '010', '001'])",
+          "expect": "2"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "count_islands([])",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "call": "count_islands(['000'])",
+          "expect": "0"
+        },
+        {
+          "name": "tes 3",
+          "call": "count_islands(['101', '010', '101'])",
+          "expect": "5"
+        }
+      ]
+    },
+    "hints": [
+      "Telusuri tiap pulau sekali.",
+      "Tandai sel yang dikunjungi.",
+      "Hitung berapa kali DFS dimulai."
+    ],
+    "complexity": "waktu O(RC), ruang O(RC)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-heap-01",
+    "pattern": "heap",
+    "order": 8,
+    "tier": 2,
+    "level": "intermediate",
+    "title": "K Skor Tertinggi",
+    "story": "Kembalikan k nilai terbesar, urut turun.",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def k_largest(nums, k):",
+    "rustSignature": "fn k_largest(nums: &[i32], k: usize) -> Vec<i32>",
+    "starter": "def k_largest(nums, k):\n    pass\n",
+    "solution": "def k_largest(nums, k):\n    import heapq\n    return heapq.nlargest(k, nums)\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "k_largest([5, 1, 9, 3, 7], 3)",
+          "expect": "[9, 7, 5]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "k_largest([1], 1)",
+          "expect": "[1]"
+        },
+        {
+          "name": "tes 2",
+          "call": "k_largest([2, 2, 1], 2)",
+          "expect": "[2, 2]"
+        },
+        {
+          "name": "tes 3",
+          "call": "k_largest([4, 5], 5)",
+          "expect": "[5, 4]"
+        }
+      ]
+    },
+    "hints": [
+      "Min-heap berukuran k.",
+      "Buang yang terkecil saat ukuran > k.",
+      "heapq.nlargest tersedia."
+    ],
+    "complexity": "waktu O(n log k), ruang O(k)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-backtracking-01",
+    "pattern": "backtracking",
+    "order": 9,
+    "tier": 3,
+    "level": "advanced",
+    "title": "Semua Himpunan Bagian",
+    "story": "Diberikan angka berbeda terurut naik; kembalikan semua subset, diurut menurut (panjang, isi).",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def subsets(nums):",
+    "rustSignature": "fn subsets(nums: &[i32]) -> Vec<Vec<i32>>",
+    "starter": "def subsets(nums):\n    pass\n",
+    "solution": "def subsets(nums):\n    res = []\n    def go(i, cur):\n        if i == len(nums):\n            res.append(cur[:])\n            return\n        go(i + 1, cur)\n        cur.append(nums[i])\n        go(i + 1, cur)\n        cur.pop()\n    go(0, [])\n    return sorted(res, key=lambda s: (len(s), s))\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "subsets([1, 2, 3])",
+          "expect": "[[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "subsets([])",
+          "expect": "[[]]"
+        },
+        {
+          "name": "tes 2",
+          "call": "subsets([5])",
+          "expect": "[[], [5]]"
+        }
+      ]
+    },
+    "hints": [
+      "Untuk tiap elemen: ambil atau lewati.",
+      "Tambah, rekursi, lalu batalkan (pop).",
+      "Urutkan di akhir sesuai aturan."
+    ],
+    "complexity": "waktu O(n·2ⁿ), ruang O(n) rekursi",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-dp-01",
+    "pattern": "dp",
+    "order": 10,
+    "tier": 3,
+    "level": "advanced",
+    "title": "Koin Paling Sedikit",
+    "story": "Dengan koin tak terbatas, hitung koin minimum untuk menyusun amount; -1 jika mustahil.",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def coin_change_min(coins, amount):",
+    "rustSignature": "fn coin_change_min(coins: &[u32], amount: u32) -> i32",
+    "starter": "def coin_change_min(coins, amount):\n    pass\n",
+    "solution": "def coin_change_min(coins, amount):\n    INF = float('inf')\n    dp = [0] + [INF] * amount\n    for a in range(1, amount + 1):\n        for c in coins:\n            if c <= a and dp[a - c] + 1 < dp[a]:\n                dp[a] = dp[a - c] + 1\n    return -1 if dp[amount] == INF else dp[amount]\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "coin_change_min([1, 2, 5], 11)",
+          "expect": "3"
+        },
+        {
+          "name": "tes 2",
+          "call": "coin_change_min([2], 3)",
+          "expect": "-1"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "coin_change_min([1], 0)",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "call": "coin_change_min([186, 419, 83, 408], 6249)",
+          "expect": "20"
+        }
+      ]
+    },
+    "hints": [
+      "State: dp[a] = koin minimum untuk a.",
+      "Transisi: dp[a] = min(dp[a-c]) + 1.",
+      "dp[0] = 0, lainnya tak hingga."
+    ],
+    "complexity": "waktu O(amount·n), ruang O(amount)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-greedy-01",
+    "pattern": "greedy",
+    "order": 11,
+    "tier": 2,
+    "level": "intermediate",
+    "title": "Rapat Terbanyak",
+    "story": "Interval (mulai, selesai). Pilih rapat sebanyak mungkin yang tidak tumpang tindih (selesai = mulai berikutnya boleh).",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def max_meetings(intervals):",
+    "rustSignature": "fn max_meetings(intervals: &[(i32, i32)]) -> usize",
+    "starter": "def max_meetings(intervals):\n    pass\n",
+    "solution": "def max_meetings(intervals):\n    count, end = 0, float('-inf')\n    for s, e in sorted(intervals, key=lambda x: x[1]):\n        if s >= end:\n            count += 1\n            end = e\n    return count\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "max_meetings([(1, 3), (2, 4), (3, 5)])",
+          "expect": "2"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "max_meetings([(1, 2), (1, 2), (1, 2)])",
+          "expect": "1"
+        },
+        {
+          "name": "tes 2",
+          "call": "max_meetings([])",
+          "expect": "0"
+        }
+      ]
+    },
+    "hints": [
+      "Urutkan berdasarkan waktu selesai.",
+      "Ambil jika mulai >= selesai terakhir.",
+      "Pilihan lokal terbaik: yang paling cepat selesai."
+    ],
+    "complexity": "waktu O(n log n), ruang O(1)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-intervals-01",
+    "pattern": "intervals",
+    "order": 12,
+    "tier": 2,
+    "level": "intermediate",
+    "title": "Gabung Jadwal",
+    "story": "Gabungkan interval yang tumpang tindih (menyentuh juga digabung); kembalikan terurut.",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def merge_intervals(iv):",
+    "rustSignature": "fn merge_intervals(iv: Vec<(i32, i32)>) -> Vec<(i32, i32)>",
+    "starter": "def merge_intervals(iv):\n    pass\n",
+    "solution": "def merge_intervals(iv):\n    out = []\n    for s, e in sorted(iv):\n        if out and s <= out[-1][1]:\n            out[-1][1] = max(out[-1][1], e)\n        else:\n            out.append([s, e])\n    return out\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]])",
+          "expect": "[[1, 6], [8, 10], [15, 18]]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "merge_intervals([[1, 4], [4, 5]])",
+          "expect": "[[1, 5]]"
+        },
+        {
+          "name": "tes 2",
+          "call": "merge_intervals([])",
+          "expect": "[]"
+        }
+      ]
+    },
+    "hints": [
+      "Urutkan berdasarkan awal.",
+      "Bandingkan dengan interval terakhir di hasil.",
+      "Perbarui batas akhir dengan max."
+    ],
+    "complexity": "waktu O(n log n), ruang O(n)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-topological-sort-01",
+    "pattern": "topological-sort",
+    "order": 13,
+    "tier": 4,
+    "level": "advanced",
+    "title": "Urutan Kuliah Terkecil",
+    "story": "n mata kuliah (0..n-1), prereq (a, b) berarti a sebelum b. Kembalikan urutan topologis terkecil secara leksikografis, atau [] jika ada siklus.",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def course_order(n, prereqs):",
+    "rustSignature": "fn course_order(n: usize, prereqs: &[(usize, usize)]) -> Vec<usize>",
+    "starter": "def course_order(n, prereqs):\n    pass\n",
+    "solution": "def course_order(n, prereqs):\n    import heapq\n    adj = [[] for _ in range(n)]\n    indeg = [0] * n\n    for a, b in prereqs:\n        adj[a].append(b)\n        indeg[b] += 1\n    h = [i for i in range(n) if indeg[i] == 0]\n    heapq.heapify(h)\n    out = []\n    while h:\n        u = heapq.heappop(h)\n        out.append(u)\n        for v in adj[u]:\n            indeg[v] -= 1\n            if indeg[v] == 0:\n                heapq.heappush(h, v)\n    return out if len(out) == n else []\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "course_order(4, [(0, 1), (0, 2), (1, 3), (2, 3)])",
+          "expect": "[0, 1, 2, 3]"
+        },
+        {
+          "name": "tes 2",
+          "call": "course_order(2, [(0, 1), (1, 0)])",
+          "expect": "[]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "course_order(3, [(2, 0)])",
+          "expect": "[1, 2, 0]"
+        },
+        {
+          "name": "tes 2",
+          "call": "course_order(0, [])",
+          "expect": "[]"
+        }
+      ]
+    },
+    "hints": [
+      "Hitung in-degree tiap node.",
+      "Mulai dari node in-degree 0 (pakai min-heap).",
+      "Jika hasil < n, ada siklus."
+    ],
+    "complexity": "waktu O((V+E) log V), ruang O(V+E)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-union-find-01",
+    "pattern": "union-find",
+    "order": 14,
+    "tier": 3,
+    "level": "advanced",
+    "title": "Jumlah Kelompok Pertemanan",
+    "story": "n orang, daftar pasangan teman. Hitung jumlah kelompok terhubung.",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def count_components(n, edges):",
+    "rustSignature": "fn count_components(n: usize, edges: &[(usize, usize)]) -> usize",
+    "starter": "def count_components(n, edges):\n    pass\n",
+    "solution": "def count_components(n, edges):\n    p = list(range(n))\n    def find(x):\n        while p[x] != x:\n            p[x] = p[p[x]]\n            x = p[x]\n        return x\n    comps = n\n    for a, b in edges:\n        ra, rb = find(a), find(b)\n        if ra != rb:\n            p[ra] = rb\n            comps -= 1\n    return comps\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "count_components(5, [(0, 1), (1, 2), (3, 4)])",
+          "expect": "2"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "count_components(4, [])",
+          "expect": "4"
+        },
+        {
+          "name": "tes 2",
+          "call": "count_components(3, [(0, 1), (1, 0)])",
+          "expect": "2"
+        }
+      ]
+    },
+    "hints": [
+      "Tiap orang awalnya kelompok sendiri.",
+      "Union dua akar yang berbeda mengurangi hitungan.",
+      "Path compression mempercepat find."
+    ],
+    "complexity": "waktu ≈ O(n α(n)), ruang O(n)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  },
+  {
+    "id": "dsa-prefix-sum-01",
+    "pattern": "prefix-sum",
+    "order": 15,
+    "tier": 3,
+    "level": "advanced",
+    "title": "Subarray Berjumlah K",
+    "story": "Hitung banyaknya subarray kontigu yang berjumlah tepat k (nilai bisa negatif).",
+    "language": "python",
+    "runner": "pyodide",
+    "signature": "def count_subarrays_sum_k(nums, k):",
+    "rustSignature": "fn count_subarrays_sum_k(nums: &[i32], k: i32) -> usize",
+    "starter": "def count_subarrays_sum_k(nums, k):\n    pass\n",
+    "solution": "def count_subarrays_sum_k(nums, k):\n    from collections import defaultdict\n    seen = defaultdict(int)\n    seen[0] = 1\n    s = cnt = 0\n    for x in nums:\n        s += x\n        cnt += seen[s - k]\n        seen[s] += 1\n    return cnt\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "count_subarrays_sum_k([1, 1, 1], 2)",
+          "expect": "2"
+        },
+        {
+          "name": "tes 2",
+          "call": "count_subarrays_sum_k([1, 2, 3], 3)",
+          "expect": "2"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "count_subarrays_sum_k([1, -1, 0], 0)",
+          "expect": "3"
+        },
+        {
+          "name": "tes 2",
+          "call": "count_subarrays_sum_k([], 0)",
+          "expect": "0"
+        }
+      ]
+    },
+    "hints": [
+      "Prefix sum: P[j] - P[i] = k.",
+      "Hitung berapa kali P[j]-k pernah muncul.",
+      "Simpan frekuensi prefix di dict (mulai dengan {0:1})."
+    ],
+    "complexity": "waktu O(n), ruang O(n)",
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "verified": "executed-python-3.12",
+    "rustStatus": "signature saja: ditulis sendiri oleh pengguna/Rado (PRD E4: Python & Rust)"
+  }
+]

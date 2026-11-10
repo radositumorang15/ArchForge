@@ -1,0 +1,3075 @@
+[
+  {
+    "id": "fondasi-cpu-memori-01",
+    "track": "fondasi",
+    "module": "m0-1-cara-komputer",
+    "order": 1,
+    "title": "CPU, Memori, Stack vs Heap",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 20,
+    "prereq": [],
+    "objectives": [
+      "Menjelaskan peran CPU dan RAM",
+      "Membedakan stack dan heap"
+    ],
+    "tags": [
+      "cpu",
+      "memory",
+      "stack",
+      "heap"
+    ],
+    "hook": "Kamu jadi koki CPU: resep ada di rak RAM, meja kerja = stack, gudang = heap.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 20,
+    "srsCards": "auto"
+  },
+  {
+    "id": "fondasi-proses-thread-01",
+    "track": "fondasi",
+    "module": "m0-1-cara-komputer",
+    "order": 2,
+    "title": "Proses vs Thread",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 20,
+    "prereq": [
+      "fondasi-cpu-memori-01"
+    ],
+    "objectives": [
+      "Membedakan proses dan thread",
+      "Menjelaskan kenapa thread berbagi memori"
+    ],
+    "tags": [
+      "process",
+      "thread"
+    ],
+    "hook": "Satu restoran (proses), banyak pelayan (thread), satu dapur bersama.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 20,
+    "srsCards": "auto"
+  },
+  {
+    "id": "fondasi-bit-byte-01",
+    "track": "fondasi",
+    "module": "m0-2-representasi",
+    "order": 3,
+    "title": "Bit, Byte, dan Integer",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 20,
+    "prereq": [
+      "fondasi-proses-thread-01"
+    ],
+    "objectives": [
+      "Mengonversi biner ke desimal",
+      "Menghitung rentang integer N-bit"
+    ],
+    "tags": [
+      "binary",
+      "integer"
+    ],
+    "hook": "Lampu saklar: 8 saklar menyimpan angka 0–255. Bisa kamu nyalakan angka 42?",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 20,
+    "srsCards": "auto"
+  },
+  {
+    "id": "fondasi-float-unicode-01",
+    "track": "fondasi",
+    "module": "m0-2-representasi",
+    "order": 4,
+    "title": "Float dan Unicode",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 25,
+    "prereq": [
+      "fondasi-bit-byte-01"
+    ],
+    "objectives": [
+      "Menjelaskan kenapa 0.1+0.2≠0.3",
+      "Memahami UTF-8"
+    ],
+    "tags": [
+      "float",
+      "unicode",
+      "utf8"
+    ],
+    "hook": "Misteri uang receh yang hilang 0.0000000000000000555 rupiah.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 25,
+    "srsCards": "auto"
+  },
+  {
+    "id": "fondasi-pseudocode-alur-01",
+    "track": "fondasi",
+    "module": "m0-3-logika",
+    "order": 5,
+    "title": "Pseudocode & Debugging Rubber Duck",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 20,
+    "prereq": [
+      "fondasi-float-unicode-01"
+    ],
+    "objectives": [
+      "Menulis pseudocode",
+      "Mereproduksi dan mengisolasi bug"
+    ],
+    "tags": [
+      "pseudocode",
+      "debugging"
+    ],
+    "hook": "Jelaskan bug-mu ke bebek karet. Seringnya, kamu menemukannya sendiri.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 20,
+    "srsCards": "auto"
+  },
+  {
+    "id": "fondasi-terminal-git-01",
+    "track": "fondasi",
+    "module": "m0-4-terminal-git",
+    "order": 6,
+    "title": "Terminal, Git, dan Membaca Error",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 30,
+    "prereq": [
+      "fondasi-pseudocode-alur-01"
+    ],
+    "objectives": [
+      "Menavigasi file via terminal",
+      "Commit dan push dengan Git",
+      "Membaca stack trace"
+    ],
+    "tags": [
+      "terminal",
+      "git"
+    ],
+    "hook": "Mesin waktu bernama git: simpan, kembali, bercabang.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 30,
+    "srsCards": "auto"
+  },
+  {
+    "id": "fondasi-ip-dns-tcp-01",
+    "track": "fondasi",
+    "module": "m0-5-jaringan",
+    "order": 7,
+    "title": "IP, DNS, TCP/UDP",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 25,
+    "prereq": [
+      "fondasi-terminal-git-01"
+    ],
+    "objectives": [
+      "Menjelaskan alur DNS",
+      "Membedakan TCP dan UDP"
+    ],
+    "tags": [
+      "ip",
+      "dns",
+      "tcp",
+      "udp"
+    ],
+    "hook": "Perjalanan satu klik: dari ketik domain sampai halaman muncul.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 25,
+    "srsCards": "auto"
+  },
+  {
+    "id": "fondasi-http-rest-ws-01",
+    "track": "fondasi",
+    "module": "m0-5-jaringan",
+    "order": 8,
+    "title": "HTTP, REST, dan WebSocket",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 25,
+    "prereq": [
+      "fondasi-ip-dns-tcp-01"
+    ],
+    "objectives": [
+      "Memilih metode & status HTTP yang tepat",
+      "Menentukan kapan memakai WebSocket"
+    ],
+    "tags": [
+      "http",
+      "rest",
+      "websocket"
+    ],
+    "hook": "Kamu jadi kurir pesan: GET mengambil, POST mengantar, WebSocket menelepon.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 31,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-var-tipe-01",
+    "track": "python",
+    "module": "a1-dasar",
+    "order": 1,
+    "title": "Variabel dan Tipe Data",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 20,
+    "prereq": [
+      "fondasi-pseudocode-alur-01"
+    ],
+    "objectives": [
+      "Memakai int/float/str/bool",
+      "Mengonversi tipe"
+    ],
+    "tags": [
+      "python",
+      "tipe"
+    ],
+    "hook": "Kalkulator suhu untuk wisata ke Dieng yang dingin.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 20,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-kondisi-loop-01",
+    "track": "python",
+    "module": "a1-dasar",
+    "order": 2,
+    "title": "Kondisi dan Loop",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 25,
+    "prereq": [
+      "python-var-tipe-01"
+    ],
+    "objectives": [
+      "Menulis if/elif/else",
+      "Menulis for dan while"
+    ],
+    "tags": [
+      "python",
+      "loop"
+    ],
+    "hook": "Game FizzBuzz: tebak aturan tersembunyi dari output.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 25,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-fungsi-01",
+    "track": "python",
+    "module": "a1-dasar",
+    "order": 3,
+    "title": "Fungsi",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 25,
+    "prereq": [
+      "python-kondisi-loop-01"
+    ],
+    "objectives": [
+      "Mendefinisikan fungsi, parameter default",
+      "Menghindari mutable default"
+    ],
+    "tags": [
+      "python",
+      "fungsi"
+    ],
+    "hook": "Bangun mesin kecil: masukkan angka, keluarkan angka yang aman.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 25,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-struktur-data-01",
+    "track": "python",
+    "module": "a1-dasar",
+    "order": 4,
+    "title": "List, Dict, Set, Tuple",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 30,
+    "prereq": [
+      "python-fungsi-01"
+    ],
+    "objectives": [
+      "Memilih struktur data yang tepat",
+      "Menghitung frekuensi dengan dict"
+    ],
+    "tags": [
+      "python",
+      "list",
+      "dict",
+      "set"
+    ],
+    "hook": "Hitung kata terpopuler di lirik fiksi buatanmu.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 30,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-oop-01",
+    "track": "python",
+    "module": "a2-menengah",
+    "order": 5,
+    "title": "OOP: Class dan Objek",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "python-struktur-data-01"
+    ],
+    "objectives": [
+      "Membuat class dengan state dan method",
+      "Menjaga invarian"
+    ],
+    "tags": [
+      "python",
+      "oop"
+    ],
+    "hook": "Rancang mesin kasir yang tak bisa dicurangi.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-exception-file-01",
+    "track": "python",
+    "module": "a2-menengah",
+    "order": 6,
+    "title": "Exception dan File I/O",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 25,
+    "prereq": [
+      "python-oop-01"
+    ],
+    "objectives": [
+      "Menangani error dengan try/except",
+      "Membaca/menulis file"
+    ],
+    "tags": [
+      "python",
+      "exception",
+      "file"
+    ],
+    "hook": "Input pengguna selalu nakal. Bikin program yang tidak mudah panik.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 31,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-comprehension-generator-01",
+    "track": "python",
+    "module": "a2-menengah",
+    "order": 7,
+    "title": "Comprehension dan Generator",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 25,
+    "prereq": [
+      "python-exception-file-01"
+    ],
+    "objectives": [
+      "Menulis comprehension",
+      "Memakai yield untuk lazy sequence"
+    ],
+    "tags": [
+      "python",
+      "generator"
+    ],
+    "hook": "Pabrik angka tanpa batas yang hemat memori.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 31,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-decorator-typehints-01",
+    "track": "python",
+    "module": "a2-menengah",
+    "order": 8,
+    "title": "Decorator dan Type Hints",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 30,
+    "prereq": [
+      "python-comprehension-generator-01"
+    ],
+    "objectives": [
+      "Menulis decorator",
+      "Menambah type hints"
+    ],
+    "tags": [
+      "python",
+      "decorator",
+      "typing"
+    ],
+    "hook": "Bungkus fungsi seperti kado: tambah log tanpa sentuh isinya.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 45,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-pytest-venv-01",
+    "track": "python",
+    "module": "a3-praktik",
+    "order": 9,
+    "title": "Testing, venv, dan pyproject",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "python-decorator-typehints-01"
+    ],
+    "objectives": [
+      "Menulis tes dengan assert",
+      "Mengelola lingkungan virtual"
+    ],
+    "tags": [
+      "pytest",
+      "venv"
+    ],
+    "hook": "Jadilah QA bagi kodemu sendiri.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-async-regex-http-01",
+    "track": "python",
+    "module": "a3-praktik",
+    "order": 10,
+    "title": "Async, Regex, JSON/HTTP",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "python-pytest-venv-01"
+    ],
+    "objectives": [
+      "Memahami async/await",
+      "Menulis regex",
+      "Memanggil API HTTP"
+    ],
+    "tags": [
+      "asyncio",
+      "regex",
+      "http"
+    ],
+    "hook": "Detektif teks: tangkap email dari log yang berantakan.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-numpy-01",
+    "track": "python",
+    "module": "a4-ilmiah",
+    "order": 11,
+    "title": "numpy: Array dan Broadcasting",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 30,
+    "prereq": [
+      "python-async-regex-http-01"
+    ],
+    "objectives": [
+      "Memakai ndarray",
+      "Memprediksi shape hasil broadcasting"
+    ],
+    "tags": [
+      "numpy"
+    ],
+    "hook": "Satu baris numpy menggantikan 20 baris loop.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 45,
+    "srsCards": "auto"
+  },
+  {
+    "id": "python-pandas-matplotlib-01",
+    "track": "python",
+    "module": "a4-ilmiah",
+    "order": 12,
+    "title": "pandas dan matplotlib",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "python-numpy-01"
+    ],
+    "objectives": [
+      "Mengelompokkan data dengan groupby",
+      "Membuat grafik"
+    ],
+    "tags": [
+      "pandas",
+      "matplotlib"
+    ],
+    "hook": "Bedah data penjualan warung dan temukan pelanggan emas.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-cargo-var-01",
+    "track": "rust",
+    "module": "b1-dasar",
+    "order": 1,
+    "title": "Cargo, Variabel, dan Mutabilitas",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 20,
+    "prereq": [],
+    "objectives": [
+      "Membuat proyek Cargo",
+      "Memahami let vs let mut"
+    ],
+    "tags": [
+      "rust",
+      "cargo"
+    ],
+    "hook": "Rust suka bilang tidak. Bagus: itu tanda sayang.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 20,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-tipe-fungsi-alur-01",
+    "track": "rust",
+    "module": "b1-dasar",
+    "order": 2,
+    "title": "Tipe, Fungsi, dan Alur Kontrol",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 25,
+    "prereq": [
+      "rust-cargo-var-01"
+    ],
+    "objectives": [
+      "Memakai tipe skalar",
+      "Menulis fungsi dan loop"
+    ],
+    "tags": [
+      "rust",
+      "fungsi"
+    ],
+    "hook": "Lintasi labirin Collatz: berapa langkah sampai 1?",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 25,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-ownership-01",
+    "track": "rust",
+    "module": "b2-inti-rust",
+    "order": 3,
+    "title": "Ownership",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "rust-tipe-fungsi-alur-01"
+    ],
+    "objectives": [
+      "Menjelaskan aturan ownership",
+      "Memprediksi move vs copy"
+    ],
+    "tags": [
+      "rust",
+      "ownership",
+      "memory"
+    ],
+    "hook": "Satu kunci rumah, satu pemilik. Serahkan kunci = kamu tak bisa masuk lagi.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-borrowing-lifetimes-01",
+    "track": "rust",
+    "module": "b2-inti-rust",
+    "order": 4,
+    "title": "Borrowing dan Lifetimes",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "rust-ownership-01"
+    ],
+    "objectives": [
+      "Membedakan & dan &mut",
+      "Membaca anotasi lifetime"
+    ],
+    "tags": [
+      "rust",
+      "borrow",
+      "lifetime"
+    ],
+    "hook": "Pinjam buku dari perpustakaan: tak boleh lebih lama dari umur perpustakaan.",
+    "components": [
+      "Diagram",
+      "CodeExercise"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-struct-enum-match-01",
+    "track": "rust",
+    "module": "b2-inti-rust",
+    "order": 5,
+    "title": "Struct, Enum, Pattern Matching",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "rust-borrowing-lifetimes-01"
+    ],
+    "objectives": [
+      "Memodelkan data dengan enum",
+      "Menulis match yang exhaustive"
+    ],
+    "tags": [
+      "rust",
+      "enum",
+      "match"
+    ],
+    "hook": "Kalkulator luas bangun datar: compiler memaksa kamu tak lupa satu bentuk pun.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-option-result-01",
+    "track": "rust",
+    "module": "b2-inti-rust",
+    "order": 6,
+    "title": "Option dan Result",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 25,
+    "prereq": [
+      "rust-struct-enum-match-01"
+    ],
+    "objectives": [
+      "Menangani ketiadaan nilai dengan Option",
+      "Memakai ? untuk error"
+    ],
+    "tags": [
+      "rust",
+      "option",
+      "result"
+    ],
+    "hook": "Tak ada null. Ada Option. Tidur lebih nyenyak.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 31,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-trait-generics-01",
+    "track": "rust",
+    "module": "b3-abstraksi",
+    "order": 7,
+    "title": "Trait dan Generics",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "rust-option-result-01"
+    ],
+    "objectives": [
+      "Menulis fungsi generik dengan trait bound",
+      "Membedakan static vs dynamic dispatch"
+    ],
+    "tags": [
+      "rust",
+      "trait",
+      "generics"
+    ],
+    "hook": "Satu fungsi untuk semua tipe, tanpa kehilangan kecepatan.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-closure-iterator-01",
+    "track": "rust",
+    "module": "b3-abstraksi",
+    "order": 8,
+    "title": "Closure dan Iterator",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 30,
+    "prereq": [
+      "rust-trait-generics-01"
+    ],
+    "objectives": [
+      "Merangkai iterator adapter",
+      "Memahami lazy evaluation"
+    ],
+    "tags": [
+      "rust",
+      "iterator"
+    ],
+    "hook": "Rantai pipa data: filter, map, jumlahkan.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 45,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-koleksi-modul-01",
+    "track": "rust",
+    "module": "b3-abstraksi",
+    "order": 9,
+    "title": "Koleksi dan Modul",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 30,
+    "prereq": [
+      "rust-closure-iterator-01"
+    ],
+    "objectives": [
+      "Memakai Vec/HashMap",
+      "Mengatur modul dan visibilitas"
+    ],
+    "tags": [
+      "rust",
+      "hashmap",
+      "modul"
+    ],
+    "hook": "Hitung frekuensi kata: HashMap sebagai alat serbaguna.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 45,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-error-handling-01",
+    "track": "rust",
+    "module": "b4-keandalan",
+    "order": 10,
+    "title": "Error Handling Idiomatik",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 30,
+    "prereq": [
+      "rust-koleksi-modul-01"
+    ],
+    "objectives": [
+      "Mendesain error type",
+      "Menyebarkan error dengan ?"
+    ],
+    "tags": [
+      "rust",
+      "error"
+    ],
+    "hook": "Kalkulator yang menolak dengan sopan.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 45,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-testing-docs-01",
+    "track": "rust",
+    "module": "b4-keandalan",
+    "order": 11,
+    "title": "Testing dan Dokumentasi",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 25,
+    "prereq": [
+      "rust-error-handling-01"
+    ],
+    "objectives": [
+      "Menulis unit test",
+      "Menulis doc comment dan doctest"
+    ],
+    "tags": [
+      "rust",
+      "test"
+    ],
+    "hook": "Dokumentasi yang bisa dijalankan sebagai tes.",
+    "components": [
+      "Quiz",
+      "Callout"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-thread-channel-01",
+    "track": "rust",
+    "module": "b5-konkurensi",
+    "order": 12,
+    "title": "Thread dan Channel",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "rust-testing-docs-01"
+    ],
+    "objectives": [
+      "Membagi kerja ke thread",
+      "Mengirim hasil lewat channel"
+    ],
+    "tags": [
+      "rust",
+      "thread",
+      "channel"
+    ],
+    "hook": "Empat koki memasak bersamaan, satu kasir menjumlahkan.",
+    "components": [
+      "CodeExercise",
+      "Diagram"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-arc-mutex-send-sync-01",
+    "track": "rust",
+    "module": "b5-konkurensi",
+    "order": 13,
+    "title": "Arc, Mutex, Send, Sync",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 35,
+    "prereq": [
+      "rust-thread-channel-01"
+    ],
+    "objectives": [
+      "Berbagi state aman antar thread",
+      "Menjelaskan Send/Sync"
+    ],
+    "tags": [
+      "rust",
+      "arc",
+      "mutex"
+    ],
+    "hook": "Satu papan skor, banyak pemain, tak ada skor yang hilang.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 61,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-async-tokio-01",
+    "track": "rust",
+    "module": "b5-konkurensi",
+    "order": 14,
+    "title": "async/await dan Tokio",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 35,
+    "prereq": [
+      "rust-arc-mutex-send-sync-01"
+    ],
+    "objectives": [
+      "Menjelaskan Future dan executor",
+      "Menulis task Tokio sederhana"
+    ],
+    "tags": [
+      "rust",
+      "async",
+      "tokio"
+    ],
+    "hook": "Satu pelayan, seribu meja: kuncinya tidak menunggu sambil berdiri.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 61,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-axum-serde-sqlx-01",
+    "track": "rust",
+    "module": "b6-sistem-web",
+    "order": 15,
+    "title": "Axum, serde, sqlx",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "rust-async-tokio-01"
+    ],
+    "objectives": [
+      "Membangun endpoint JSON",
+      "Query DB tervalidasi compile-time"
+    ],
+    "tags": [
+      "rust",
+      "axum",
+      "sqlx"
+    ],
+    "hook": "Rakit API pertamamu: dari request sampai baris di Postgres.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "rust-wasm-ffi-unsafe-01",
+    "track": "rust",
+    "module": "b6-sistem-web",
+    "order": 16,
+    "title": "WASM, FFI, dan unsafe",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "rust-axum-serde-sqlx-01"
+    ],
+    "objectives": [
+      "Mengekspor fungsi ke WASM",
+      "Memakai unsafe secara bertanggung jawab"
+    ],
+    "tags": [
+      "rust",
+      "wasm",
+      "ffi",
+      "unsafe"
+    ],
+    "hook": "Rust menembus browser: engine simulasi System Design jalan di tab-mu.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-val-var-null-01",
+    "track": "kotlin",
+    "module": "c1-dasar",
+    "order": 1,
+    "title": "val, var, dan Null Safety",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 20,
+    "prereq": [],
+    "objectives": [
+      "Membedakan val/var",
+      "Memakai ?. dan ?:"
+    ],
+    "tags": [
+      "kotlin",
+      "null"
+    ],
+    "hook": "NullPointerException? Di sini ia dilarang masuk.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 20,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-fungsi-alur-01",
+    "track": "kotlin",
+    "module": "c1-dasar",
+    "order": 2,
+    "title": "Fungsi dan Alur Kontrol",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 25,
+    "prereq": [
+      "kotlin-val-var-null-01"
+    ],
+    "objectives": [
+      "Menulis fungsi ekspresi",
+      "Memakai when"
+    ],
+    "tags": [
+      "kotlin",
+      "when"
+    ],
+    "hook": "when: switch yang naik kelas.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 25,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-class-sealed-01",
+    "track": "kotlin",
+    "module": "c2-oop-fungsional",
+    "order": 3,
+    "title": "Class, Data Class, Sealed",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "kotlin-fungsi-alur-01"
+    ],
+    "objectives": [
+      "Memakai data class",
+      "Memodelkan state dengan sealed"
+    ],
+    "tags": [
+      "kotlin",
+      "sealed"
+    ],
+    "hook": "Sealed class: daftar kemungkinan yang tertutup rapat.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-lambda-koleksi-01",
+    "track": "kotlin",
+    "module": "c2-oop-fungsional",
+    "order": 4,
+    "title": "Lambda dan Koleksi",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "kotlin-class-sealed-01"
+    ],
+    "objectives": [
+      "Merangkai filter/map/sorted",
+      "Memahami Sequence"
+    ],
+    "tags": [
+      "kotlin",
+      "lambda"
+    ],
+    "hook": "Rantai transformasi koleksi seperti merakit LEGO.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-generics-delegation-dsl-01",
+    "track": "kotlin",
+    "module": "c3-lanjut",
+    "order": 5,
+    "title": "Generics, Delegation, DSL",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "kotlin-lambda-koleksi-01"
+    ],
+    "objectives": [
+      "Memahami variance (in/out)",
+      "Menulis DSL kecil"
+    ],
+    "tags": [
+      "kotlin",
+      "generics",
+      "dsl"
+    ],
+    "hook": "Bikin bahasa mini di dalam Kotlin.",
+    "components": [
+      "Quiz",
+      "Diagram"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-coroutines-flow-01",
+    "track": "kotlin",
+    "module": "c3-lanjut",
+    "order": 6,
+    "title": "Coroutines dan Flow",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "kotlin-generics-delegation-dsl-01"
+    ],
+    "objectives": [
+      "Membedakan launch/async",
+      "Memahami structured concurrency dan Flow"
+    ],
+    "tags": [
+      "kotlin",
+      "coroutines",
+      "flow"
+    ],
+    "hook": "Ribuan tugas ringan, tanpa neraka callback.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-testing-gradle-ktor-01",
+    "track": "kotlin",
+    "module": "c4-praktik",
+    "order": 7,
+    "title": "Testing, Gradle, Ktor",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 40,
+    "prereq": [
+      "kotlin-coroutines-flow-01"
+    ],
+    "objectives": [
+      "Menulis tes JUnit",
+      "Membuat route Ktor"
+    ],
+    "tags": [
+      "kotlin",
+      "ktor",
+      "gradle"
+    ],
+    "hook": "Server mungil dalam 10 baris.",
+    "components": [
+      "Quiz",
+      "Diagram"
+    ],
+    "xp": 60,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-kmp-bridge-01",
+    "track": "kotlin",
+    "module": "c4-praktik",
+    "order": 8,
+    "title": "Kotlin Multiplatform & Jembatan Platform",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 35,
+    "prereq": [
+      "kotlin-testing-gradle-ktor-01"
+    ],
+    "objectives": [
+      "Memahami expect/actual",
+      "Menghubungkan ke Flutter lewat platform channel"
+    ],
+    "tags": [
+      "kotlin",
+      "kmp"
+    ],
+    "hook": "Tulis sekali, jalan di mana-mana, dengan sadar harganya.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 61,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-compose-dasar-01",
+    "track": "kotlin",
+    "module": "c5-compose",
+    "order": 9,
+    "title": "Compose: Composable, Modifier, Layout",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "kotlin-lambda-koleksi-01"
+    ],
+    "objectives": [
+      "Menyusun Row/Column/Box",
+      "Memakai Modifier"
+    ],
+    "tags": [
+      "compose",
+      "layout"
+    ],
+    "hook": "UI adalah fungsi. Ubah inputnya, UI berubah.",
+    "components": [
+      "UIPredict",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-state-hoisting-01",
+    "track": "kotlin",
+    "module": "c5-compose",
+    "order": 10,
+    "title": "State dan State Hoisting",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "kotlin-compose-dasar-01"
+    ],
+    "objectives": [
+      "Memakai remember/mutableStateOf",
+      "Mengangkat state ke atas"
+    ],
+    "tags": [
+      "compose",
+      "state"
+    ],
+    "hook": "Siapa pemilik state? Jawabannya: yang paling atas yang butuh.",
+    "components": [
+      "UIPredict",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-material3-navigasi-01",
+    "track": "kotlin",
+    "module": "c5-compose",
+    "order": 11,
+    "title": "Material 3, Navigasi, Animasi",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "kotlin-state-hoisting-01"
+    ],
+    "objectives": [
+      "Menerapkan theming M3",
+      "Mengatur navigasi"
+    ],
+    "tags": [
+      "compose",
+      "material3"
+    ],
+    "hook": "Satu tema, seluruh app berganti suasana.",
+    "components": [
+      "UIPredict",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "kotlin-recomposition-perf-a11y-01",
+    "track": "kotlin",
+    "module": "c5-compose",
+    "order": 12,
+    "title": "Recomposition, Performa, Aksesibilitas",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "kotlin-material3-navigasi-01"
+    ],
+    "objectives": [
+      "Mengurangi recomposition",
+      "Menerapkan semantics & ukuran sentuh"
+    ],
+    "tags": [
+      "compose",
+      "performance",
+      "a11y"
+    ],
+    "hook": "Kenapa layar berkedip? Telusuri recomposition berlebih.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-dart-dasar-01",
+    "track": "dart-flutter",
+    "module": "d1-dart",
+    "order": 1,
+    "title": "Dart: Sintaks dan Null Safety",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 25,
+    "prereq": [],
+    "objectives": [
+      "Memakai tipe & null safety",
+      "Memakai koleksi dan fungsi"
+    ],
+    "tags": [
+      "dart",
+      "null"
+    ],
+    "hook": "Dart: bahasa yang dirancang untuk UI.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 25,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-dart-async-isolate-01",
+    "track": "dart-flutter",
+    "module": "d1-dart",
+    "order": 2,
+    "title": "Future, Stream, Isolate",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 30,
+    "prereq": [
+      "dart-flutter-dart-dasar-01"
+    ],
+    "objectives": [
+      "Membedakan Future dan Stream",
+      "Menjelaskan isolate"
+    ],
+    "tags": [
+      "dart",
+      "async",
+      "isolate"
+    ],
+    "hook": "Banyak pekerjaan, satu thread UI yang harus tetap mulus.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 45,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-widget-layout-01",
+    "track": "dart-flutter",
+    "module": "d2-flutter-inti",
+    "order": 3,
+    "title": "Widget Tree dan Layout",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "dart-flutter-dart-dasar-01"
+    ],
+    "objectives": [
+      "Menyusun Row/Column/Stack",
+      "Membaca widget tree"
+    ],
+    "tags": [
+      "flutter",
+      "layout"
+    ],
+    "hook": "Semua adalah widget, bahkan padding.",
+    "components": [
+      "UIPredict",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-state-navigasi-01",
+    "track": "dart-flutter",
+    "module": "d2-flutter-inti",
+    "order": 4,
+    "title": "State dan Navigasi",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 35,
+    "prereq": [
+      "dart-flutter-widget-layout-01"
+    ],
+    "objectives": [
+      "Memakai setState dan Riverpod/Provider",
+      "Navigasi antar layar"
+    ],
+    "tags": [
+      "flutter",
+      "state"
+    ],
+    "hook": "Dari satu layar ke banyak layar tanpa tersesat.",
+    "components": [
+      "UIPredict",
+      "Quiz"
+    ],
+    "xp": 43,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-http-storage-test-01",
+    "track": "dart-flutter",
+    "module": "d3-praktik",
+    "order": 5,
+    "title": "HTTP, Penyimpanan Lokal, Testing",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 40,
+    "prereq": [
+      "dart-flutter-state-navigasi-01"
+    ],
+    "objectives": [
+      "Mengambil JSON",
+      "Menyimpan lokal",
+      "Menulis widget test"
+    ],
+    "tags": [
+      "flutter",
+      "http",
+      "test"
+    ],
+    "hook": "App yang tetap berguna saat sinyal hilang.",
+    "components": [
+      "Quiz",
+      "Diagram"
+    ],
+    "xp": 60,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-clean-arch-ffi-01",
+    "track": "dart-flutter",
+    "module": "d4-arsitektur",
+    "order": 6,
+    "title": "Clean Architecture, DI, FFI",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "dart-flutter-http-storage-test-01"
+    ],
+    "objectives": [
+      "Menerapkan repository & DI",
+      "Memanggil Rust via FFI"
+    ],
+    "tags": [
+      "flutter",
+      "architecture",
+      "ffi"
+    ],
+    "hook": "Pisahkan UI dari logika sampai bisa diganti tanpa menangis.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-layout-sliver-01",
+    "track": "dart-flutter",
+    "module": "d5-ui-mendalam",
+    "order": 7,
+    "title": "Constraints, Sliver, Scroll",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "dart-flutter-clean-arch-ffi-01"
+    ],
+    "objectives": [
+      "Menjelaskan aturan constraints",
+      "Memakai Sliver"
+    ],
+    "tags": [
+      "flutter",
+      "sliver"
+    ],
+    "hook": "Constraints go down, sizes go up, parent sets position.",
+    "components": [
+      "UIPredict",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-animasi-painter-01",
+    "track": "dart-flutter",
+    "module": "d5-ui-mendalam",
+    "order": 8,
+    "title": "Animasi dan CustomPainter",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "dart-flutter-layout-sliver-01"
+    ],
+    "objectives": [
+      "Membedakan implicit/explicit",
+      "Menggambar dengan CustomPainter"
+    ],
+    "tags": [
+      "flutter",
+      "animation"
+    ],
+    "hook": "Hidupkan UI: dari fade sederhana sampai kanvas sendiri.",
+    "components": [
+      "UIPredict",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-adaptif-a11y-golden-01",
+    "track": "dart-flutter",
+    "module": "d5-ui-mendalam",
+    "order": 9,
+    "title": "UI Adaptif, Aksesibilitas, Golden Test",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "dart-flutter-animasi-painter-01"
+    ],
+    "objectives": [
+      "Membuat layout adaptif",
+      "Menguji tampilan dengan golden test"
+    ],
+    "tags": [
+      "flutter",
+      "adaptive",
+      "a11y"
+    ],
+    "hook": "Satu app, dari ponsel sampai layar 27 inci.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-tokens-komponen-01",
+    "track": "dart-flutter",
+    "module": "d6-design-to-code",
+    "order": 10,
+    "title": "Design Tokens dan Komponen Reusable",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "dart-flutter-adaptif-a11y-golden-01"
+    ],
+    "objectives": [
+      "Mendefinisikan tokens",
+      "Membangun komponen konsisten"
+    ],
+    "tags": [
+      "flutter",
+      "tokens"
+    ],
+    "hook": "Ganti satu warna di satu tempat, seluruh app ikut.",
+    "components": [
+      "UIPredict",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dart-flutter-figma-to-code-01",
+    "track": "dart-flutter",
+    "module": "d6-design-to-code",
+    "order": 11,
+    "title": "Dari Figma ke Layar Nyata",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "dart-flutter-tokens-komponen-01"
+    ],
+    "objectives": [
+      "Menerjemahkan frame Figma ke widget",
+      "Menangani state loading/empty/error"
+    ],
+    "tags": [
+      "flutter",
+      "figma"
+    ],
+    "hook": "Rakit ulang desain pixel demi pixel, lalu bandingkan.",
+    "components": [
+      "UIPredict",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dsa-big-o-01",
+    "track": "dsa",
+    "module": "e1-kompleksitas",
+    "order": 1,
+    "title": "Big-O: Waktu dan Ruang",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 25,
+    "prereq": [
+      "python-fungsi-01"
+    ],
+    "objectives": [
+      "Menentukan Big-O loop bersarang",
+      "Memahami amortized"
+    ],
+    "tags": [
+      "bigo"
+    ],
+    "hook": "Kenapa satu kode 1 detik, kode lain 1 jam? Rahasia Big-O.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 25,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dsa-array-hash-01",
+    "track": "dsa",
+    "module": "e2-struktur-data",
+    "order": 2,
+    "title": "Array dan Hash Table",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "dsa-big-o-01"
+    ],
+    "objectives": [
+      "Memakai hash table untuk lookup O(1)",
+      "Menyelesaikan two-sum"
+    ],
+    "tags": [
+      "array",
+      "hash"
+    ],
+    "hook": "Mencari jarum di tumpukan jerami dalam sekali lihat.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dsa-stack-queue-heap-01",
+    "track": "dsa",
+    "module": "e2-struktur-data",
+    "order": 3,
+    "title": "Stack, Queue, Heap",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 35,
+    "prereq": [
+      "dsa-array-hash-01"
+    ],
+    "objectives": [
+      "Memilih stack/queue/heap",
+      "Mengevaluasi RPN"
+    ],
+    "tags": [
+      "stack",
+      "queue",
+      "heap"
+    ],
+    "hook": "Tumpukan piring, antrean loket, dan prioritas UGD.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 43,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dsa-tree-graph-trie-uf-01",
+    "track": "dsa",
+    "module": "e2-struktur-data",
+    "order": 4,
+    "title": "Tree, Graph, Trie, Union-Find",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 40,
+    "prereq": [
+      "dsa-stack-queue-heap-01"
+    ],
+    "objectives": [
+      "Menghitung tinggi tree",
+      "Memodelkan masalah sebagai graph"
+    ],
+    "tags": [
+      "tree",
+      "graph",
+      "trie"
+    ],
+    "hook": "Silsilah keluarga, peta kota, dan kamus: semua graf.",
+    "components": [
+      "Diagram",
+      "CodeExercise"
+    ],
+    "xp": 60,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dsa-two-pointers-window-01",
+    "track": "dsa",
+    "module": "e3-teknik",
+    "order": 5,
+    "title": "Two Pointers dan Sliding Window",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "dsa-tree-graph-trie-uf-01"
+    ],
+    "objectives": [
+      "Mengenali masalah window",
+      "Menulis solusi O(n)"
+    ],
+    "tags": [
+      "window",
+      "pointers"
+    ],
+    "hook": "Jendela geser: sekali lewat, tanpa mengulang.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dsa-binsearch-rekursi-01",
+    "track": "dsa",
+    "module": "e3-teknik",
+    "order": 6,
+    "title": "Binary Search dan Rekursi",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "dsa-two-pointers-window-01"
+    ],
+    "objectives": [
+      "Menulis lower_bound dengan benar",
+      "Merancang kasus dasar rekursi"
+    ],
+    "tags": [
+      "binsearch",
+      "recursion"
+    ],
+    "hook": "Tebak angka 1–1.000.000 dalam 20 tebakan.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dsa-dp-greedy-01",
+    "track": "dsa",
+    "module": "e3-teknik",
+    "order": 7,
+    "title": "Dynamic Programming dan Greedy",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 40,
+    "prereq": [
+      "dsa-binsearch-rekursi-01"
+    ],
+    "objectives": [
+      "Merumuskan state dan transisi DP",
+      "Membedakan DP dan greedy"
+    ],
+    "tags": [
+      "dp",
+      "greedy"
+    ],
+    "hook": "Maling pintar: ambil rumah yang tidak bersebelahan.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 60,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dsa-graph-algos-01",
+    "track": "dsa",
+    "module": "e3-teknik",
+    "order": 8,
+    "title": "BFS, DFS, Topological Sort, Dijkstra",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 45,
+    "prereq": [
+      "dsa-dp-greedy-01"
+    ],
+    "objectives": [
+      "Memakai BFS untuk jarak terpendek",
+      "Menjelaskan Dijkstra"
+    ],
+    "tags": [
+      "bfs",
+      "dfs",
+      "dijkstra"
+    ],
+    "hook": "Rute tercepat di peta kota imajiner.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 78,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dsa-pola-soal-01",
+    "track": "dsa",
+    "module": "e4-pola-soal",
+    "order": 9,
+    "title": "Peta 15 Pola Soal",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 30,
+    "prereq": [
+      "dsa-graph-algos-01"
+    ],
+    "objectives": [
+      "Mengenali pola dari ciri soal",
+      "Memilih struktur data yang tepat"
+    ],
+    "tags": [
+      "patterns"
+    ],
+    "hook": "Setiap soal punya sidik jari. Pelajari mengenalinya.",
+    "components": [
+      "Quiz",
+      "Playground"
+    ],
+    "xp": 45,
+    "srsCards": "auto"
+  },
+  {
+    "id": "dsa-live-coding-01",
+    "track": "dsa",
+    "module": "e5-live-coding",
+    "order": 10,
+    "title": "Teknik Live Coding",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 30,
+    "prereq": [
+      "dsa-pola-soal-01"
+    ],
+    "objectives": [
+      "Menjalankan fase klarifikasi sampai analisis",
+      "Memverbalisasi pikiran"
+    ],
+    "tags": [
+      "interview",
+      "livecoding"
+    ],
+    "hook": "Bicara sambil mengetik: skill yang bisa dilatih.",
+    "components": [
+      "Quiz",
+      "Callout"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-estimasi-01",
+    "track": "system-design",
+    "module": "f1-fondasi",
+    "order": 1,
+    "title": "Estimasi Kapasitas dan SLO",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "fondasi-http-rest-ws-01"
+    ],
+    "objectives": [
+      "Melakukan back-of-envelope estimation",
+      "Menghitung error budget"
+    ],
+    "tags": [
+      "estimation",
+      "slo"
+    ],
+    "hook": "Berapa server yang dibutuhkan? Tebak dengan rumus, bukan firasat.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-lb-cdn-gateway-01",
+    "track": "system-design",
+    "module": "f2-blok-bangunan",
+    "order": 2,
+    "title": "DNS, CDN, Load Balancer, API Gateway",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "system-design-estimasi-01"
+    ],
+    "objectives": [
+      "Memilih algoritma LB",
+      "Menempatkan CDN dan gateway"
+    ],
+    "tags": [
+      "lb",
+      "cdn"
+    ],
+    "hook": "Pintu masuk stadion: bagaimana 50.000 orang masuk tanpa desak-desakan?",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-sql-index-replikasi-01",
+    "track": "system-design",
+    "module": "f3-data",
+    "order": 3,
+    "title": "SQL/NoSQL, Index, Replikasi",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 40,
+    "prereq": [
+      "system-design-lb-cdn-gateway-01"
+    ],
+    "objectives": [
+      "Menjelaskan manfaat dan biaya index",
+      "Memahami replication lag"
+    ],
+    "tags": [
+      "sql",
+      "index",
+      "replication"
+    ],
+    "hook": "Buku telepon tanpa abjad? Itu database tanpa index.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 60,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-sharding-consistent-hash-01",
+    "track": "system-design",
+    "module": "f3-data",
+    "order": 4,
+    "title": "Sharding dan Consistent Hashing",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "system-design-sql-index-replikasi-01"
+    ],
+    "objectives": [
+      "Membagi data lintas shard",
+      "Mengimplementasikan hash ring"
+    ],
+    "tags": [
+      "sharding",
+      "consistent-hashing"
+    ],
+    "hook": "Pindah 1 dari 4 server tanpa memindahkan semua data.",
+    "components": [
+      "CodeExercise",
+      "Diagram"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-caching-01",
+    "track": "system-design",
+    "module": "f4-caching",
+    "order": 5,
+    "title": "Pola Caching dan Eviction",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "system-design-sharding-consistent-hash-01"
+    ],
+    "objectives": [
+      "Membedakan cache-aside dan write-through",
+      "Mengimplementasikan LRU"
+    ],
+    "tags": [
+      "cache",
+      "lru"
+    ],
+    "hook": "Cache cepat, invalidasi sulit. Kita hadapi keduanya.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-cap-konsistensi-01",
+    "track": "system-design",
+    "module": "f5-terdistribusi",
+    "order": 6,
+    "title": "CAP, PACELC, Model Konsistensi",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "system-design-caching-01"
+    ],
+    "objectives": [
+      "Menjelaskan CAP dan PACELC",
+      "Memilih model konsistensi"
+    ],
+    "tags": [
+      "cap",
+      "consistency"
+    ],
+    "hook": "Dua ATM, jaringan putus: izinkan tarik tunai atau tidak?",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-idempotency-konsensus-01",
+    "track": "system-design",
+    "module": "f5-terdistribusi",
+    "order": 7,
+    "title": "Idempotensi dan Konsensus",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "system-design-cap-konsistensi-01"
+    ],
+    "objectives": [
+      "Mendesain API idempoten",
+      "Menjelaskan Raft secara konsep"
+    ],
+    "tags": [
+      "idempotency",
+      "raft"
+    ],
+    "hook": "Klik bayar dua kali, tertagih sekali.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-api-komunikasi-01",
+    "track": "system-design",
+    "module": "f6-komunikasi",
+    "order": 8,
+    "title": "REST, gRPC, GraphQL, Real-time",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 30,
+    "prereq": [
+      "system-design-idempotency-konsensus-01"
+    ],
+    "objectives": [
+      "Membandingkan gaya API",
+      "Memilih WebSocket/SSE/polling"
+    ],
+    "tags": [
+      "api",
+      "grpc",
+      "websocket"
+    ],
+    "hook": "Pilih bahasa percakapan antar layanan.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 45,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-queue-streaming-01",
+    "track": "system-design",
+    "module": "f6-komunikasi",
+    "order": 9,
+    "title": "Queue, Pub/Sub, Event Streaming",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 35,
+    "prereq": [
+      "system-design-api-komunikasi-01"
+    ],
+    "objectives": [
+      "Membedakan at-least-once dan exactly-once",
+      "Memakai outbox"
+    ],
+    "tags": [
+      "queue",
+      "kafka"
+    ],
+    "hook": "Kurir antar layanan yang tidak boleh menghilangkan paket.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 61,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-keandalan-01",
+    "track": "system-design",
+    "module": "f7-keandalan",
+    "order": 10,
+    "title": "Circuit Breaker, Retry, DR",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "system-design-queue-streaming-01"
+    ],
+    "objectives": [
+      "Menghitung backoff",
+      "Merancang degradasi anggun dan RPO/RTO"
+    ],
+    "tags": [
+      "reliability",
+      "retry"
+    ],
+    "hook": "Sistem yang jatuh dengan anggun, bukan dengan teriakan.",
+    "components": [
+      "CodeExercise",
+      "Diagram"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-observability-01",
+    "track": "system-design",
+    "module": "f8-observability",
+    "order": 11,
+    "title": "Observability dan SLO Budget",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 35,
+    "prereq": [
+      "system-design-keandalan-01"
+    ],
+    "objectives": [
+      "Membedakan log/metrik/trace",
+      "Menghitung error budget"
+    ],
+    "tags": [
+      "observability",
+      "slo"
+    ],
+    "hook": "Dokter butuh monitor jantung. Sistem butuh metrik.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 61,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-keamanan-01",
+    "track": "system-design",
+    "module": "f9-keamanan",
+    "order": 12,
+    "title": "Keamanan: AuthN/Z, OWASP, STRIDE",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "system-design-observability-01"
+    ],
+    "objectives": [
+      "Membandingkan JWT dan sesi",
+      "Melakukan threat modeling STRIDE"
+    ],
+    "tags": [
+      "security",
+      "owasp"
+    ],
+    "hook": "Pikir seperti penyerang untuk mendesain seperti pembela.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "system-design-kasus-lengkap-01",
+    "track": "system-design",
+    "module": "f10-kasus",
+    "order": 13,
+    "title": "8 Skenario Sistem Lengkap",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 60,
+    "prereq": [
+      "system-design-keamanan-01"
+    ],
+    "objectives": [
+      "Menyelesaikan skenario end-to-end",
+      "Menulis mini-ADR"
+    ],
+    "tags": [
+      "scenarios",
+      "interview"
+    ],
+    "hook": "Delapan sistem, delapan tantangan, satu kanvas.",
+    "components": [
+      "SDScenario",
+      "ProjectBrief"
+    ],
+    "xp": 105,
+    "srsCards": "auto"
+  },
+  {
+    "id": "arsitek-peran-01",
+    "track": "arsitek",
+    "module": "g1-peran",
+    "order": 1,
+    "title": "EA, Solution, dan Software Architect",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 25,
+    "prereq": [
+      "system-design-estimasi-01"
+    ],
+    "objectives": [
+      "Membedakan tiga peran arsitek",
+      "Memetakan jalur karier"
+    ],
+    "tags": [
+      "role",
+      "career"
+    ],
+    "hook": "Tiga topi arsitek: strategi, solusi, struktur.",
+    "components": [
+      "Quiz",
+      "Callout"
+    ],
+    "xp": 31,
+    "srsCards": "auto"
+  },
+  {
+    "id": "arsitek-c4-adr-01",
+    "track": "arsitek",
+    "module": "g2-pemodelan",
+    "order": 2,
+    "title": "C4 Model dan ADR",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "arsitek-peran-01"
+    ],
+    "objectives": [
+      "Menggambar C4 level 1–3",
+      "Menulis ADR"
+    ],
+    "tags": [
+      "c4",
+      "adr"
+    ],
+    "hook": "Peta zoom-in untuk sistemmu, plus buku harian keputusan.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "arsitek-gaya-arsitektur-01",
+    "track": "arsitek",
+    "module": "g3-gaya",
+    "order": 3,
+    "title": "Monolit, Microservices, Event-Driven, CQRS",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 40,
+    "prereq": [
+      "arsitek-c4-adr-01"
+    ],
+    "objectives": [
+      "Membandingkan gaya arsitektur",
+      "Menentukan kapan memecah monolit"
+    ],
+    "tags": [
+      "microservices",
+      "cqrs"
+    ],
+    "hook": "Jangan pecah monolit kalau belum sakit.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 60,
+    "srsCards": "auto"
+  },
+  {
+    "id": "arsitek-ddd-api-01",
+    "track": "arsitek",
+    "module": "g4-domain",
+    "order": 4,
+    "title": "DDD dan Desain API",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "arsitek-gaya-arsitektur-01"
+    ],
+    "objectives": [
+      "Menetapkan bounded context",
+      "Mendesain kontrak OpenAPI"
+    ],
+    "tags": [
+      "ddd",
+      "openapi"
+    ],
+    "hook": "Bahasa bersama dengan bisnis: Ubiquitous Language.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "arsitek-nfr-tradeoff-01",
+    "track": "arsitek",
+    "module": "g5-nfr",
+    "order": 5,
+    "title": "Atribut Kualitas dan Trade-off",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "arsitek-ddd-api-01"
+    ],
+    "objectives": [
+      "Menuliskan NFR terukur",
+      "Menganalisis trade-off dengan ATAM"
+    ],
+    "tags": [
+      "nfr",
+      "atam"
+    ],
+    "hook": "Cepat, murah, aman: pilih dua, lalu jelaskan harganya.",
+    "components": [
+      "Quiz",
+      "Callout"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "arsitek-platform-rilis-01",
+    "track": "arsitek",
+    "module": "g6-platform",
+    "order": 6,
+    "title": "CI/CD, IaC, Container, Strategi Rilis",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 45,
+    "prereq": [
+      "arsitek-nfr-tradeoff-01"
+    ],
+    "objectives": [
+      "Membandingkan blue/green dan canary",
+      "Memahami 12-factor"
+    ],
+    "tags": [
+      "cicd",
+      "iac",
+      "k8s"
+    ],
+    "hook": "Rilis di hari Jumat tanpa keringat dingin.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 78,
+    "srsCards": "auto"
+  },
+  {
+    "id": "arsitek-cloud-finops-01",
+    "track": "arsitek",
+    "module": "g7-cloud",
+    "order": 7,
+    "title": "Cloud, Shared Responsibility, FinOps",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 35,
+    "prereq": [
+      "arsitek-platform-rilis-01"
+    ],
+    "objectives": [
+      "Menjelaskan shared responsibility",
+      "Menghitung biaya dasar"
+    ],
+    "tags": [
+      "cloud",
+      "finops"
+    ],
+    "hook": "Tagihan cloud juga bagian dari arsitektur.",
+    "components": [
+      "Quiz",
+      "Callout"
+    ],
+    "xp": 61,
+    "srsCards": "auto"
+  },
+  {
+    "id": "arsitek-kepemimpinan-01",
+    "track": "arsitek",
+    "module": "g8-kepemimpinan",
+    "order": 8,
+    "title": "Kepemimpinan Teknis",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 35,
+    "prereq": [
+      "arsitek-cloud-finops-01"
+    ],
+    "objectives": [
+      "Mengelola utang teknis",
+      "Memimpin design review"
+    ],
+    "tags": [
+      "leadership",
+      "techdebt"
+    ],
+    "hook": "Arsitek yang baik membuat tim lebih pintar.",
+    "components": [
+      "Quiz",
+      "Callout"
+    ],
+    "xp": 61,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ml-cv-matematika-01",
+    "track": "ml-cv",
+    "module": "h1-matematika",
+    "order": 1,
+    "title": "Matematika Terapan: Vektor, Probabilitas, Gradien",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 35,
+    "prereq": [
+      "python-pandas-matplotlib-01"
+    ],
+    "objectives": [
+      "Menghitung dot product & cosine",
+      "Memahami gradien"
+    ],
+    "tags": [
+      "math",
+      "vector"
+    ],
+    "hook": "Dua kalimat, seberapa mirip? Hitung dengan sudut vektor.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 43,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ml-cv-ml-klasik-01",
+    "track": "ml-cv",
+    "module": "h2-ml-klasik",
+    "order": 2,
+    "title": "ML Klasik dan Metrik",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 40,
+    "prereq": [
+      "ml-cv-matematika-01"
+    ],
+    "objectives": [
+      "Menghitung precision/recall",
+      "Mengenali overfitting"
+    ],
+    "tags": [
+      "ml",
+      "metrics"
+    ],
+    "hook": "Alarm kebakaran yang terlalu sensitif: precision atau recall?",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 60,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ml-cv-deep-learning-01",
+    "track": "ml-cv",
+    "module": "h3-deep-learning",
+    "order": 3,
+    "title": "Deep Learning: Neuron, CNN, Transfer Learning",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 45,
+    "prereq": [
+      "ml-cv-ml-klasik-01"
+    ],
+    "objectives": [
+      "Menghitung softmax",
+      "Menjelaskan CNN dan transfer learning"
+    ],
+    "tags": [
+      "dl",
+      "cnn"
+    ],
+    "hook": "Neuron buatan: tebakan yang belajar dari salah.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 78,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ml-cv-cv-dasar-01",
+    "track": "ml-cv",
+    "module": "h4-computer-vision",
+    "order": 4,
+    "title": "Computer Vision: Gambar dan Kernel",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 40,
+    "prereq": [
+      "ml-cv-deep-learning-01"
+    ],
+    "objectives": [
+      "Menerapkan kernel konvolusi",
+      "Menjelaskan deteksi tepi"
+    ],
+    "tags": [
+      "cv",
+      "kernel"
+    ],
+    "hook": "Gambar hanyalah angka. Sobel mengubahnya jadi sketsa.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 60,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ml-cv-cv-deteksi-01",
+    "track": "ml-cv",
+    "module": "h4-computer-vision",
+    "order": 5,
+    "title": "Deteksi Objek, Segmentasi, OCR",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 45,
+    "prereq": [
+      "ml-cv-cv-dasar-01"
+    ],
+    "objectives": [
+      "Menghitung IoU",
+      "Menjelaskan NMS"
+    ],
+    "tags": [
+      "cv",
+      "yolo",
+      "iou"
+    ],
+    "hook": "Seberapa pas kotak tebakanmu? Ukur dengan IoU.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 78,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ml-cv-mlops-onnx-01",
+    "track": "ml-cv",
+    "module": "h5-mlops",
+    "order": 6,
+    "title": "MLOps: ONNX, Kuantisasi, Drift",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 40,
+    "prereq": [
+      "ml-cv-cv-deteksi-01"
+    ],
+    "objectives": [
+      "Mengekspor ke ONNX",
+      "Menjelaskan kuantisasi dan drift"
+    ],
+    "tags": [
+      "mlops",
+      "onnx"
+    ],
+    "hook": "Latih di laptop, jalankan di browser teman.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 70,
+    "srsCards": "auto"
+  },
+  {
+    "id": "interview-alur-01",
+    "track": "interview",
+    "module": "i1-interview",
+    "order": 1,
+    "title": "Alur Interview Coding dan System Design",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 25,
+    "prereq": [
+      "dsa-live-coding-01"
+    ],
+    "objectives": [
+      "Menyusun fase interview",
+      "Memahami rubrik umum"
+    ],
+    "tags": [
+      "interview",
+      "rubric"
+    ],
+    "hook": "Interview adalah permainan dengan aturan. Hafalkan aturannya.",
+    "components": [
+      "Quiz",
+      "Playground"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "interview-behavioral-01",
+    "track": "interview",
+    "module": "i2-behavioral",
+    "order": 2,
+    "title": "Behavioral STAR dan Negosiasi",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 25,
+    "prereq": [
+      "interview-alur-01"
+    ],
+    "objectives": [
+      "Menyusun cerita STAR",
+      "Berkomunikasi trade-off"
+    ],
+    "tags": [
+      "behavioral",
+      "star"
+    ],
+    "hook": "Ceritakan kegagalanmu dengan bangga.",
+    "components": [
+      "Quiz",
+      "Callout"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "interview-simulasi-01",
+    "track": "interview",
+    "module": "i3-simulasi",
+    "order": 3,
+    "title": "Simulasi Penuh Berwaktu",
+    "level": "advanced",
+    "tier": 4,
+    "tierName": "expert",
+    "estMinutes": 60,
+    "prereq": [
+      "interview-behavioral-01"
+    ],
+    "objectives": [
+      "Menyelesaikan interview 45–60 menit",
+      "Menerima umpan balik terstruktur"
+    ],
+    "tags": [
+      "simulation"
+    ],
+    "hook": "Boss terakhir: timer berjalan, penonton diam.",
+    "components": [
+      "SDScenario",
+      "ProjectBrief"
+    ],
+    "xp": 105,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ui-ux-visual-01",
+    "track": "ui-ux",
+    "module": "j1-visual",
+    "order": 1,
+    "title": "Prinsip Visual: Hierarki, Grid, Warna, Kontras",
+    "level": "beginner",
+    "tier": 1,
+    "tierName": "beginner",
+    "estMinutes": 30,
+    "prereq": [],
+    "objectives": [
+      "Menerapkan grid 4/8pt",
+      "Menghitung rasio kontras WCAG"
+    ],
+    "tags": [
+      "ui",
+      "visual",
+      "wcag"
+    ],
+    "hook": "Kenapa tombol itu tak terlihat? Salahkan kontras.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 30,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ui-ux-interaksi-01",
+    "track": "ui-ux",
+    "module": "j2-interaksi",
+    "order": 2,
+    "title": "Desain Interaksi dan State UI",
+    "level": "intermediate",
+    "tier": 2,
+    "tierName": "intermediate",
+    "estMinutes": 30,
+    "prereq": [
+      "ui-ux-visual-01"
+    ],
+    "objectives": [
+      "Merancang loading/empty/error",
+      "Menulis microcopy"
+    ],
+    "tags": [
+      "ux",
+      "state"
+    ],
+    "hook": "Layar kosong bukan layar jelek, hanya belum dirancang.",
+    "components": [
+      "Quiz",
+      "Callout"
+    ],
+    "xp": 37,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ui-ux-sistem-desain-01",
+    "track": "ui-ux",
+    "module": "j3-sistem-desain",
+    "order": 3,
+    "title": "Design Tokens dan Komponen",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 30,
+    "prereq": [
+      "ui-ux-interaksi-01"
+    ],
+    "objectives": [
+      "Mendefinisikan tokens",
+      "Menyusun varian komponen"
+    ],
+    "tags": [
+      "ds",
+      "tokens"
+    ],
+    "hook": "Satu sumber kebenaran untuk semua pixel.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 45,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ui-ux-figma-01",
+    "track": "ui-ux",
+    "module": "j4-figma",
+    "order": 4,
+    "title": "Rancang di Figma",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "ui-ux-sistem-desain-01"
+    ],
+    "objectives": [
+      "Memakai auto layout dan komponen",
+      "Menyiapkan handoff"
+    ],
+    "tags": [
+      "figma"
+    ],
+    "hook": "Prototipe klik-klik sebelum satu baris kode ditulis.",
+    "components": [
+      "Quiz",
+      "Callout"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ui-ux-platform-01",
+    "track": "ui-ux",
+    "module": "j5-platform",
+    "order": 5,
+    "title": "Material 3 vs HIG, Adaptif, Dark Mode",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 30,
+    "prereq": [
+      "ui-ux-figma-01"
+    ],
+    "objectives": [
+      "Membandingkan M3 dan HIG",
+      "Mengatur lokalisasi ID vs EN"
+    ],
+    "tags": [
+      "m3",
+      "hig",
+      "i18n"
+    ],
+    "hook": "Satu desain, dua kebiasaan platform.",
+    "components": [
+      "Diagram",
+      "Quiz"
+    ],
+    "xp": 45,
+    "srsCards": "auto"
+  },
+  {
+    "id": "ui-ux-evaluasi-01",
+    "track": "ui-ux",
+    "module": "j6-evaluasi",
+    "order": 6,
+    "title": "Uji Kegunaan dan Aksesibilitas",
+    "level": "advanced",
+    "tier": 3,
+    "tierName": "advanced",
+    "estMinutes": 35,
+    "prereq": [
+      "ui-ux-platform-01"
+    ],
+    "objectives": [
+      "Menghitung skor SUS",
+      "Memakai heuristik Nielsen"
+    ],
+    "tags": [
+      "usability",
+      "heuristics"
+    ],
+    "hook": "Lima pengguna pertama menemukan 85% masalah.",
+    "components": [
+      "CodeExercise",
+      "Quiz"
+    ],
+    "xp": 52,
+    "srsCards": "auto"
+  }
+]

@@ -1,0 +1,966 @@
+[
+  {
+    "id": "url-shortener",
+    "order": 1,
+    "tier": 2,
+    "level": "intermediate",
+    "title": "URL Shortener",
+    "story": "Warung digital Pak Budi butuh tautan pendek untuk dibagikan di WhatsApp.",
+    "functional": [
+      "Membuat tautan pendek dari URL panjang",
+      "Redirect cepat",
+      "Opsional: kedaluwarsa & alias kustom"
+    ],
+    "nonFunctional": {
+      "availability": "99.9%",
+      "latencyRedirectP95Ms": 100,
+      "readWriteRatio": "100:1"
+    },
+    "trafficProfile": [
+      {
+        "type": "constant",
+        "rps": 500,
+        "seconds": 60
+      },
+      {
+        "type": "spike",
+        "rps": 5000,
+        "seconds": 30,
+        "note": "tautan viral"
+      }
+    ],
+    "estimation": {
+      "writesPerDay": "10 juta",
+      "readsPerDay": "1 miliar",
+      "keyLength": "7 karakter base62 (3,5 triliun kombinasi)",
+      "storage5y": "≈ 18 TB"
+    },
+    "components": [
+      "Client",
+      "DNS",
+      "CDN",
+      "Load Balancer",
+      "API Server",
+      "Cache",
+      "DB Primary",
+      "DB Replica",
+      "Queue",
+      "Worker",
+      "Object Storage",
+      "Rate Limiter",
+      "API Gateway"
+    ],
+    "rubric": [
+      {
+        "criterion": "Kebutuhan fungsional terpenuhi",
+        "weight": 15
+      },
+      {
+        "criterion": "Skalabilitas pada target RPS",
+        "weight": 20
+      },
+      {
+        "criterion": "Tidak ada SPOF di jalur kritis",
+        "weight": 15
+      },
+      {
+        "criterion": "Strategi caching/partisi tepat",
+        "weight": 15
+      },
+      {
+        "criterion": "Penanganan kegagalan",
+        "weight": 10
+      },
+      {
+        "criterion": "Biaya wajar",
+        "weight": 5
+      },
+      {
+        "criterion": "Kualitas alasan di mini-ADR",
+        "weight": 10
+      },
+      {
+        "criterion": "Generator ID unik tanpa tabrakan",
+        "weight": 10
+      }
+    ],
+    "failureInjections": [
+      "Matikan satu API server",
+      "Cache dingin (cold start) setelah deploy",
+      "Lonjakan trafik ×10"
+    ],
+    "referenceSolution": "LB → API (stateless) → cache (hot keys) → DB (key-value). ID dari counter terdistribusi/range per instans.",
+    "tradeoffs": [
+      "Counter vs hash: counter menghindari tabrakan, hash butuh penanganan tabrakan",
+      "301 vs 302: cache browser vs analitik"
+    ],
+    "interviewFlow": [
+      {
+        "phase": "Klarifikasi kebutuhan",
+        "minutes": 5
+      },
+      {
+        "phase": "Estimasi kapasitas",
+        "minutes": 5
+      },
+      {
+        "phase": "Rancang di kanvas",
+        "minutes": 15
+      },
+      {
+        "phase": "Simulasi & injeksi kegagalan",
+        "minutes": 10
+      },
+      {
+        "phase": "Mini-ADR & trade-off",
+        "minutes": 10
+      }
+    ],
+    "twists": [
+      "Bagaimana mencegah penyalahgunaan (spam/phishing)?",
+      "Bagaimana analitik klik tanpa memperlambat redirect?"
+    ],
+    "seed": 1001
+  },
+  {
+    "id": "rate-limiter",
+    "order": 2,
+    "tier": 3,
+    "level": "advanced",
+    "title": "Rate Limiter",
+    "story": "API publik kena scraping; lindungi layanan tanpa mengganggu pengguna sah.",
+    "functional": [
+      "Batasi request per pengguna/IP/kunci API",
+      "Balas 429 + header Retry-After",
+      "Aturan berbeda per endpoint"
+    ],
+    "nonFunctional": {
+      "addedLatencyMs": 5,
+      "availability": "99.99%",
+      "consistency": "longgar diperbolehkan"
+    },
+    "trafficProfile": [
+      {
+        "type": "ramp",
+        "from_rps": 100,
+        "to_rps": 10000,
+        "seconds": 120
+      },
+      {
+        "type": "spike",
+        "rps": 50000,
+        "seconds": 10,
+        "note": "serangan"
+      }
+    ],
+    "estimation": {
+      "clients": "10 juta",
+      "memoryPerCounter": "≈ 64 B",
+      "counterStorage": "≈ 640 MB"
+    },
+    "components": [
+      "Client",
+      "DNS",
+      "CDN",
+      "Load Balancer",
+      "API Server",
+      "Cache",
+      "DB Primary",
+      "DB Replica",
+      "Queue",
+      "Worker",
+      "Object Storage",
+      "Rate Limiter",
+      "API Gateway"
+    ],
+    "rubric": [
+      {
+        "criterion": "Kebutuhan fungsional terpenuhi",
+        "weight": 15
+      },
+      {
+        "criterion": "Skalabilitas pada target RPS",
+        "weight": 20
+      },
+      {
+        "criterion": "Tidak ada SPOF di jalur kritis",
+        "weight": 15
+      },
+      {
+        "criterion": "Strategi caching/partisi tepat",
+        "weight": 15
+      },
+      {
+        "criterion": "Penanganan kegagalan",
+        "weight": 10
+      },
+      {
+        "criterion": "Biaya wajar",
+        "weight": 5
+      },
+      {
+        "criterion": "Kualitas alasan di mini-ADR",
+        "weight": 10
+      },
+      {
+        "criterion": "Pemilihan algoritma (token bucket / sliding window)",
+        "weight": 10
+      }
+    ],
+    "failureInjections": [
+      "Redis counter mati (fail-open vs fail-closed)",
+      "Jam antar-node tidak sinkron",
+      "Hot key satu klien"
+    ],
+    "referenceSolution": "Limiter di gateway dengan token bucket terdistribusi di Redis (skrip Lua atomik), fallback lokal bila Redis mati.",
+    "tradeoffs": [
+      "Akurasi vs latensi (sinkron ke Redis tiap request vs batching)",
+      "Fail-open menjaga ketersediaan, fail-closed menjaga perlindungan"
+    ],
+    "interviewFlow": [
+      {
+        "phase": "Klarifikasi kebutuhan",
+        "minutes": 5
+      },
+      {
+        "phase": "Estimasi kapasitas",
+        "minutes": 5
+      },
+      {
+        "phase": "Rancang di kanvas",
+        "minutes": 15
+      },
+      {
+        "phase": "Simulasi & injeksi kegagalan",
+        "minutes": 10
+      },
+      {
+        "phase": "Mini-ADR & trade-off",
+        "minutes": 10
+      }
+    ],
+    "twists": [
+      "Bagaimana limit per-region tanpa koordinasi global?",
+      "Bagaimana mengizinkan burst sambil menjaga rata-rata?"
+    ],
+    "seed": 1002
+  },
+  {
+    "id": "chat-1-1",
+    "order": 3,
+    "tier": 3,
+    "level": "advanced",
+    "title": "Chat 1-ke-1 (WebSocket)",
+    "story": "Aplikasi pesan untuk komunitas ojek lokal.",
+    "functional": [
+      "Kirim/terima pesan real-time",
+      "Status terkirim/dibaca",
+      "Riwayat pesan",
+      "Offline → pesan menunggu"
+    ],
+    "nonFunctional": {
+      "deliveryLatencyP95Ms": 300,
+      "ordering": "per percakapan",
+      "durability": "tidak boleh hilang"
+    },
+    "trafficProfile": [
+      {
+        "type": "constant",
+        "connections": 1000000,
+        "msgPerSecond": 20000
+      },
+      {
+        "type": "spike",
+        "msgPerSecond": 100000,
+        "note": "momen viral"
+      }
+    ],
+    "estimation": {
+      "concurrentConnections": "1 juta",
+      "serverCapacity": "≈ 50 rb koneksi/server → 20 server+"
+    },
+    "components": [
+      "Client",
+      "DNS",
+      "CDN",
+      "Load Balancer",
+      "API Server",
+      "Cache",
+      "DB Primary",
+      "DB Replica",
+      "Queue",
+      "Worker",
+      "Object Storage",
+      "Rate Limiter",
+      "API Gateway"
+    ],
+    "rubric": [
+      {
+        "criterion": "Kebutuhan fungsional terpenuhi",
+        "weight": 15
+      },
+      {
+        "criterion": "Skalabilitas pada target RPS",
+        "weight": 20
+      },
+      {
+        "criterion": "Tidak ada SPOF di jalur kritis",
+        "weight": 15
+      },
+      {
+        "criterion": "Strategi caching/partisi tepat",
+        "weight": 15
+      },
+      {
+        "criterion": "Penanganan kegagalan",
+        "weight": 10
+      },
+      {
+        "criterion": "Biaya wajar",
+        "weight": 5
+      },
+      {
+        "criterion": "Kualitas alasan di mini-ADR",
+        "weight": 10
+      },
+      {
+        "criterion": "Urutan pesan & ID unik per percakapan",
+        "weight": 10
+      }
+    ],
+    "failureInjections": [
+      "Gateway WebSocket restart (reconnect storm)",
+      "Partisi jaringan antar-region",
+      "Antrean pesan menumpuk"
+    ],
+    "referenceSolution": "Gateway WebSocket stateless + registry koneksi; pesan lewat queue ke penyimpanan append-only per percakapan; push notif untuk offline.",
+    "tradeoffs": [
+      "Fan-out sederhana pada 1-ke-1, tetapi grup butuh strategi lain",
+      "Sticky session vs registry koneksi"
+    ],
+    "interviewFlow": [
+      {
+        "phase": "Klarifikasi kebutuhan",
+        "minutes": 5
+      },
+      {
+        "phase": "Estimasi kapasitas",
+        "minutes": 5
+      },
+      {
+        "phase": "Rancang di kanvas",
+        "minutes": 15
+      },
+      {
+        "phase": "Simulasi & injeksi kegagalan",
+        "minutes": 10
+      },
+      {
+        "phase": "Mini-ADR & trade-off",
+        "minutes": 10
+      }
+    ],
+    "twists": [
+      "Bagaimana skala ke chat grup 10 ribu anggota?",
+      "Bagaimana end-to-end encryption mengubah desain?"
+    ],
+    "seed": 1003
+  },
+  {
+    "id": "news-feed",
+    "order": 4,
+    "tier": 3,
+    "level": "advanced",
+    "title": "News Feed",
+    "story": "Linimasa untuk komunitas hobi: ikuti orang, lihat kiriman terbaru.",
+    "functional": [
+      "Posting",
+      "Ikuti pengguna",
+      "Lihat feed berurut waktu/relevansi"
+    ],
+    "nonFunctional": {
+      "feedLoadP95Ms": 300,
+      "freshnessSeconds": 10,
+      "readWriteRatio": "100:1"
+    },
+    "trafficProfile": [
+      {
+        "type": "constant",
+        "rps": 20000
+      },
+      {
+        "type": "spike",
+        "rps": 100000,
+        "note": "selebritas posting"
+      }
+    ],
+    "estimation": {
+      "dau": "50 juta",
+      "avgFollowers": 200,
+      "celebrityFollowers": "10 juta"
+    },
+    "components": [
+      "Client",
+      "DNS",
+      "CDN",
+      "Load Balancer",
+      "API Server",
+      "Cache",
+      "DB Primary",
+      "DB Replica",
+      "Queue",
+      "Worker",
+      "Object Storage",
+      "Rate Limiter",
+      "API Gateway"
+    ],
+    "rubric": [
+      {
+        "criterion": "Kebutuhan fungsional terpenuhi",
+        "weight": 15
+      },
+      {
+        "criterion": "Skalabilitas pada target RPS",
+        "weight": 20
+      },
+      {
+        "criterion": "Tidak ada SPOF di jalur kritis",
+        "weight": 15
+      },
+      {
+        "criterion": "Strategi caching/partisi tepat",
+        "weight": 15
+      },
+      {
+        "criterion": "Penanganan kegagalan",
+        "weight": 10
+      },
+      {
+        "criterion": "Biaya wajar",
+        "weight": 5
+      },
+      {
+        "criterion": "Kualitas alasan di mini-ADR",
+        "weight": 10
+      },
+      {
+        "criterion": "Strategi fan-out (write vs read vs hybrid)",
+        "weight": 15
+      }
+    ],
+    "failureInjections": [
+      "Selebritas dengan 10 juta pengikut memposting",
+      "Cache feed hilang",
+      "Queue fan-out tertinggal"
+    ],
+    "referenceSolution": "Hybrid: fan-out on write untuk pengguna biasa, fan-out on read untuk selebritas; cache feed per pengguna.",
+    "tradeoffs": [
+      "Fan-out on write: baca cepat, tulis mahal; on read: kebalikannya",
+      "Ranking real-time vs prakomputasi"
+    ],
+    "interviewFlow": [
+      {
+        "phase": "Klarifikasi kebutuhan",
+        "minutes": 5
+      },
+      {
+        "phase": "Estimasi kapasitas",
+        "minutes": 5
+      },
+      {
+        "phase": "Rancang di kanvas",
+        "minutes": 15
+      },
+      {
+        "phase": "Simulasi & injeksi kegagalan",
+        "minutes": 10
+      },
+      {
+        "phase": "Mini-ADR & trade-off",
+        "minutes": 10
+      }
+    ],
+    "twists": [
+      "Bagaimana menangani hapus/edit kiriman yang sudah tersebar?"
+    ],
+    "seed": 1004
+  },
+  {
+    "id": "file-sync",
+    "order": 5,
+    "tier": 4,
+    "level": "advanced",
+    "title": "File Storage & Sinkronisasi",
+    "story": "Sinkronisasi berkas antar perangkat seperti Dropbox untuk tim kecil.",
+    "functional": [
+      "Unggah/unduh berkas",
+      "Sinkron otomatis lintas perangkat",
+      "Versi & pemulihan",
+      "Berbagi"
+    ],
+    "nonFunctional": {
+      "durability": "99.999999999%",
+      "syncLatencySeconds": 5,
+      "bandwidth": "hemat (delta sync)"
+    },
+    "trafficProfile": [
+      {
+        "type": "constant",
+        "rps": 2000
+      },
+      {
+        "type": "spike",
+        "rps": 20000,
+        "note": "kantor mulai kerja pukul 09.00"
+      }
+    ],
+    "estimation": {
+      "users": "10 juta",
+      "avgStorage": "5 GB",
+      "total": "≈ 50 PB"
+    },
+    "components": [
+      "Client",
+      "DNS",
+      "CDN",
+      "Load Balancer",
+      "API Server",
+      "Cache",
+      "DB Primary",
+      "DB Replica",
+      "Queue",
+      "Worker",
+      "Object Storage",
+      "Rate Limiter",
+      "API Gateway"
+    ],
+    "rubric": [
+      {
+        "criterion": "Kebutuhan fungsional terpenuhi",
+        "weight": 15
+      },
+      {
+        "criterion": "Skalabilitas pada target RPS",
+        "weight": 20
+      },
+      {
+        "criterion": "Tidak ada SPOF di jalur kritis",
+        "weight": 15
+      },
+      {
+        "criterion": "Strategi caching/partisi tepat",
+        "weight": 15
+      },
+      {
+        "criterion": "Penanganan kegagalan",
+        "weight": 10
+      },
+      {
+        "criterion": "Biaya wajar",
+        "weight": 5
+      },
+      {
+        "criterion": "Kualitas alasan di mini-ADR",
+        "weight": 10
+      },
+      {
+        "criterion": "Chunking + deduplikasi + delta sync",
+        "weight": 15
+      }
+    ],
+    "failureInjections": [
+      "Konflik edit di dua perangkat",
+      "Node object storage hilang",
+      "Unggah terputus di tengah"
+    ],
+    "referenceSolution": "Klien memecah berkas jadi chunk berhash; metadata di DB, chunk di object storage; notifikasi perubahan lewat long-poll/WebSocket.",
+    "tradeoffs": [
+      "Chunk kecil: dedup lebih baik, metadata lebih besar",
+      "Last-write-wins vs merge manual"
+    ],
+    "interviewFlow": [
+      {
+        "phase": "Klarifikasi kebutuhan",
+        "minutes": 5
+      },
+      {
+        "phase": "Estimasi kapasitas",
+        "minutes": 5
+      },
+      {
+        "phase": "Rancang di kanvas",
+        "minutes": 15
+      },
+      {
+        "phase": "Simulasi & injeksi kegagalan",
+        "minutes": 10
+      },
+      {
+        "phase": "Mini-ADR & trade-off",
+        "minutes": 10
+      }
+    ],
+    "twists": [
+      "Bagaimana mengatasi berkas 50 GB?",
+      "Bagaimana dedup lintas pengguna tanpa membocorkan keberadaan berkas?"
+    ],
+    "seed": 1005
+  },
+  {
+    "id": "ticketing",
+    "order": 6,
+    "tier": 4,
+    "level": "advanced",
+    "title": "Tiket Konser",
+    "story": "Penjualan tiket 50.000 kursi yang ludes dalam 2 menit.",
+    "functional": [
+      "Lihat kursi",
+      "Tahan kursi sementara",
+      "Bayar",
+      "Tidak boleh double booking"
+    ],
+    "nonFunctional": {
+      "consistency": "kuat untuk kursi",
+      "fairness": "antre adil",
+      "availability": "99.95%"
+    },
+    "trafficProfile": [
+      {
+        "type": "spike",
+        "rps": 200000,
+        "seconds": 120,
+        "note": "pembukaan penjualan"
+      }
+    ],
+    "estimation": {
+      "seats": 50000,
+      "concurrentBuyers": "1 juta",
+      "holdTtlMinutes": 10
+    },
+    "components": [
+      "Client",
+      "DNS",
+      "CDN",
+      "Load Balancer",
+      "API Server",
+      "Cache",
+      "DB Primary",
+      "DB Replica",
+      "Queue",
+      "Worker",
+      "Object Storage",
+      "Rate Limiter",
+      "API Gateway"
+    ],
+    "rubric": [
+      {
+        "criterion": "Kebutuhan fungsional terpenuhi",
+        "weight": 15
+      },
+      {
+        "criterion": "Skalabilitas pada target RPS",
+        "weight": 20
+      },
+      {
+        "criterion": "Tidak ada SPOF di jalur kritis",
+        "weight": 15
+      },
+      {
+        "criterion": "Strategi caching/partisi tepat",
+        "weight": 15
+      },
+      {
+        "criterion": "Penanganan kegagalan",
+        "weight": 10
+      },
+      {
+        "criterion": "Biaya wajar",
+        "weight": 5
+      },
+      {
+        "criterion": "Kualitas alasan di mini-ADR",
+        "weight": 10
+      },
+      {
+        "criterion": "Mencegah double booking (lock/optimistic/queue)",
+        "weight": 20
+      }
+    ],
+    "failureInjections": [
+      "Pembayaran gagal setelah kursi ditahan",
+      "Lonjakan membanjiri DB",
+      "Bot memborong tiket"
+    ],
+    "referenceSolution": "Waiting room antrean virtual → layanan reservasi dengan lock kursi bertenggat (TTL) di DB/Redis → pembayaran idempoten → rilis kursi saat TTL habis.",
+    "tradeoffs": [
+      "Pessimistic lock menjaga kebenaran tetapi membatasi throughput",
+      "Antrean adil vs eksploitasi bot"
+    ],
+    "interviewFlow": [
+      {
+        "phase": "Klarifikasi kebutuhan",
+        "minutes": 5
+      },
+      {
+        "phase": "Estimasi kapasitas",
+        "minutes": 5
+      },
+      {
+        "phase": "Rancang di kanvas",
+        "minutes": 15
+      },
+      {
+        "phase": "Simulasi & injeksi kegagalan",
+        "minutes": 10
+      },
+      {
+        "phase": "Mini-ADR & trade-off",
+        "minutes": 10
+      }
+    ],
+    "twists": [
+      "Bagaimana menjual kursi per kategori dengan harga dinamis?"
+    ],
+    "seed": 1006
+  },
+  {
+    "id": "payments",
+    "order": 7,
+    "tier": 4,
+    "level": "advanced",
+    "title": "Sistem Pembayaran",
+    "story": "Dompet digital untuk UMKM: transfer antar akun tanpa uang hilang.",
+    "functional": [
+      "Transfer antar akun",
+      "Riwayat transaksi",
+      "Rekonsiliasi",
+      "Webhook ke merchant"
+    ],
+    "nonFunctional": {
+      "consistency": "kuat",
+      "durability": "tidak boleh hilang",
+      "auditability": "penuh",
+      "availability": "99.99%"
+    },
+    "trafficProfile": [
+      {
+        "type": "constant",
+        "rps": 3000
+      },
+      {
+        "type": "spike",
+        "rps": 15000,
+        "note": "promo gajian"
+      }
+    ],
+    "estimation": {
+      "txPerDay": "50 juta",
+      "peakTps": "≈ 3.000"
+    },
+    "components": [
+      "Client",
+      "DNS",
+      "CDN",
+      "Load Balancer",
+      "API Server",
+      "Cache",
+      "DB Primary",
+      "DB Replica",
+      "Queue",
+      "Worker",
+      "Object Storage",
+      "Rate Limiter",
+      "API Gateway"
+    ],
+    "rubric": [
+      {
+        "criterion": "Kebutuhan fungsional terpenuhi",
+        "weight": 15
+      },
+      {
+        "criterion": "Skalabilitas pada target RPS",
+        "weight": 20
+      },
+      {
+        "criterion": "Tidak ada SPOF di jalur kritis",
+        "weight": 15
+      },
+      {
+        "criterion": "Strategi caching/partisi tepat",
+        "weight": 15
+      },
+      {
+        "criterion": "Penanganan kegagalan",
+        "weight": 10
+      },
+      {
+        "criterion": "Biaya wajar",
+        "weight": 5
+      },
+      {
+        "criterion": "Kualitas alasan di mini-ADR",
+        "weight": 10
+      },
+      {
+        "criterion": "Idempotensi & ledger double-entry",
+        "weight": 20
+      }
+    ],
+    "failureInjections": [
+      "Retry dari klien setelah timeout",
+      "Primary DB failover di tengah transaksi",
+      "Webhook merchant down"
+    ],
+    "referenceSolution": "Ledger double-entry append-only di DB ACID, idempotency key per permintaan, outbox untuk event/webhook, rekonsiliasi harian.",
+    "tradeoffs": [
+      "Konsistensi kuat membatasi sharding lintas akun",
+      "Saga vs transaksi terdistribusi"
+    ],
+    "interviewFlow": [
+      {
+        "phase": "Klarifikasi kebutuhan",
+        "minutes": 5
+      },
+      {
+        "phase": "Estimasi kapasitas",
+        "minutes": 5
+      },
+      {
+        "phase": "Rancang di kanvas",
+        "minutes": 15
+      },
+      {
+        "phase": "Simulasi & injeksi kegagalan",
+        "minutes": 10
+      },
+      {
+        "phase": "Mini-ADR & trade-off",
+        "minutes": 10
+      }
+    ],
+    "twists": [
+      "Bagaimana transfer antar-bank dengan partner yang tak idempoten?"
+    ],
+    "seed": 1007
+  },
+  {
+    "id": "video-pipeline",
+    "order": 8,
+    "tier": 4,
+    "level": "advanced",
+    "title": "Video Streaming / Pipeline Clip",
+    "story": "Platform unggah video panjang yang otomatis dipotong menjadi klip pendek (clipper) dan di-stream.",
+    "functional": [
+      "Unggah video",
+      "Transcoding multi-resolusi",
+      "Potong klip otomatis",
+      "Streaming adaptif"
+    ],
+    "nonFunctional": {
+      "startupTimeSeconds": 2,
+      "processingThroughput": "paralel",
+      "cost": "dioptimalkan"
+    },
+    "trafficProfile": [
+      {
+        "type": "constant",
+        "uploadsPerMinute": 200
+      },
+      {
+        "type": "spike",
+        "uploadsPerMinute": 2000,
+        "note": "acara live selesai"
+      }
+    ],
+    "estimation": {
+      "uploadsPerDay": "100 rb",
+      "avgLengthMin": 60,
+      "storagePerDay": "≈ 50 TB"
+    },
+    "components": [
+      "Client",
+      "DNS",
+      "CDN",
+      "Load Balancer",
+      "API Server",
+      "Cache",
+      "DB Primary",
+      "DB Replica",
+      "Queue",
+      "Worker",
+      "Object Storage",
+      "Rate Limiter",
+      "API Gateway"
+    ],
+    "rubric": [
+      {
+        "criterion": "Kebutuhan fungsional terpenuhi",
+        "weight": 15
+      },
+      {
+        "criterion": "Skalabilitas pada target RPS",
+        "weight": 20
+      },
+      {
+        "criterion": "Tidak ada SPOF di jalur kritis",
+        "weight": 15
+      },
+      {
+        "criterion": "Strategi caching/partisi tepat",
+        "weight": 15
+      },
+      {
+        "criterion": "Penanganan kegagalan",
+        "weight": 10
+      },
+      {
+        "criterion": "Biaya wajar",
+        "weight": 5
+      },
+      {
+        "criterion": "Kualitas alasan di mini-ADR",
+        "weight": 10
+      },
+      {
+        "criterion": "Pipeline asinkron & pemecahan pekerjaan (chunk)",
+        "weight": 15
+      }
+    ],
+    "failureInjections": [
+      "Worker transcoding mati di tengah",
+      "Antrean menumpuk",
+      "CDN origin overload"
+    ],
+    "referenceSolution": "Unggah langsung ke object storage → event ke queue → worker transcoding paralel per segmen → manifest HLS/DASH → CDN; job clip terpisah.",
+    "tradeoffs": [
+      "Transcoding on-demand vs prakomputasi",
+      "Biaya GPU vs CPU vs waktu tunggu"
+    ],
+    "interviewFlow": [
+      {
+        "phase": "Klarifikasi kebutuhan",
+        "minutes": 5
+      },
+      {
+        "phase": "Estimasi kapasitas",
+        "minutes": 5
+      },
+      {
+        "phase": "Rancang di kanvas",
+        "minutes": 15
+      },
+      {
+        "phase": "Simulasi & injeksi kegagalan",
+        "minutes": 10
+      },
+      {
+        "phase": "Mini-ADR & trade-off",
+        "minutes": 10
+      }
+    ],
+    "twists": [
+      "Bagaimana prioritas job untuk pengguna berbayar?"
+    ],
+    "seed": 1008
+  }
+]

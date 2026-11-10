@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grad-bg:
+    radial-gradient(60% 45% at 0% 35%, #F67455 0%, #C54E34 35%, transparent 70%),
+    radial-gradient(55% 50% at 100% 100%, #7B230F 0%, rgba(123,35,15,.55) 40%, transparent 75%),
+    radial-gradient(35% 30% at 0% 0%, #613A13 0%, transparent 70%),
+    radial-gradient(30% 25% at 55% 0%, rgba(255,255,255,.14) 0%, transparent 70%),
+    #0A0804;
+
+  --grad-accent: linear-gradient(100deg, #E7803D 0%, #EEA66A 100%);
+  --grad-accent-btn: linear-gradient(135deg, #F28A3E 0%, #E3691A 100%);
+  --grad-glass-stroke: linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,.04) 60%);
+  --grad-chat-glow:
+    radial-gradient(70% 60% at 70% 100%, #FCEEE3 0%, rgba(252,238,227,0) 70%),
+    #FFFFFF;
+  --grad-scrim: linear-gradient(180deg, rgba(10,8,4,0) 0%, rgba(10,8,4,.55) 100%);
+  --grad-fade-white: linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 85%);
+  --grad-progress: linear-gradient(90deg, #EE833A 0%, #F67455 100%);
+
+  --glass-fill: rgba(255, 255, 255, 0.09);
+  --glass-fill-strong: rgba(255, 255, 255, 0.14);
+  --glass-stroke: rgba(255, 255, 255, 0.12);
+  --glass-active: rgba(238, 131, 58, 0.30);
+  --on-glass: #FFFDF5;
+  --on-glass-muted: rgba(255, 255, 255, 0.65);
+}
+
+body {
+  color: #0A0A0A;
+  background: #0A0804;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-app-backdrop {
+  background: var(--grad-bg);
+  background-attachment: fixed;
+}
+
+.glass-shell {
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
+  backdrop-filter: blur(28px) saturate(140%);
+  border: 1px solid var(--glass-stroke);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 40px 120px -24px rgba(0, 0, 0, 0.7);
+}
+
+.glass-sidebar {
+  background: rgba(20, 18, 16, 0.55);
+  -webkit-backdrop-filter: blur(24px) saturate(130%);
+  backdrop-filter: blur(24px) saturate(130%);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-item-active {
+  background: var(--glass-active);
+  border: 1px solid rgba(238, 131, 58, 0.4);
+  color: #FFFDF5;
+}
+
+.chat-glow {
+  background: var(--grad-chat-glow);
+  position: relative;
+}
+
+.chat-glow::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 55%;
+  background: repeating-linear-gradient(90deg, rgba(238, 131, 58, 0.08) 0 1px, transparent 1px 6px);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 90%);
+  mask-image: linear-gradient(180deg, transparent, #000 90%);
+  pointer-events: none;
+}
+
+/* Custom scrollbar for sleek modern look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.3);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(238, 131, 58, 0.6);
+}
+
+/* Tabular numbers for timer and metrics */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Dot grid for System Design canvas */
+.canvas-dot-grid {
+  background-color: #FFFFFF;
+  background-image: radial-gradient(#E2E2E0 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+

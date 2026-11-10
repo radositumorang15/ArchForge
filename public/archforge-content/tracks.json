@@ -1,0 +1,103 @@
+[
+  {
+    "id": "fondasi",
+    "code": "0",
+    "order": 0,
+    "title": "Fondasi Komputasi",
+    "description": "Peta dunia sebelum menulis kode: CPU, memori, data, terminal, jaringan.",
+    "languages": []
+  },
+  {
+    "id": "python",
+    "code": "A",
+    "order": 1,
+    "title": "Python: Dari Nol ke Data/ML",
+    "description": "Bahasa pertama yang ramah: dari variabel sampai numpy/pandas.",
+    "languages": [
+      "python"
+    ]
+  },
+  {
+    "id": "rust",
+    "code": "B",
+    "order": 2,
+    "title": "Rust: Dari Nol ke Sistem",
+    "description": "Ownership, konkurensi, web, WASM: bahasa sistem yang aman.",
+    "languages": [
+      "rust"
+    ]
+  },
+  {
+    "id": "kotlin",
+    "code": "C",
+    "order": 3,
+    "title": "Kotlin & Jetpack Compose",
+    "description": "Dari null safety, coroutines, sampai UI deklaratif Android.",
+    "languages": [
+      "kotlin"
+    ]
+  },
+  {
+    "id": "dart-flutter",
+    "code": "D",
+    "order": 4,
+    "title": "Dart & Flutter",
+    "description": "Satu codebase, UI lintas platform: dari widget tree sampai FFI Rust.",
+    "languages": [
+      "dart"
+    ]
+  },
+  {
+    "id": "dsa",
+    "code": "E",
+    "order": 5,
+    "title": "Struktur Data, Algoritma & Live Coding",
+    "description": "Dari Big-O sampai 15 pola soal dan teknik live coding.",
+    "languages": [
+      "python",
+      "rust"
+    ]
+  },
+  {
+    "id": "system-design",
+    "code": "F",
+    "order": 6,
+    "title": "System Design & Arsitektur IT",
+    "description": "Dari estimasi kapasitas sampai 8 skenario sistem nyata.",
+    "languages": []
+  },
+  {
+    "id": "arsitek",
+    "code": "G",
+    "order": 7,
+    "title": "Peran & Praktik Arsitek",
+    "description": "C4, ADR, DDD, trade-off, platform, sampai kepemimpinan teknis.",
+    "languages": []
+  },
+  {
+    "id": "ml-cv",
+    "code": "H",
+    "order": 8,
+    "title": "Machine Learning & Computer Vision",
+    "description": "Matematika, ML klasik, deep learning, CV, sampai ONNX di browser.",
+    "languages": [
+      "python"
+    ]
+  },
+  {
+    "id": "interview",
+    "code": "I",
+    "order": 9,
+    "title": "Persiapan Interview",
+    "description": "Alur, behavioral STAR, dan simulasi penuh berwaktu.",
+    "languages": []
+  },
+  {
+    "id": "ui-ux",
+    "code": "J",
+    "order": 10,
+    "title": "Desain UI/UX & Rancang Antarmuka",
+    "description": "Prinsip visual sampai evaluasi kegunaan; diimplementasi di Compose dan Flutter.",
+    "languages": []
+  }
+]

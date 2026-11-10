@@ -1,0 +1,74 @@
+[
+  {
+    "id": "first-run",
+    "name": "Run Pertama",
+    "description": "Jalankan kode pertamamu di browser",
+    "rule": "first_submission"
+  },
+  {
+    "id": "streak-7",
+    "name": "Api Tujuh Hari",
+    "description": "Belajar 7 hari berturut-turut",
+    "rule": "streak>=7"
+  },
+  {
+    "id": "streak-30",
+    "name": "Konsisten 30",
+    "description": "Streak 30 hari",
+    "rule": "streak>=30"
+  },
+  {
+    "id": "bug-hunter",
+    "name": "Pemburu Bug",
+    "description": "Lulus soal setelah ≥ 3 kali gagal",
+    "rule": "pass_after_3_fails"
+  },
+  {
+    "id": "borrow-checker-friend",
+    "name": "Sahabat Borrow Checker",
+    "description": "Selesaikan modul B2",
+    "rule": "module:b2-inti-rust"
+  },
+  {
+    "id": "pattern-master",
+    "name": "Master Pola",
+    "description": "Selesaikan 1 soal tiap 15 pola",
+    "rule": "dsa_patterns>=15"
+  },
+  {
+    "id": "sd-80",
+    "name": "Arsitek Muda",
+    "description": "Skor ≥ 80% pada 3 skenario SD",
+    "rule": "sd_score80>=3"
+  },
+  {
+    "id": "chaos-survivor",
+    "name": "Penyintas Chaos",
+    "description": "Sistemmu selamat dari 3 injeksi kegagalan",
+    "rule": "chaos>=3"
+  },
+  {
+    "id": "ui-twins",
+    "name": "Kembar UI",
+    "description": "Selesaikan proyek satu desain dua implementasi",
+    "rule": "project:ux-3-two-impl"
+  },
+  {
+    "id": "full-stack-polyglot",
+    "name": "Poliglot",
+    "description": "Selesaikan proyek di Python, Rust, Kotlin, dan Dart",
+    "rule": "projects_langs>=4"
+  },
+  {
+    "id": "interview-ready",
+    "name": "Siap Interview",
+    "description": "Selesaikan 3 simulasi penuh dengan skor baik",
+    "rule": "interviews>=3"
+  },
+  {
+    "id": "srs-100",
+    "name": "Ingatan Baja",
+    "description": "Tinjau 100 kartu SRS",
+    "rule": "reviews>=100"
+  }
+]

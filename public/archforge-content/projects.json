@@ -1,0 +1,848 @@
+[
+  {
+    "id": "py-1-cli-todo",
+    "track": "python",
+    "tier": 1,
+    "kind": "project",
+    "title": "CLI Todo + Penyimpanan JSON",
+    "brief": "Aplikasi todo lewat terminal dengan data tersimpan di file JSON.",
+    "acceptanceCriteria": [
+      "Perintah add/list/done/delete",
+      "Data bertahan antar sesi",
+      "Minimal 8 tes pytest"
+    ],
+    "rubric": [
+      "Struktur kode rapi",
+      "Penanganan error input",
+      "README jelas"
+    ],
+    "estHours": 6,
+    "stack": [
+      "python",
+      "pytest"
+    ],
+    "starterRepo": "archforge-starters/py-1-cli-todo",
+    "ci": "github-actions/template-python",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": false,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "py-2-scraper-pandas",
+    "track": "python",
+    "tier": 2,
+    "kind": "project",
+    "title": "Scraper + Analisis Data (pandas)",
+    "brief": "Ambil data publik, bersihkan, analisis, dan buat grafik.",
+    "acceptanceCriteria": [
+      "Mengambil ≥ 100 baris data legal",
+      "Pembersihan terdokumentasi",
+      "≥ 2 grafik dengan insight tertulis"
+    ],
+    "rubric": [
+      "Etika scraping (robots.txt, rate)",
+      "Reproduksibilitas",
+      "Kualitas insight"
+    ],
+    "estHours": 10,
+    "stack": [
+      "python",
+      "pandas",
+      "matplotlib"
+    ],
+    "starterRepo": "archforge-starters/py-2-scraper-pandas",
+    "ci": "github-actions/template-python",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "py-3-ml-pipeline",
+    "track": "python",
+    "tier": 3,
+    "kind": "project",
+    "title": "Mini-Pipeline Data/ML",
+    "brief": "Bersihkan data → latih model sederhana → laporan.",
+    "acceptanceCriteria": [
+      "Pipeline dapat dijalankan ulang",
+      "Metrik dengan validasi silang",
+      "Laporan satu halaman"
+    ],
+    "rubric": [
+      "Pemisahan train/test benar",
+      "Pemilihan metrik tepat",
+      "Analisis kesalahan"
+    ],
+    "estHours": 16,
+    "stack": [
+      "python",
+      "scikit-learn"
+    ],
+    "starterRepo": "archforge-starters/py-3-ml-pipeline",
+    "ci": "github-actions/template-python",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "rs-1-grep-mini",
+    "track": "rust",
+    "tier": 1,
+    "kind": "project",
+    "title": "CLI grep Mini",
+    "brief": "Cari pola teks di berkas seperti grep.",
+    "acceptanceCriteria": [
+      "Mencari substring di banyak berkas",
+      "Opsi -i dan -n",
+      "Tes unit & integrasi"
+    ],
+    "rubric": [
+      "Idiomatik (Result, iterator)",
+      "Tanpa unwrap sembarangan",
+      "Pesan error jelas"
+    ],
+    "estHours": 8,
+    "stack": [
+      "rust",
+      "cargo"
+    ],
+    "starterRepo": "archforge-starters/rs-1-grep-mini",
+    "ci": "github-actions/template-rust",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": false,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "rs-2-kv-store",
+    "track": "rust",
+    "tier": 2,
+    "kind": "project",
+    "title": "Key-Value Store",
+    "brief": "Penyimpanan kunci-nilai dengan persistensi disk.",
+    "acceptanceCriteria": [
+      "Operasi get/set/delete",
+      "Persistensi dan pemulihan",
+      "Tes properti dasar"
+    ],
+    "rubric": [
+      "Desain format file",
+      "Penanganan korupsi data",
+      "Benchmark sederhana"
+    ],
+    "estHours": 16,
+    "stack": [
+      "rust",
+      "serde"
+    ],
+    "starterRepo": "archforge-starters/rs-2-kv-store",
+    "ci": "github-actions/template-rust",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "rs-3-http-service",
+    "track": "rust",
+    "tier": 3,
+    "kind": "project",
+    "title": "HTTP Service (Axum + DB) atau Engine Simulasi",
+    "brief": "Pilih: layanan HTTP dengan Postgres, atau engine simulasi untuk simulator app ini.",
+    "acceptanceCriteria": [
+      "Endpoint CRUD dengan validasi",
+      "Tes integrasi",
+      "Dockerfile & CI"
+    ],
+    "rubric": [
+      "Arsitektur berlapis",
+      "Observability dasar",
+      "Keamanan input"
+    ],
+    "estHours": 30,
+    "stack": [
+      "rust",
+      "axum",
+      "sqlx",
+      "wasm-bindgen"
+    ],
+    "starterRepo": "archforge-starters/rs-3-http-service",
+    "ci": "github-actions/template-rust",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "kt-1-task-manager",
+    "track": "kotlin",
+    "tier": 1,
+    "kind": "project",
+    "title": "Manajer Tugas Konsol",
+    "brief": "Aplikasi konsol OOP dengan koleksi.",
+    "acceptanceCriteria": [
+      "Model data class & sealed state",
+      "Operasi filter/sort",
+      "Tes JUnit"
+    ],
+    "rubric": [
+      "Pemodelan domain",
+      "Idiomatik Kotlin",
+      "Cakupan tes"
+    ],
+    "estHours": 8,
+    "stack": [
+      "kotlin",
+      "junit"
+    ],
+    "starterRepo": "archforge-starters/kt-1-task-manager",
+    "ci": "github-actions/template-kotlin",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": false,
+      "screenshots": true
+    }
+  },
+  {
+    "id": "kt-2-ktor-api",
+    "track": "kotlin",
+    "tier": 2,
+    "kind": "project",
+    "title": "REST API Ktor + Database",
+    "brief": "API tugas dengan autentikasi dasar.",
+    "acceptanceCriteria": [
+      "CRUD + paginasi",
+      "Skema DB & migrasi",
+      "Tes route"
+    ],
+    "rubric": [
+      "Desain API",
+      "Penanganan error",
+      "Keamanan dasar"
+    ],
+    "estHours": 16,
+    "stack": [
+      "kotlin",
+      "ktor",
+      "postgres"
+    ],
+    "starterRepo": "archforge-starters/kt-2-ktor-api",
+    "ci": "github-actions/template-kotlin",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": true
+    }
+  },
+  {
+    "id": "kt-3-compose-app",
+    "track": "kotlin",
+    "tier": 3,
+    "kind": "project",
+    "title": "Aplikasi Android Compose",
+    "brief": "Daftar + detail dengan tema Material 3, state hoisting, ViewModel.",
+    "acceptanceCriteria": [
+      "Layar daftar & detail",
+      "ViewModel + StateFlow",
+      "Tema M3 & mode gelap",
+      "Tes UI minimal 3"
+    ],
+    "rubric": [
+      "Arsitektur state",
+      "Aksesibilitas (48dp, semantics)",
+      "Performa (key LazyColumn)"
+    ],
+    "estHours": 30,
+    "stack": [
+      "kotlin",
+      "compose",
+      "material3"
+    ],
+    "starterRepo": "archforge-starters/kt-3-compose-app",
+    "ci": "github-actions/template-kotlin",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": true
+    }
+  },
+  {
+    "id": "dt-1-notes-offline",
+    "track": "dart-flutter",
+    "tier": 1,
+    "kind": "project",
+    "title": "App Catatan Offline-First",
+    "brief": "Catatan yang tetap berfungsi tanpa internet.",
+    "acceptanceCriteria": [
+      "CRUD catatan lokal",
+      "State management terstruktur",
+      "Widget test"
+    ],
+    "rubric": [
+      "Pemisahan UI/logika",
+      "UX state kosong/error",
+      "Kualitas tes"
+    ],
+    "estHours": 12,
+    "stack": [
+      "flutter",
+      "sqlite"
+    ],
+    "starterRepo": "archforge-starters/dt-1-notes-offline",
+    "ci": "github-actions/template-dart-flutter",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": false,
+      "screenshots": true
+    }
+  },
+  {
+    "id": "dt-2-ui-toolkit",
+    "track": "dart-flutter",
+    "tier": 2,
+    "kind": "project",
+    "title": "Toolkit Komponen UI",
+    "brief": "Kartu, form, bottom sheet, chart kustom + animasi.",
+    "acceptanceCriteria": [
+      "≥ 6 komponen reusable",
+      "Katalog demo",
+      "Golden test"
+    ],
+    "rubric": [
+      "Konsistensi token",
+      "Animasi halus",
+      "Dokumentasi"
+    ],
+    "estHours": 20,
+    "stack": [
+      "flutter",
+      "customPainter"
+    ],
+    "starterRepo": "archforge-starters/dt-2-ui-toolkit",
+    "ci": "github-actions/template-dart-flutter",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": true
+    }
+  },
+  {
+    "id": "dt-3-flutter-ffi",
+    "track": "dart-flutter",
+    "tier": 3,
+    "kind": "project",
+    "title": "App Lengkap + FFI ke Rust",
+    "brief": "Clean architecture, responsif ponsel/tablet/web, pustaka Rust via FFI.",
+    "acceptanceCriteria": [
+      "Layout adaptif 3 ukuran",
+      "Pemanggilan fungsi Rust lewat FFI",
+      "CI menjalankan tes"
+    ],
+    "rubric": [
+      "Arsitektur bersih",
+      "Responsivitas",
+      "Integrasi native"
+    ],
+    "estHours": 40,
+    "stack": [
+      "flutter",
+      "dart:ffi",
+      "rust"
+    ],
+    "starterRepo": "archforge-starters/dt-3-flutter-ffi",
+    "ci": "github-actions/template-dart-flutter",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": true
+    }
+  },
+  {
+    "id": "ds-1-mini-lib",
+    "track": "dsa",
+    "tier": 1,
+    "kind": "project",
+    "title": "Mini-Library Struktur Data",
+    "brief": "Implementasi stack, queue, hash map sendiri.",
+    "acceptanceCriteria": [
+      "API konsisten",
+      "Tes ≥ 90% cabang",
+      "Dokumentasi kompleksitas"
+    ],
+    "rubric": [
+      "Ketepatan",
+      "Kejelasan API",
+      "Analisis Big-O"
+    ],
+    "estHours": 8,
+    "stack": [
+      "python",
+      "rust"
+    ],
+    "starterRepo": "archforge-starters/ds-1-mini-lib",
+    "ci": "github-actions/template-dsa",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": false,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "ds-2-algo-visualizer",
+    "track": "dsa",
+    "tier": 2,
+    "kind": "project",
+    "title": "Visualizer Algoritma",
+    "brief": "Animasi sorting dan graf.",
+    "acceptanceCriteria": [
+      "≥ 4 algoritma",
+      "Kontrol kecepatan/langkah",
+      "Penjelasan tiap langkah"
+    ],
+    "rubric": [
+      "Kejelasan visual",
+      "Kebenaran algoritma",
+      "UX"
+    ],
+    "estHours": 16,
+    "stack": [
+      "typescript"
+    ],
+    "starterRepo": "archforge-starters/ds-2-algo-visualizer",
+    "ci": "github-actions/template-dsa",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "ds-3-30-pola",
+    "track": "dsa",
+    "tier": 3,
+    "kind": "project",
+    "title": "30 Soal Pola + Catatan Kompleksitas",
+    "brief": "Selesaikan 30 soal lintas 15 pola dan tulis catatan.",
+    "acceptanceCriteria": [
+      "≥ 2 soal per pola",
+      "Catatan waktu & ruang",
+      "Refleksi kesalahan"
+    ],
+    "rubric": [
+      "Variasi pola",
+      "Kualitas catatan",
+      "Konsistensi"
+    ],
+    "estHours": 30,
+    "stack": [
+      "python",
+      "rust"
+    ],
+    "starterRepo": "archforge-starters/ds-3-30-pola",
+    "ci": "github-actions/template-dsa",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "sd-1-three-docs",
+    "track": "system-design",
+    "tier": 1,
+    "kind": "project",
+    "title": "3 Dokumen Desain",
+    "brief": "URL shortener, rate limiter, chat.",
+    "acceptanceCriteria": [
+      "Tiap dokumen: kebutuhan, estimasi, desain, trade-off",
+      "Diagram",
+      "Mini-ADR"
+    ],
+    "rubric": [
+      "Kejelasan estimasi",
+      "Trade-off eksplisit",
+      "Kelengkapan"
+    ],
+    "estHours": 12,
+    "stack": [
+      "markdown",
+      "diagram"
+    ],
+    "starterRepo": "archforge-starters/sd-1-three-docs",
+    "ci": "github-actions/template-system-design",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": false,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "sd-2-sim-analysis",
+    "track": "system-design",
+    "tier": 2,
+    "kind": "project",
+    "title": "Simulasi + Analisis Bottleneck",
+    "brief": "Jalankan skenario di simulator lalu analisis.",
+    "acceptanceCriteria": [
+      "Skor ≥ 80% pada 2 skenario",
+      "Laporan bottleneck",
+      "Rekomendasi perbaikan"
+    ],
+    "rubric": [
+      "Analisis data simulasi",
+      "Ketepatan diagnosis",
+      "Prioritas perbaikan"
+    ],
+    "estHours": 12,
+    "stack": [
+      "archforge-simulator"
+    ],
+    "starterRepo": "archforge-starters/sd-2-sim-analysis",
+    "ci": "github-actions/template-system-design",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "sd-3-capstone",
+    "track": "system-design",
+    "tier": 3,
+    "kind": "project",
+    "title": "Desain Sistem Lengkap",
+    "brief": "Pilih sistem: C4 + ADR + estimasi + presentasi 15 menit.",
+    "acceptanceCriteria": [
+      "C4 level 1–3",
+      "≥ 5 ADR",
+      "Estimasi kapasitas",
+      "Presentasi 15 menit"
+    ],
+    "rubric": [
+      "Koherensi",
+      "Kedalaman trade-off",
+      "Komunikasi"
+    ],
+    "estHours": 30,
+    "stack": [
+      "c4",
+      "adr"
+    ],
+    "starterRepo": "archforge-starters/sd-3-capstone",
+    "ci": "github-actions/template-system-design",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "ar-1-five-adr",
+    "track": "arsitek",
+    "tier": 1,
+    "kind": "project",
+    "title": "5 ADR untuk Proyek Nyata",
+    "brief": "Tuliskan keputusan arsitektur penting di proyek nyata.",
+    "acceptanceCriteria": [
+      "5 ADR format baku",
+      "Alternatif dan konsekuensi",
+      "Ditinjau rekan"
+    ],
+    "rubric": [
+      "Kejelasan alasan",
+      "Alternatif realistis",
+      "Konsekuensi jujur"
+    ],
+    "estHours": 8,
+    "stack": [
+      "markdown"
+    ],
+    "starterRepo": "archforge-starters/ar-1-five-adr",
+    "ci": "github-actions/template-arsitek",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": false,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "ar-2-c4-nfr",
+    "track": "arsitek",
+    "tier": 2,
+    "kind": "project",
+    "title": "Diagram C4 + Atribut Kualitas",
+    "brief": "C4 level 1–3 beserta NFR terukur.",
+    "acceptanceCriteria": [
+      "C4 konsisten",
+      "≥ 6 NFR terukur",
+      "Matriks trade-off"
+    ],
+    "rubric": [
+      "Konsistensi diagram",
+      "Keterukuran NFR",
+      "Kualitas analisis"
+    ],
+    "estHours": 12,
+    "stack": [
+      "c4"
+    ],
+    "starterRepo": "archforge-starters/ar-2-c4-nfr",
+    "ci": "github-actions/template-arsitek",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "ar-3-arc42",
+    "track": "arsitek",
+    "tier": 3,
+    "kind": "project",
+    "title": "Dokumen Arsitektur arc42 Ringkas",
+    "brief": "Dokumen arsitektur satu proyek nyata.",
+    "acceptanceCriteria": [
+      "Bab arc42 inti terisi",
+      "Risiko dan utang teknis",
+      "Roadmap evolusi"
+    ],
+    "rubric": [
+      "Kelengkapan",
+      "Realisme",
+      "Keterbacaan"
+    ],
+    "estHours": 24,
+    "stack": [
+      "arc42"
+    ],
+    "starterRepo": "archforge-starters/ar-3-arc42",
+    "ci": "github-actions/template-arsitek",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "ml-1-image-classifier",
+    "track": "ml-cv",
+    "tier": 1,
+    "kind": "project",
+    "title": "Klasifikasi Gambar Sederhana",
+    "brief": "Klasifikasi 3–5 kelas dengan model kecil.",
+    "acceptanceCriteria": [
+      "Dataset terdokumentasi",
+      "Akurasi validasi ≥ target",
+      "Notebook reproducible"
+    ],
+    "rubric": [
+      "Pemisahan data",
+      "Metrik",
+      "Analisis kesalahan"
+    ],
+    "estHours": 12,
+    "stack": [
+      "python",
+      "pytorch"
+    ],
+    "starterRepo": "archforge-starters/ml-1-image-classifier",
+    "ci": "github-actions/template-ml-cv",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": false,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "ml-2-detection-onnx",
+    "track": "ml-cv",
+    "tier": 2,
+    "kind": "project",
+    "title": "Deteksi Objek → Ekspor ONNX",
+    "brief": "Latih/fine-tune detektor dan ekspor ke ONNX.",
+    "acceptanceCriteria": [
+      "mAP dilaporkan",
+      "Model ONNX valid",
+      "Uji inferensi lokal"
+    ],
+    "rubric": [
+      "Evaluasi",
+      "Ekspor benar",
+      "Dokumentasi"
+    ],
+    "estHours": 20,
+    "stack": [
+      "python",
+      "onnx"
+    ],
+    "starterRepo": "archforge-starters/ml-2-detection-onnx",
+    "ci": "github-actions/template-ml-cv",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "ml-3-browser-demo",
+    "track": "ml-cv",
+    "tier": 3,
+    "kind": "project",
+    "title": "Demo CV di Browser",
+    "brief": "ONNX Runtime Web + OpenCV.js.",
+    "acceptanceCriteria": [
+      "Berjalan di browser tanpa server inferensi",
+      "FPS terukur",
+      "Penanganan perangkat lemah"
+    ],
+    "rubric": [
+      "Performa",
+      "UX",
+      "Kompatibilitas Next 16"
+    ],
+    "estHours": 24,
+    "stack": [
+      "onnxruntime-web",
+      "opencv.js",
+      "nextjs"
+    ],
+    "starterRepo": "archforge-starters/ml-3-browser-demo",
+    "ci": "github-actions/template-ml-cv",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": false
+    }
+  },
+  {
+    "id": "ux-1-redesign",
+    "track": "ui-ux",
+    "tier": 1,
+    "kind": "project",
+    "title": "Kritik + Rancang Ulang Satu Layar",
+    "brief": "Pilih layar app nyata, kritik, rancang ulang.",
+    "acceptanceCriteria": [
+      "Kritik berbasis heuristik Nielsen",
+      "Desain sebelum/sesudah",
+      "Audit kontras"
+    ],
+    "rubric": [
+      "Kedalaman kritik",
+      "Kualitas solusi",
+      "Aksesibilitas"
+    ],
+    "estHours": 6,
+    "stack": [
+      "figma"
+    ],
+    "starterRepo": "archforge-starters/ux-1-redesign",
+    "ci": "github-actions/template-ui-ux",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": false,
+      "screenshots": true
+    }
+  },
+  {
+    "id": "ux-2-design-system",
+    "track": "ui-ux",
+    "tier": 2,
+    "kind": "project",
+    "title": "Design System Kecil di Figma",
+    "brief": "Token + 8 komponen berbervarian.",
+    "acceptanceCriteria": [
+      "Token warna/spasi/tipografi",
+      "8 komponen berbervarian",
+      "Dokumentasi"
+    ],
+    "rubric": [
+      "Konsistensi",
+      "Kelengkapan varian",
+      "Penamaan"
+    ],
+    "estHours": 16,
+    "stack": [
+      "figma"
+    ],
+    "starterRepo": "archforge-starters/ux-2-design-system",
+    "ci": "github-actions/template-ui-ux",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": true
+    }
+  },
+  {
+    "id": "ux-3-two-impl",
+    "track": "ui-ux",
+    "tier": 3,
+    "kind": "project",
+    "title": "Satu Desain → Dua Implementasi",
+    "brief": "Implementasi desain yang sama di Compose dan Flutter + laporan perbandingan.",
+    "acceptanceCriteria": [
+      "Kedua implementasi berjalan",
+      "Laporan perbandingan (kode, performa, DX)",
+      "Tangkapan layar berdampingan"
+    ],
+    "rubric": [
+      "Kesetiaan pada desain",
+      "Kedalaman perbandingan",
+      "Kualitas kode"
+    ],
+    "estHours": 40,
+    "stack": [
+      "compose",
+      "flutter",
+      "figma"
+    ],
+    "starterRepo": "archforge-starters/ux-3-two-impl",
+    "ci": "github-actions/template-ui-ux",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": true
+    }
+  },
+  {
+    "id": "cap-lintas",
+    "track": null,
+    "tier": 4,
+    "kind": "project",
+    "title": "Capstone Gabungan: Produk Kecil Lintas Platform",
+    "brief": "Satu produk: backend Rust (B), klien Android Compose (C5), klien Flutter (D), desain Figma (J).",
+    "acceptanceCriteria": [
+      "Kontrak API OpenAPI tunggal",
+      "Dua klien memakai backend yang sama",
+      "Desain Figma konsisten dengan keduanya",
+      "CI untuk semua repo"
+    ],
+    "rubric": [
+      "Konsistensi kontrak",
+      "Perbandingan antar-framework",
+      "Kualitas keseluruhan"
+    ],
+    "estHours": 80,
+    "stack": [
+      "rust",
+      "kotlin",
+      "flutter",
+      "figma"
+    ],
+    "starterRepo": "archforge-starters/cap-lintas",
+    "ci": "github-actions/template-lintas",
+    "submit": {
+      "repoUrl": true,
+      "demoUrl": true,
+      "screenshots": true
+    }
+  }
+]

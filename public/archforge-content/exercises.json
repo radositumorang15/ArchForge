@@ -1,0 +1,7336 @@
+[
+  {
+    "id": "fondasi-cpu-memori-ex01",
+    "lessonId": "fondasi-cpu-memori-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 10,
+    "prompt": "Variabel lokal berukuran tetap di dalam sebuah fungsi biasanya disimpan di…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Stack"
+      },
+      {
+        "id": "b",
+        "text": "Heap"
+      },
+      {
+        "id": "c",
+        "text": "BIOS"
+      },
+      {
+        "id": "d",
+        "text": "Disk"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Stack dialokasikan otomatis saat fungsi dipanggil dan dibebaskan saat fungsi selesai.",
+    "hints": [],
+    "srs": true,
+    "tags": [
+      "stack"
+    ]
+  },
+  {
+    "id": "fondasi-cpu-memori-ex02",
+    "lessonId": "fondasi-cpu-memori-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Mana yang paling mungkin menyebabkan stack overflow?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Membaca file besar"
+      },
+      {
+        "id": "b",
+        "text": "Rekursi tanpa kasus dasar"
+      },
+      {
+        "id": "c",
+        "text": "Memakai banyak variabel global"
+      },
+      {
+        "id": "d",
+        "text": "Membuka dua program"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Setiap panggilan rekursif menambah frame di stack; tanpa kasus dasar, stack habis.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-proses-thread-ex01",
+    "lessonId": "fondasi-proses-thread-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 10,
+    "prompt": "Dua thread dalam satu proses…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Punya ruang memori terpisah total"
+      },
+      {
+        "id": "b",
+        "text": "Tidak bisa jalan bersamaan"
+      },
+      {
+        "id": "c",
+        "text": "Berbagi heap yang sama"
+      },
+      {
+        "id": "d",
+        "text": "Selalu berjalan di CPU berbeda"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Thread berbagi ruang alamat proses (heap, global), tetapi punya stack masing-masing. Itu sebabnya data race mungkin terjadi.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-proses-thread-ex02",
+    "lessonId": "fondasi-proses-thread-01",
+    "track": "fondasi",
+    "kind": "fill-blank",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Proses punya ruang alamat {{1}}, sedangkan thread dalam proses yang sama berbagi {{2}}.",
+    "answers": [
+      [
+        "terpisah"
+      ],
+      [
+        "heap",
+        "memori"
+      ]
+    ],
+    "explanation": "Isolasi antar proses adalah alasan satu aplikasi crash tidak menjatuhkan aplikasi lain.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "fondasi-bit-byte-ex01",
+    "lessonId": "fondasi-bit-byte-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 10,
+    "prompt": "Berapa nilai desimal biner 1011?",
+    "options": [
+      {
+        "id": "a",
+        "text": "9"
+      },
+      {
+        "id": "b",
+        "text": "10"
+      },
+      {
+        "id": "c",
+        "text": "11"
+      },
+      {
+        "id": "d",
+        "text": "13"
+      }
+    ],
+    "answer": "c",
+    "explanation": "8+0+2+1 = 11.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-bit-byte-ex02",
+    "lessonId": "fondasi-bit-byte-01",
+    "track": "fondasi",
+    "kind": "fill-blank",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Integer 8-bit tak bertanda bisa menyimpan 0 sampai {{1}}.",
+    "answers": [
+      [
+        "255"
+      ]
+    ],
+    "explanation": "2^8 - 1 = 255.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "fondasi-float-unicode-ex01",
+    "lessonId": "fondasi-float-unicode-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 10,
+    "prompt": "Mengapa 0.1 + 0.2 tidak persis 0.3 di kebanyakan bahasa?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Bug kompiler"
+      },
+      {
+        "id": "b",
+        "text": "Float biner tak bisa merepresentasikan 0.1 secara persis"
+      },
+      {
+        "id": "c",
+        "text": "CPU lama"
+      },
+      {
+        "id": "d",
+        "text": "Dibulatkan oleh terminal"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Pecahan desimal tertentu menjadi pecahan biner tak berhingga, sehingga ada galat kecil. Jangan bandingkan float dengan ==.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-float-unicode-ex02",
+    "lessonId": "fondasi-float-unicode-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Karakter '€' di UTF-8 memakai berapa byte?",
+    "options": [
+      {
+        "id": "a",
+        "text": "1"
+      },
+      {
+        "id": "b",
+        "text": "2"
+      },
+      {
+        "id": "c",
+        "text": "3"
+      },
+      {
+        "id": "d",
+        "text": "8"
+      }
+    ],
+    "answer": "c",
+    "explanation": "U+20AC dikodekan E2 82 AC = 3 byte. UTF-8 berpanjang variabel 1–4 byte.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-pseudocode-alur-ex01",
+    "lessonId": "fondasi-pseudocode-alur-01",
+    "track": "fondasi",
+    "kind": "parsons",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 15,
+    "language": "pseudocode",
+    "prompt": "Susun pseudocode untuk mencari angka terbesar di dalam daftar.",
+    "lines": [
+      {
+        "text": "max ← item pertama",
+        "indent": 0
+      },
+      {
+        "text": "untuk setiap item dalam daftar",
+        "indent": 0
+      },
+      {
+        "text": "jika item > max",
+        "indent": 1
+      },
+      {
+        "text": "max ← item",
+        "indent": 2
+      },
+      {
+        "text": "tampilkan max",
+        "indent": 0
+      }
+    ],
+    "shuffle": true,
+    "explanation": "Inisialisasi dulu, lalu bandingkan satu per satu, update hanya saat lebih besar.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "fondasi-pseudocode-alur-ex02",
+    "lessonId": "fondasi-pseudocode-alur-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Langkah paling awal saat debugging yang efektif?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menulis ulang semua kode"
+      },
+      {
+        "id": "b",
+        "text": "Mereproduksi bug secara konsisten"
+      },
+      {
+        "id": "c",
+        "text": "Menghapus tes"
+      },
+      {
+        "id": "d",
+        "text": "Menambah thread"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Bug yang tak bisa direproduksi tak bisa diisolasi atau diverifikasi perbaikannya.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-terminal-git-ex01",
+    "lessonId": "fondasi-terminal-git-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 10,
+    "prompt": "Perintah Git untuk menyimpan snapshot perubahan yang sudah di-stage?",
+    "options": [
+      {
+        "id": "a",
+        "text": "git commit"
+      },
+      {
+        "id": "b",
+        "text": "git push"
+      },
+      {
+        "id": "c",
+        "text": "git clone"
+      },
+      {
+        "id": "d",
+        "text": "git stash pop"
+      }
+    ],
+    "answer": "a",
+    "explanation": "commit membuat snapshot lokal; push baru mengirim ke remote.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-terminal-git-ex02",
+    "lessonId": "fondasi-terminal-git-01",
+    "track": "fondasi",
+    "kind": "parsons",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 15,
+    "language": "bash",
+    "prompt": "Susun alur kirim perubahan ke remote.",
+    "lines": [
+      {
+        "text": "git add .",
+        "indent": 0
+      },
+      {
+        "text": "git commit -m \"fitur login\"",
+        "indent": 0
+      },
+      {
+        "text": "git push origin main",
+        "indent": 0
+      }
+    ],
+    "shuffle": true,
+    "explanation": "add → commit → push.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "fondasi-terminal-git-ex03",
+    "lessonId": "fondasi-terminal-git-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "`permission denied` saat menjalankan ./script.sh. Penyebab paling mungkin?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Python belum terpasang"
+      },
+      {
+        "id": "b",
+        "text": "Internet mati"
+      },
+      {
+        "id": "c",
+        "text": "Disk penuh"
+      },
+      {
+        "id": "d",
+        "text": "File belum executable (chmod +x)"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Bit executable belum diset. Perbaiki dengan chmod +x script.sh.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-ip-dns-tcp-ex01",
+    "lessonId": "fondasi-ip-dns-tcp-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 10,
+    "prompt": "DNS bertugas…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mengenkripsi trafik"
+      },
+      {
+        "id": "b",
+        "text": "Menerjemahkan nama domain menjadi alamat IP"
+      },
+      {
+        "id": "c",
+        "text": "Membagi beban"
+      },
+      {
+        "id": "d",
+        "text": "Menyimpan cookie"
+      }
+    ],
+    "answer": "b",
+    "explanation": "DNS adalah buku telepon internet.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-ip-dns-tcp-ex02",
+    "lessonId": "fondasi-ip-dns-tcp-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Protokol yang menjamin urutan paket dan retransmisi?",
+    "options": [
+      {
+        "id": "a",
+        "text": "UDP"
+      },
+      {
+        "id": "b",
+        "text": "TCP"
+      },
+      {
+        "id": "c",
+        "text": "Keduanya"
+      },
+      {
+        "id": "d",
+        "text": "Tidak ada"
+      }
+    ],
+    "answer": "b",
+    "explanation": "TCP berorientasi koneksi dan andal; UDP ringan tanpa jaminan (cocok untuk game/streaming).",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-http-rest-ws-ex01",
+    "lessonId": "fondasi-http-rest-ws-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 15,
+    "prompt": "Metode HTTP yang idempoten untuk mengganti seluruh resource?",
+    "options": [
+      {
+        "id": "a",
+        "text": "POST"
+      },
+      {
+        "id": "b",
+        "text": "PUT"
+      },
+      {
+        "id": "c",
+        "text": "PATCH"
+      },
+      {
+        "id": "d",
+        "text": "CONNECT"
+      }
+    ],
+    "answer": "b",
+    "explanation": "PUT dengan payload sama berkali-kali menghasilkan keadaan akhir yang sama.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-http-rest-ws-ex02",
+    "lessonId": "fondasi-http-rest-ws-01",
+    "track": "fondasi",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Kapan WebSocket lebih cocok dari polling HTTP?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mengunduh PDF"
+      },
+      {
+        "id": "b",
+        "text": "Halaman statis"
+      },
+      {
+        "id": "c",
+        "text": "Chat real-time dua arah"
+      },
+      {
+        "id": "d",
+        "text": "Form login sekali"
+      }
+    ],
+    "answer": "c",
+    "explanation": "WebSocket membuka kanal dua arah persisten berlatensi rendah.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "fondasi-http-rest-ws-ex03",
+    "lessonId": "fondasi-http-rest-ws-01",
+    "track": "fondasi",
+    "kind": "fill-blank",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Status HTTP {{1}} berarti Not Found, dan {{2}} berarti Too Many Requests.",
+    "answers": [
+      [
+        "404"
+      ],
+      [
+        "429"
+      ]
+    ],
+    "explanation": "4xx = salah klien; 429 dipakai oleh rate limiter.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "python-var-tipe-ex01",
+    "lessonId": "python-var-tipe-01",
+    "track": "python",
+    "kind": "code",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 30,
+    "title": "Termometer Dieng",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `celsius_to_fahrenheit(c)` yang mengembalikan suhu dalam Fahrenheit (F = C × 9/5 + 32).",
+    "starter": "def celsius_to_fahrenheit(c):\n    # TODO\n    pass\n",
+    "solution": "def celsius_to_fahrenheit(c):\n    return c * 9 / 5 + 32\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "celsius_to_fahrenheit(0)",
+          "expect": "32.0"
+        },
+        {
+          "name": "tes 2",
+          "call": "celsius_to_fahrenheit(100)",
+          "expect": "212.0"
+        },
+        {
+          "name": "tes 3",
+          "call": "celsius_to_fahrenheit(-40)",
+          "expect": "-40.0"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "celsius_to_fahrenheit(37)",
+          "expect": "98.6"
+        },
+        {
+          "name": "tes 2",
+          "call": "celsius_to_fahrenheit(20)",
+          "expect": "68.0"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Rumusnya: C × 9/5 + 32.",
+      "Pakai / (hasil float), bukan //.",
+      "return c * 9 / 5 + 32"
+    ],
+    "explanation": "Operator / selalu menghasilkan float di Python 3.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-var-tipe-ex02",
+    "lessonId": "python-var-tipe-01",
+    "track": "python",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Hasil `type(3/2)` di Python 3?",
+    "options": [
+      {
+        "id": "a",
+        "text": "<class 'float'>"
+      },
+      {
+        "id": "b",
+        "text": "<class 'int'>"
+      },
+      {
+        "id": "c",
+        "text": "<class 'str'>"
+      },
+      {
+        "id": "d",
+        "text": "Error"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Pembagian biasa selalu float; gunakan // untuk pembagian bulat.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "python-kondisi-loop-ex01",
+    "lessonId": "python-kondisi-loop-01",
+    "track": "python",
+    "kind": "code",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 30,
+    "title": "Game FizzBuzz",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `fizzbuzz_list(n)`: list string 1..n; kelipatan 3 → 'Fizz', kelipatan 5 → 'Buzz', keduanya → 'FizzBuzz'.",
+    "starter": "def fizzbuzz_list(n):\n    result = []\n    # TODO\n    return result\n",
+    "solution": "def fizzbuzz_list(n):\n    result = []\n    for i in range(1, n + 1):\n        if i % 15 == 0:\n            result.append('FizzBuzz')\n        elif i % 3 == 0:\n            result.append('Fizz')\n        elif i % 5 == 0:\n            result.append('Buzz')\n        else:\n            result.append(str(i))\n    return result\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "fizzbuzz_list(5)",
+          "expect": "['1', '2', 'Fizz', '4', 'Buzz']"
+        },
+        {
+          "name": "tes 2",
+          "call": "fizzbuzz_list(0)",
+          "expect": "[]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "fizzbuzz_list(15)[-1]",
+          "expect": "'FizzBuzz'"
+        },
+        {
+          "name": "tes 2",
+          "call": "fizzbuzz_list(3)",
+          "expect": "['1', '2', 'Fizz']"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Gunakan range(1, n + 1).",
+      "Cek kelipatan 15 lebih dulu.",
+      "Ubah angka ke string dengan str(i)."
+    ],
+    "explanation": "Urutan pengecekan penting: cabang paling spesifik harus pertama.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-kondisi-loop-ex02",
+    "lessonId": "python-kondisi-loop-01",
+    "track": "python",
+    "kind": "parsons",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 15,
+    "language": "python",
+    "prompt": "Susun kode untuk menjumlah angka 1..10.",
+    "lines": [
+      {
+        "text": "total = 0",
+        "indent": 0
+      },
+      {
+        "text": "for i in range(1, 11):",
+        "indent": 0
+      },
+      {
+        "text": "total += i",
+        "indent": 1
+      },
+      {
+        "text": "print(total)",
+        "indent": 0
+      }
+    ],
+    "shuffle": true,
+    "explanation": "Inisialisasi akumulator, loop, tambahkan, lalu cetak setelah loop.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "python-fungsi-ex01",
+    "lessonId": "python-fungsi-01",
+    "track": "python",
+    "kind": "code",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 30,
+    "title": "",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `clamp(x, lo, hi)` yang membatasi x ke rentang [lo, hi].",
+    "starter": "def clamp(x, lo, hi):\n    pass\n",
+    "solution": "def clamp(x, lo, hi):\n    return max(lo, min(x, hi))\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "clamp(5, 0, 10)",
+          "expect": "5"
+        },
+        {
+          "name": "tes 2",
+          "call": "clamp(-3, 0, 10)",
+          "expect": "0"
+        },
+        {
+          "name": "tes 3",
+          "call": "clamp(99, 0, 10)",
+          "expect": "10"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "clamp(0, 0, 0)",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "call": "clamp(2.5, 0, 2)",
+          "expect": "2"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Ada dua batas.",
+      "min(x, hi) membatasi atas.",
+      "max(lo, ...) membatasi bawah."
+    ],
+    "explanation": "Komposisi min dan max menghindari rantai if.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-fungsi-ex02",
+    "lessonId": "python-fungsi-01",
+    "track": "python",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "`def f(x, acc=[]): acc.append(x); return acc`. Setelah `f(1)` lalu `f(2)`, hasil f(2)?",
+    "options": [
+      {
+        "id": "a",
+        "text": "[2]"
+      },
+      {
+        "id": "b",
+        "text": "[1, 2]"
+      },
+      {
+        "id": "c",
+        "text": "[1]"
+      },
+      {
+        "id": "d",
+        "text": "Error"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Default argument dievaluasi sekali saat definisi, sehingga list dibagikan antar panggilan. Pakai acc=None.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "python-struktur-data-ex01",
+    "lessonId": "python-struktur-data-01",
+    "track": "python",
+    "kind": "code",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 30,
+    "title": "Lirik Terpopuler",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `word_count(text)`: dict frekuensi kata (huruf kecil, buang tanda baca di tepi kata: .,!?;:).",
+    "starter": "def word_count(text):\n    counts = {}\n    # TODO\n    return counts\n",
+    "solution": "def word_count(text):\n    counts = {}\n    for w in text.lower().split():\n        w = w.strip('.,!?;:')\n        if w:\n            counts[w] = counts.get(w, 0) + 1\n    return counts\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "word_count('Halo halo, dunia!')",
+          "expect": "{'halo': 2, 'dunia': 1}"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "word_count('')",
+          "expect": "{}"
+        },
+        {
+          "name": "tes 2",
+          "call": "word_count('A a A!')",
+          "expect": "{'a': 3}"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "split() memecah di spasi.",
+      "dict.get(k, 0) memberi default.",
+      "strip('.,!?;:') membuang tanda baca di tepi."
+    ],
+    "explanation": "dict.get dengan default adalah pola frekuensi klasik; collections.Counter melakukan hal yang sama.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-struktur-data-ex02",
+    "lessonId": "python-struktur-data-01",
+    "track": "python",
+    "kind": "fill-blank",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "{{1}} adalah struktur data tanpa elemen duplikat.",
+    "answers": [
+      [
+        "set"
+      ]
+    ],
+    "explanation": "set juga memberi lookup rata-rata O(1).",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "python-oop-ex01",
+    "lessonId": "python-oop-01",
+    "track": "python",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "Mesin Kasir Anti-Curang",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Buat class `Stack` dengan `push(x)`, `pop()`, `peek()`, `is_empty()`. `pop`/`peek` pada stack kosong → IndexError.",
+    "starter": "class Stack:\n    def __init__(self):\n        pass\n",
+    "solution": "class Stack:\n    def __init__(self):\n        self._items = []\n    def push(self, x):\n        self._items.append(x)\n    def pop(self):\n        if not self._items:\n            raise IndexError('stack kosong')\n        return self._items.pop()\n    def peek(self):\n        if not self._items:\n            raise IndexError('stack kosong')\n        return self._items[-1]\n    def is_empty(self):\n        return not self._items\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "setup": "s=Stack(); s.push(1); s.push(2)",
+          "call": "s.pop()",
+          "expect": "2"
+        },
+        {
+          "name": "tes 2",
+          "setup": "s=Stack(); s.push(1)",
+          "call": "s.is_empty()",
+          "expect": "False"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "setup": "s=Stack()",
+          "call": "s.is_empty()",
+          "expect": "True"
+        },
+        {
+          "name": "tes 2",
+          "setup": "s=Stack()",
+          "call": "s.pop()",
+          "expect": "!IndexError"
+        },
+        {
+          "name": "tes 3",
+          "setup": "s=Stack(); s.push('a'); s.push('b')",
+          "call": "s.peek()",
+          "expect": "'b'"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Simpan data di list privat self._items.",
+      "Gunakan list.append dan list.pop.",
+      "raise IndexError('...') bila kosong."
+    ],
+    "explanation": "Enkapsulasi: pengguna class tidak menyentuh list internal, jadi invarian terjaga.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-oop-ex02",
+    "lessonId": "python-oop-01",
+    "track": "python",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Method khusus mana yang menentukan representasi string objek untuk debugging?",
+    "options": [
+      {
+        "id": "a",
+        "text": "__init__"
+      },
+      {
+        "id": "b",
+        "text": "__repr__"
+      },
+      {
+        "id": "c",
+        "text": "__len__"
+      },
+      {
+        "id": "d",
+        "text": "__call__"
+      }
+    ],
+    "answer": "b",
+    "explanation": "__repr__ dipakai repr() dan tampilan debugger.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "python-exception-file-ex01",
+    "lessonId": "python-exception-file-01",
+    "track": "python",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "Input Nakal",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `safe_int(s, default=0)`: ubah s ke int; jika gagal (ValueError/TypeError) kembalikan default.",
+    "starter": "def safe_int(s, default=0):\n    pass\n",
+    "solution": "def safe_int(s, default=0):\n    try:\n        return int(s)\n    except (ValueError, TypeError):\n        return default\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "safe_int('42')",
+          "expect": "42"
+        },
+        {
+          "name": "tes 2",
+          "call": "safe_int('abc')",
+          "expect": "0"
+        },
+        {
+          "name": "tes 3",
+          "call": "safe_int('x', -1)",
+          "expect": "-1"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "safe_int(None, 5)",
+          "expect": "5"
+        },
+        {
+          "name": "tes 2",
+          "call": "safe_int(' 7 ')",
+          "expect": "7"
+        },
+        {
+          "name": "tes 3",
+          "call": "safe_int('3.5')",
+          "expect": "0"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Bungkus int(s) dengan try.",
+      "Tangkap dua jenis exception.",
+      "int(None) memunculkan TypeError."
+    ],
+    "explanation": "Tangkap exception yang spesifik, bukan `except:` kosong.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-exception-file-ex02",
+    "lessonId": "python-exception-file-01",
+    "track": "python",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Blok mana yang selalu dijalankan, baik terjadi exception atau tidak?",
+    "options": [
+      {
+        "id": "a",
+        "text": "else"
+      },
+      {
+        "id": "b",
+        "text": "finally"
+      },
+      {
+        "id": "c",
+        "text": "except"
+      },
+      {
+        "id": "d",
+        "text": "try"
+      }
+    ],
+    "answer": "b",
+    "explanation": "finally cocok untuk membersihkan resource; with lebih disarankan untuk file.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "python-comprehension-generator-ex01",
+    "lessonId": "python-comprehension-generator-01",
+    "track": "python",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "Pabrik Angka",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis generator `fib_gen(n)` yang menghasilkan n bilangan Fibonacci pertama (0, 1, 1, 2, …).",
+    "starter": "def fib_gen(n):\n    pass\n",
+    "solution": "def fib_gen(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "list(fib_gen(7))",
+          "expect": "[0, 1, 1, 2, 3, 5, 8]"
+        },
+        {
+          "name": "tes 2",
+          "call": "list(fib_gen(1))",
+          "expect": "[0]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "list(fib_gen(0))",
+          "expect": "[]"
+        },
+        {
+          "name": "tes 2",
+          "call": "list(fib_gen(10))[-1]",
+          "expect": "34"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Pakai yield, bukan return list.",
+      "Simpan dua nilai terakhir: a, b.",
+      "a, b = b, a + b"
+    ],
+    "explanation": "Generator menghitung lazy: hemat memori untuk deret panjang.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-comprehension-generator-ex02",
+    "lessonId": "python-comprehension-generator-01",
+    "track": "python",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "`[x*x for x in range(4) if x % 2 == 0]` menghasilkan?",
+    "options": [
+      {
+        "id": "a",
+        "text": "[0, 1, 4, 9]"
+      },
+      {
+        "id": "b",
+        "text": "[0, 4]"
+      },
+      {
+        "id": "c",
+        "text": "[4]"
+      },
+      {
+        "id": "d",
+        "text": "[0, 2]"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Hanya x=0 dan x=2 yang lolos filter, kuadratnya 0 dan 4.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "python-decorator-typehints-ex01",
+    "lessonId": "python-decorator-typehints-01",
+    "track": "python",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Bungkus Kado",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis decorator `count_calls` yang menambah atribut `.calls` pada fungsi dan menaikkannya tiap pemanggilan.",
+    "starter": "import functools\n\ndef count_calls(fn):\n    pass\n",
+    "solution": "import functools\n\ndef count_calls(fn):\n    @functools.wraps(fn)\n    def wrapper(*args, **kwargs):\n        wrapper.calls += 1\n        return fn(*args, **kwargs)\n    wrapper.calls = 0\n    return wrapper\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "setup": "@count_calls\ndef hi(): return 'hi'\nhi(); hi()",
+          "call": "hi.calls",
+          "expect": "2"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "setup": "@count_calls\ndef add(a, b): return a + b\nadd(1, 2)",
+          "call": "[add(2, 3), add.calls]",
+          "expect": "[5, 2]"
+        },
+        {
+          "name": "tes 2",
+          "setup": "@count_calls\ndef f(): pass",
+          "call": "f.calls",
+          "expect": "0"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Decorator mengembalikan fungsi pembungkus.",
+      "Gunakan *args, **kwargs agar generik.",
+      "Simpan counter sebagai atribut wrapper."
+    ],
+    "explanation": "functools.wraps menjaga nama dan docstring fungsi asli.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-decorator-typehints-ex02",
+    "lessonId": "python-decorator-typehints-01",
+    "track": "python",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Apa fungsi `functools.wraps`?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mempercepat fungsi"
+      },
+      {
+        "id": "b",
+        "text": "Menyalin metadata fungsi asli ke pembungkus"
+      },
+      {
+        "id": "c",
+        "text": "Membuat fungsi async"
+      },
+      {
+        "id": "d",
+        "text": "Menambah cache"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Tanpa wraps, __name__ dan __doc__ tertimpa oleh wrapper.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "python-pytest-venv-ex01",
+    "lessonId": "python-pytest-venv-01",
+    "track": "python",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "QA untuk Kodemu",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `is_palindrome(s)`: True jika s palindrom, abaikan huruf besar/kecil dan karakter non-alfanumerik.",
+    "starter": "def is_palindrome(s):\n    pass\n",
+    "solution": "def is_palindrome(s):\n    cleaned = [c.lower() for c in s if c.isalnum()]\n    return cleaned == cleaned[::-1]\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "is_palindrome('Kasur ini rusak')",
+          "expect": "True"
+        },
+        {
+          "name": "tes 2",
+          "call": "is_palindrome('halo')",
+          "expect": "False"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "is_palindrome('A man, a plan, a canal: Panama')",
+          "expect": "True"
+        },
+        {
+          "name": "tes 2",
+          "call": "is_palindrome('')",
+          "expect": "True"
+        },
+        {
+          "name": "tes 3",
+          "call": "is_palindrome('ab')",
+          "expect": "False"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Bersihkan dulu string-nya.",
+      "str.isalnum() menyaring karakter.",
+      "Bandingkan dengan versi terbalik [::-1]."
+    ],
+    "explanation": "Fungsi murni seperti ini mudah dites; tulis tes sebelum implementasi (TDD).",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-pytest-venv-ex02",
+    "lessonId": "python-pytest-venv-01",
+    "track": "python",
+    "kind": "fill-blank",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Di pytest, kondisi yang diuji ditulis dengan kata kunci {{1}}.",
+    "answers": [
+      [
+        "assert"
+      ]
+    ],
+    "explanation": "pytest menulis ulang assert sehingga pesan gagalnya informatif.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "python-async-regex-http-ex01",
+    "lessonId": "python-async-regex-http-01",
+    "track": "python",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Detektif Teks",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `extract_emails(text)`: list semua alamat email dalam teks (urutan kemunculan).",
+    "starter": "import re\n\ndef extract_emails(text):\n    pass\n",
+    "solution": "import re\n\ndef extract_emails(text):\n    return re.findall(r'[\\w.+-]+@[\\w-]+(?:\\.[\\w-]+)+', text)\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "extract_emails('hubungi a@b.com atau rado.dev@mail.co.id')",
+          "expect": "['a@b.com', 'rado.dev@mail.co.id']"
+        },
+        {
+          "name": "tes 2",
+          "call": "extract_emails('tidak ada')",
+          "expect": "[]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "extract_emails('x@y.io,z@w.com')",
+          "expect": "['x@y.io', 'z@w.com']"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "re.findall mengembalikan semua kecocokan.",
+      "Bagian lokal: karakter kata, titik, plus, minus.",
+      "Domain: kata, lalu satu atau lebih .kata"
+    ],
+    "explanation": "Regex praktis tidak harus RFC-sempurna; ia cukup untuk kasus nyata.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-async-regex-http-ex02",
+    "lessonId": "python-async-regex-http-01",
+    "track": "python",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "`await` hanya boleh dipakai di dalam…",
+    "options": [
+      {
+        "id": "a",
+        "text": "fungsi biasa"
+      },
+      {
+        "id": "b",
+        "text": "fungsi `async def`"
+      },
+      {
+        "id": "c",
+        "text": "list comprehension saja"
+      },
+      {
+        "id": "d",
+        "text": "kelas apa pun"
+      }
+    ],
+    "answer": "b",
+    "explanation": "await menyerahkan kendali ke event loop; hanya bermakna di coroutine.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "python-numpy-ex01",
+    "lessonId": "python-numpy-01",
+    "track": "python",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Satu Baris Ajaib",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `normalize_minmax(arr)` (numpy): skala ke 0..1. Jika semua nilai sama, kembalikan array nol.",
+    "starter": "import numpy as np\n\ndef normalize_minmax(arr):\n    pass\n",
+    "solution": "import numpy as np\n\ndef normalize_minmax(arr):\n    arr = np.asarray(arr, dtype=float)\n    lo, hi = arr.min(), arr.max()\n    if hi == lo:\n        return np.zeros_like(arr)\n    return (arr - lo) / (hi - lo)\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "setup": "import numpy as np",
+          "call": "normalize_minmax(np.array([1, 2, 3])).tolist()",
+          "expect": "[0.0, 0.5, 1.0]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "setup": "import numpy as np",
+          "call": "normalize_minmax(np.array([5, 5, 5])).tolist()",
+          "expect": "[0.0, 0.0, 0.0]"
+        },
+        {
+          "name": "tes 2",
+          "setup": "import numpy as np",
+          "call": "normalize_minmax(np.array([10, 20])).tolist()",
+          "expect": "[0.0, 1.0]"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Hitung min dan max array.",
+      "Operasi array bekerja elemen-demi-elemen.",
+      "Tangani kasus hi == lo agar tidak bagi nol."
+    ],
+    "explanation": "Vectorization: tanpa loop Python, jauh lebih cepat.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-numpy-ex02",
+    "lessonId": "python-numpy-01",
+    "track": "python",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Shape hasil `a(3,1) + b(1,4)` dalam broadcasting numpy?",
+    "options": [
+      {
+        "id": "a",
+        "text": "(3, 1)"
+      },
+      {
+        "id": "b",
+        "text": "(3, 4)"
+      },
+      {
+        "id": "c",
+        "text": "(4, 3)"
+      },
+      {
+        "id": "d",
+        "text": "Error"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Dimensi 1 di-stretch: 3×1 + 1×4 → 3×4.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "python-pandas-matplotlib-ex01",
+    "lessonId": "python-pandas-matplotlib-01",
+    "track": "python",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Pelanggan Emas",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `total_per_category(df)`: dict {kategori: total jumlah} dari DataFrame kolom 'kategori' dan 'jumlah'.",
+    "starter": "import pandas as pd\n\ndef total_per_category(df):\n    pass\n",
+    "solution": "import pandas as pd\n\ndef total_per_category(df):\n    return df.groupby('kategori')['jumlah'].sum().to_dict()\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "setup": "import pandas as pd\ndf = pd.DataFrame({'kategori': ['a', 'b', 'a'], 'jumlah': [1, 2, 3]})",
+          "call": "total_per_category(df)",
+          "expect": "{'a': 4, 'b': 2}"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "setup": "import pandas as pd\ndf = pd.DataFrame({'kategori': ['x'], 'jumlah': [9]})",
+          "call": "total_per_category(df)",
+          "expect": "{'x': 9}"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "groupby mengelompokkan baris.",
+      "Pilih kolom lalu agregasi dengan sum().",
+      "to_dict() mengubah Series ke dict."
+    ],
+    "explanation": "groupby + agregasi adalah inti analisis data tabular.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "python-pandas-matplotlib-ex02",
+    "lessonId": "python-pandas-matplotlib-01",
+    "track": "python",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Metode pandas yang menggabungkan baris per kelompok lalu mengagregasi?",
+    "options": [
+      {
+        "id": "a",
+        "text": "merge"
+      },
+      {
+        "id": "b",
+        "text": "groupby"
+      },
+      {
+        "id": "c",
+        "text": "pivot_table hanya"
+      },
+      {
+        "id": "d",
+        "text": "concat"
+      }
+    ],
+    "answer": "b",
+    "explanation": "groupby memecah → menerapkan agregasi → menggabungkan hasil.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-cargo-var-ex01",
+    "lessonId": "rust-cargo-var-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 30,
+    "title": "Jumlah Dua",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Baca dua bilangan bulat dari stdin (dipisah spasi/baris) lalu cetak jumlahnya.",
+    "starter": "use std::io::{self, Read};\n\nfn main() {\n    let mut input = String::new();\n    io::stdin().read_to_string(&mut input).unwrap();\n    // TODO: parse dan cetak jumlah\n}\n",
+    "solution": "use std::io::{self, Read};\n\nfn main() {\n    let mut input = String::new();\n    io::stdin().read_to_string(&mut input).unwrap();\n    let nums: Vec<i64> = input.split_whitespace().map(|x| x.parse().unwrap()).collect();\n    println!(\"{}\", nums[0] + nums[1]);\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "3\n4\n",
+          "expect": "7"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "-5\n12\n",
+          "expect": "7"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "1000000000000 1\n",
+          "expect": "1000000000001"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "split_whitespace() memecah token.",
+      "parse::<i64>() mengubah string ke angka.",
+      "Gunakan i64 agar muat angka besar."
+    ],
+    "explanation": "Variabel immutable secara default; `let mut` hanya jika perlu.",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-cargo-var-ex02",
+    "lessonId": "rust-cargo-var-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Apa yang terjadi: `let x = 5; x = 6;`?",
+    "options": [
+      {
+        "id": "a",
+        "text": "x menjadi 6"
+      },
+      {
+        "id": "b",
+        "text": "Error kompilasi: x immutable"
+      },
+      {
+        "id": "c",
+        "text": "Panic runtime"
+      },
+      {
+        "id": "d",
+        "text": "Warning saja"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Tambahkan `mut` untuk mengizinkan perubahan.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-tipe-fungsi-alur-ex01",
+    "lessonId": "rust-tipe-fungsi-alur-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 30,
+    "title": "Labirin Collatz",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Baca n (u64 ≥ 1). Cetak jumlah langkah Collatz sampai mencapai 1 (genap: n/2, ganjil: 3n+1).",
+    "starter": "use std::io::{self, Read};\n\nfn collatz_steps(mut n: u64) -> u32 {\n    // TODO\n    0\n}\n\nfn main() {\n    let mut s = String::new();\n    io::stdin().read_to_string(&mut s).unwrap();\n    let n: u64 = s.trim().parse().unwrap();\n    println!(\"{}\", collatz_steps(n));\n}\n",
+    "solution": "use std::io::{self, Read};\n\nfn collatz_steps(mut n: u64) -> u32 {\n    let mut steps = 0;\n    while n != 1 {\n        n = if n % 2 == 0 { n / 2 } else { 3 * n + 1 };\n        steps += 1;\n    }\n    steps\n}\n\nfn main() {\n    let mut s = String::new();\n    io::stdin().read_to_string(&mut s).unwrap();\n    let n: u64 = s.trim().parse().unwrap();\n    println!(\"{}\", collatz_steps(n));\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "6\n",
+          "expect": "8"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "1\n",
+          "expect": "0"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "27\n",
+          "expect": "111"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "7\n",
+          "expect": "16"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "Gunakan while n != 1.",
+      "if/else adalah ekspresi di Rust.",
+      "Hitung setiap iterasi."
+    ],
+    "explanation": "Di Rust, if adalah ekspresi sehingga bisa dipakai di sisi kanan `=`.",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-ownership-ex01",
+    "lessonId": "rust-ownership-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 15,
+    "prompt": "Apa hasil: `let s1 = String::from(\"hi\"); let s2 = s1; println!(\"{}\", s1);`?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mencetak hi"
+      },
+      {
+        "id": "b",
+        "text": "Error: s1 sudah di-move ke s2"
+      },
+      {
+        "id": "c",
+        "text": "Mencetak string kosong"
+      },
+      {
+        "id": "d",
+        "text": "Panic saat runtime"
+      }
+    ],
+    "answer": "b",
+    "explanation": "String tidak Copy; assignment memindahkan ownership. Gunakan s1.clone() jika butuh dua salinan.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-ownership-ex02",
+    "lessonId": "rust-ownership-01",
+    "track": "rust",
+    "kind": "fill-blank",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Tipe yang mengimplementasikan trait {{1}} disalin secara implisit (bukan di-move).",
+    "answers": [
+      [
+        "Copy"
+      ]
+    ],
+    "explanation": "Contoh tipe Copy: i32, bool, char, tuple dari tipe Copy.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "rust-ownership-ex03",
+    "lessonId": "rust-ownership-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Berapa mutable reference (&mut) ke data yang sama boleh hidup bersamaan?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Nol"
+      },
+      {
+        "id": "b",
+        "text": "Satu"
+      },
+      {
+        "id": "c",
+        "text": "Dua"
+      },
+      {
+        "id": "d",
+        "text": "Tak terbatas"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Aturan ini mencegah data race saat kompilasi.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-borrowing-lifetimes-ex01",
+    "lessonId": "rust-borrowing-lifetimes-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Pinjam Kata",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Implementasikan `longest_word(s: &str) -> &str` yang mengembalikan kata terpanjang (yang pertama jika seri). Baca satu baris dari stdin dan cetak hasilnya.",
+    "starter": "fn longest_word(s: &str) -> &str {\n    // TODO\n    \"\"\n}\n\nfn main() {\n    let mut line = String::new();\n    std::io::stdin().read_line(&mut line).unwrap();\n    println!(\"{}\", longest_word(&line));\n}\n",
+    "solution": "fn longest_word(s: &str) -> &str {\n    let mut best = \"\";\n    for w in s.split_whitespace() {\n        if w.len() > best.len() {\n            best = w;\n        }\n    }\n    best\n}\n\nfn main() {\n    let mut line = String::new();\n    std::io::stdin().read_line(&mut line).unwrap();\n    println!(\"{}\", longest_word(&line));\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "saya suka belajar rust\n",
+          "expect": "belajar"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "aa bb\n",
+          "expect": "aa"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "satu\n",
+          "expect": "satu"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "Mulai dari best = \"\".",
+      "Ganti best hanya jika w.len() > best.len().",
+      "Hasil meminjam dari s, jadi lifetime-nya ikut s."
+    ],
+    "explanation": "Lifetime elision membuat anotasi eksplisit tidak perlu di sini: satu input referensi → output meminjam darinya.",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-borrowing-lifetimes-ex02",
+    "lessonId": "rust-borrowing-lifetimes-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Apa jaminan dari `fn longest<'a>(x: &'a str, y: &'a str) -> &'a str`?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Hasil tidak hidup lebih lama dari input yang umurnya lebih pendek"
+      },
+      {
+        "id": "b",
+        "text": "String dikloning"
+      },
+      {
+        "id": "c",
+        "text": "Fungsi berjalan paralel"
+      },
+      {
+        "id": "d",
+        "text": "Memori dialokasi di heap"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Lifetime mendeskripsikan hubungan umur, tidak mengubah umur.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-struct-enum-match-ex01",
+    "lessonId": "rust-struct-enum-match-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "Kalkulator Luas",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Baca satu baris: `circle r`, `rect w h`, atau `tri b h`. Cetak luas dengan 2 desimal. Modelkan dengan enum Shape + match.",
+    "starter": "use std::io::Read;\n\nenum Shape {\n    // TODO: Circle, Rect, Tri\n}\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    // TODO\n}\n",
+    "solution": "use std::io::Read;\n\nenum Shape {\n    Circle(f64),\n    Rect(f64, f64),\n    Tri(f64, f64),\n}\n\nfn area(s: &Shape) -> f64 {\n    match s {\n        Shape::Circle(r) => std::f64::consts::PI * r * r,\n        Shape::Rect(w, h) => w * h,\n        Shape::Tri(b, h) => 0.5 * b * h,\n    }\n}\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    let p: Vec<&str> = s.split_whitespace().collect();\n    let n = |i: usize| p[i].parse::<f64>().unwrap();\n    let shape = match p[0] {\n        \"circle\" => Shape::Circle(n(1)),\n        \"rect\" => Shape::Rect(n(1), n(2)),\n        _ => Shape::Tri(n(1), n(2)),\n    };\n    println!(\"{:.2}\", area(&shape));\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "circle 2\n",
+          "expect": "12.57"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "rect 3 4\n",
+          "expect": "12.00"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "tri 3 4\n",
+          "expect": "6.00"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "circle 1\n",
+          "expect": "3.14"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "enum varian bisa membawa data.",
+      "match harus mencakup semua varian.",
+      "Cetak dengan {:.2}."
+    ],
+    "explanation": "Compiler memaksa exhaustive match: tambah varian baru → semua match yang lupa langsung error.",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-struct-enum-match-ex02",
+    "lessonId": "rust-struct-enum-match-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Jika `match` pada enum tidak mencakup semua varian dan tanpa `_`?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Panic runtime"
+      },
+      {
+        "id": "b",
+        "text": "Varian diabaikan"
+      },
+      {
+        "id": "c",
+        "text": "Error kompilasi"
+      },
+      {
+        "id": "d",
+        "text": "Warning saja"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Exhaustiveness dicek compiler.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-option-result-ex01",
+    "lessonId": "rust-option-result-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "Tanpa Null",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Baca satu baris berisi bilangan (i32) dipisah spasi. Cetak jumlahnya, atau `error` jika ada token yang bukan i32 valid.",
+    "starter": "fn main() {\n    let mut line = String::new();\n    std::io::stdin().read_line(&mut line).unwrap();\n    // TODO\n}\n",
+    "solution": "fn main() {\n    let mut line = String::new();\n    std::io::stdin().read_line(&mut line).unwrap();\n    let parsed: Result<Vec<i32>, _> = line.split_whitespace().map(|t| t.parse::<i32>()).collect();\n    match parsed {\n        Ok(v) => println!(\"{}\", v.iter().sum::<i32>()),\n        Err(_) => println!(\"error\"),\n    }\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "1 2 3\n",
+          "expect": "6"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "1 x 3\n",
+          "expect": "error"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "\n",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "-4 4\n",
+          "expect": "0"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "parse::<i32>() mengembalikan Result.",
+      "collect() bisa menghasilkan Result<Vec<_>, _>.",
+      "match Ok/Err."
+    ],
+    "explanation": "collect ke Result berhenti pada error pertama: pola idiomatik.",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-option-result-ex02",
+    "lessonId": "rust-option-result-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Operator `?` pada Result di fungsi yang mengembalikan Result…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mengabaikan error"
+      },
+      {
+        "id": "b",
+        "text": "Mengembalikan Err lebih awal dari fungsi"
+      },
+      {
+        "id": "c",
+        "text": "Panic"
+      },
+      {
+        "id": "d",
+        "text": "Mengubah Err jadi Ok"
+      }
+    ],
+    "answer": "b",
+    "explanation": "`?` membongkar Ok atau langsung return Err.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-trait-generics-ex01",
+    "lessonId": "rust-trait-generics-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Satu Fungsi Semua Tipe",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Tulis `largest<T: PartialOrd + Copy>(xs: &[T]) -> T`. Baca bilangan dari stdin, cetak yang terbesar.",
+    "starter": "use std::io::Read;\n\nfn largest<T: PartialOrd + Copy>(xs: &[T]) -> T {\n    // TODO\n    xs[0]\n}\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    let v: Vec<i32> = s.split_whitespace().map(|x| x.parse().unwrap()).collect();\n    println!(\"{}\", largest(&v));\n}\n",
+    "solution": "use std::io::Read;\n\nfn largest<T: PartialOrd + Copy>(xs: &[T]) -> T {\n    let mut m = xs[0];\n    for &x in xs {\n        if x > m {\n            m = x;\n        }\n    }\n    m\n}\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    let v: Vec<i32> = s.split_whitespace().map(|x| x.parse().unwrap()).collect();\n    println!(\"{}\", largest(&v));\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "3 9 2\n",
+          "expect": "9"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "-1 -5\n",
+          "expect": "-1"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "7\n",
+          "expect": "7"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "Mulai dari elemen pertama.",
+      "Bandingkan dengan >, butuh PartialOrd.",
+      "Copy agar bisa menyalin nilai."
+    ],
+    "explanation": "Trait bound menyatakan kemampuan minimum yang dibutuhkan tipe T.",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-trait-generics-ex02",
+    "lessonId": "rust-trait-generics-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Dynamic dispatch (`dyn Trait`) dipilih…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Saat compile lewat monomorphization"
+      },
+      {
+        "id": "b",
+        "text": "Saat runtime lewat vtable"
+      },
+      {
+        "id": "c",
+        "text": "Hanya untuk async"
+      },
+      {
+        "id": "d",
+        "text": "Tanpa pointer"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Generics → static dispatch (cepat, binary lebih besar); dyn → fleksibel dengan sedikit overhead.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-closure-iterator-ex01",
+    "lessonId": "rust-closure-iterator-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Rantai Pipa",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Baca bilangan dari stdin; cetak jumlah kuadrat dari bilangan genap saja, memakai rantai iterator.",
+    "starter": "use std::io::Read;\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    let v: Vec<i64> = s.split_whitespace().map(|x| x.parse().unwrap()).collect();\n    // TODO\n}\n",
+    "solution": "use std::io::Read;\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    let v: Vec<i64> = s.split_whitespace().map(|x| x.parse().unwrap()).collect();\n    let total: i64 = v.iter().filter(|x| **x % 2 == 0).map(|x| x * x).sum();\n    println!(\"{}\", total);\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "1 2 3 4\n",
+          "expect": "20"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "1 3 5\n",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "-2 2\n",
+          "expect": "8"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "iter().filter(...).map(...).sum()",
+      "Di filter, elemen berupa &&i64.",
+      "Tentukan tipe sum: sum::<i64>()"
+    ],
+    "explanation": "Iterator bersifat lazy: tidak ada kerja sampai ada konsumen (sum/collect).",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-closure-iterator-ex02",
+    "lessonId": "rust-closure-iterator-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Iterator adapter seperti `map` bersifat…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Eager: langsung dieksekusi"
+      },
+      {
+        "id": "b",
+        "text": "Lazy sampai dikonsumsi"
+      },
+      {
+        "id": "c",
+        "text": "Hanya untuk Vec"
+      },
+      {
+        "id": "d",
+        "text": "Selalu alokasi heap"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Tanpa konsumen seperti collect()/sum(), map tidak melakukan apa pun.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-koleksi-modul-ex01",
+    "lessonId": "rust-koleksi-modul-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Frekuensi Kata",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Baca kata-kata dari stdin. Cetak `kata jumlah` per baris, urut jumlah turun lalu kata naik (abjad).",
+    "starter": "use std::collections::HashMap;\nuse std::io::Read;\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    // TODO\n}\n",
+    "solution": "use std::collections::HashMap;\nuse std::io::Read;\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    let mut m: HashMap<&str, u32> = HashMap::new();\n    for w in s.split_whitespace() {\n        *m.entry(w).or_insert(0) += 1;\n    }\n    let mut v: Vec<(&str, u32)> = m.into_iter().collect();\n    v.sort_by(|a, b| b.1.cmp(&a.1).then(a.0.cmp(b.0)));\n    for (w, c) in v {\n        println!(\"{} {}\", w, c);\n    }\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "a b a c b a\n",
+          "expect": "a 3\nb 2\nc 1"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "x\n",
+          "expect": "x 1"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "b a\n",
+          "expect": "a 1\nb 1"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "entry(k).or_insert(0) menambah penghitung.",
+      "Pindahkan ke Vec untuk diurutkan.",
+      "sort_by + then untuk urutan ganda."
+    ],
+    "explanation": "HashMap tidak berurutan; urutkan secara eksplisit sebelum mencetak.",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-koleksi-modul-ex02",
+    "lessonId": "rust-koleksi-modul-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Visibilitas default item di modul Rust?",
+    "options": [
+      {
+        "id": "a",
+        "text": "public"
+      },
+      {
+        "id": "b",
+        "text": "private (hanya modul itu dan turunannya)"
+      },
+      {
+        "id": "c",
+        "text": "crate-wide"
+      },
+      {
+        "id": "d",
+        "text": "global"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gunakan `pub` untuk mengekspos.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-error-handling-ex01",
+    "lessonId": "rust-error-handling-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Kalkulator Sopan",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Baca `a op b` (op ∈ + - * /). Cetak hasil integer, atau `error: <alasan>`: `format salah`, `angka tidak valid`, `bagi nol`, `operator tidak dikenal`.",
+    "starter": "fn calc(line: &str) -> Result<i64, String> {\n    // TODO\n    Err(\"format salah\".to_string())\n}\n\nfn main() {\n    let mut line = String::new();\n    std::io::stdin().read_line(&mut line).unwrap();\n    match calc(&line) {\n        Ok(v) => println!(\"{}\", v),\n        Err(e) => println!(\"error: {}\", e),\n    }\n}\n",
+    "solution": "fn calc(line: &str) -> Result<i64, String> {\n    let p: Vec<&str> = line.split_whitespace().collect();\n    if p.len() != 3 {\n        return Err(\"format salah\".to_string());\n    }\n    let a: i64 = p[0].parse().map_err(|_| \"angka tidak valid\".to_string())?;\n    let b: i64 = p[2].parse().map_err(|_| \"angka tidak valid\".to_string())?;\n    match p[1] {\n        \"+\" => Ok(a + b),\n        \"-\" => Ok(a - b),\n        \"*\" => Ok(a * b),\n        \"/\" => {\n            if b == 0 {\n                Err(\"bagi nol\".to_string())\n            } else {\n                Ok(a / b)\n            }\n        }\n        _ => Err(\"operator tidak dikenal\".to_string()),\n    }\n}\n\nfn main() {\n    let mut line = String::new();\n    std::io::stdin().read_line(&mut line).unwrap();\n    match calc(&line) {\n        Ok(v) => println!(\"{}\", v),\n        Err(e) => println!(\"error: {}\", e),\n    }\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "7 + 5\n",
+          "expect": "12"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "10 / 0\n",
+          "expect": "error: bagi nol"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "2 ^ 3\n",
+          "expect": "error: operator tidak dikenal"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "x + 1\n",
+          "expect": "error: angka tidak valid"
+        },
+        {
+          "name": "tes 3",
+          "stdin": "1 +\n",
+          "expect": "error: format salah"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "Pecah baris menjadi 3 token.",
+      "map_err mengubah tipe error, lalu ?.",
+      "Cek b == 0 sebelum membagi."
+    ],
+    "explanation": "Error sebagai nilai: setiap jalur gagal terlihat di tipe fungsi.",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-testing-docs-ex01",
+    "lessonId": "rust-testing-docs-01",
+    "track": "rust",
+    "kind": "fill-blank",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Jalankan seluruh tes proyek dengan perintah `cargo {{1}}`.",
+    "answers": [
+      [
+        "test"
+      ]
+    ],
+    "explanation": "Tes unit biasanya diletakkan di modul `#[cfg(test)]` dalam file yang sama.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "rust-testing-docs-ex02",
+    "lessonId": "rust-testing-docs-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Atribut apa yang menandai modul yang hanya dikompilasi saat menjalankan tes?",
+    "options": [
+      {
+        "id": "a",
+        "text": "#[test_only]"
+      },
+      {
+        "id": "b",
+        "text": "#[cfg(test)]"
+      },
+      {
+        "id": "c",
+        "text": "#[debug]"
+      },
+      {
+        "id": "d",
+        "text": "#[allow(test)]"
+      }
+    ],
+    "answer": "b",
+    "explanation": "`#[cfg(test)]` membuat kode tes tidak ikut ke binary rilis.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-thread-channel-ex01",
+    "lessonId": "rust-thread-channel-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Empat Koki, Satu Kasir",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Baca n (u64). Bagi 1..=n ke 4 thread, kirim jumlah parsial lewat channel, cetak total. Batas bagian i: dari i*n/4+1 sampai (i+1)*n/4.",
+    "starter": "use std::io::Read;\nuse std::sync::mpsc;\nuse std::thread;\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    let n: u64 = s.trim().parse().unwrap();\n    // TODO\n}\n",
+    "solution": "use std::io::Read;\nuse std::sync::mpsc;\nuse std::thread;\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    let n: u64 = s.trim().parse().unwrap();\n    let (tx, rx) = mpsc::channel();\n    for i in 0..4u64 {\n        let tx = tx.clone();\n        thread::spawn(move || {\n            let start = i * n / 4 + 1;\n            let end = (i + 1) * n / 4;\n            let part: u64 = (start..=end).sum();\n            tx.send(part).unwrap();\n        });\n    }\n    drop(tx);\n    let total: u64 = rx.iter().sum();\n    println!(\"{}\", total);\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "100\n",
+          "expect": "5050"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "10\n",
+          "expect": "55"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "1000000\n",
+          "expect": "500000500000"
+        },
+        {
+          "name": "tes 3",
+          "stdin": "1\n",
+          "expect": "1"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "Clone tx untuk setiap thread.",
+      "Gunakan `move` pada closure.",
+      "drop(tx) di thread utama agar rx.iter() berhenti."
+    ],
+    "explanation": "Pola fan-out/fan-in: sebar kerja, kumpulkan hasil lewat channel.",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-arc-mutex-send-sync-ex01",
+    "lessonId": "rust-arc-mutex-send-sync-01",
+    "track": "rust",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 75,
+    "title": "Papan Skor",
+    "language": "rust",
+    "runner": "judge0",
+    "prompt": "Baca n. Jalankan n thread yang masing-masing menaikkan penghitung bersama 1000 kali (Arc<Mutex<u64>>). Cetak nilai akhir.",
+    "starter": "use std::io::Read;\nuse std::sync::{Arc, Mutex};\nuse std::thread;\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    let n: usize = s.trim().parse().unwrap();\n    // TODO\n}\n",
+    "solution": "use std::io::Read;\nuse std::sync::{Arc, Mutex};\nuse std::thread;\n\nfn main() {\n    let mut s = String::new();\n    std::io::stdin().read_to_string(&mut s).unwrap();\n    let n: usize = s.trim().parse().unwrap();\n    let counter = Arc::new(Mutex::new(0u64));\n    let mut handles = Vec::new();\n    for _ in 0..n {\n        let c = Arc::clone(&counter);\n        handles.push(thread::spawn(move || {\n            for _ in 0..1000 {\n                *c.lock().unwrap() += 1;\n            }\n        }));\n    }\n    for h in handles {\n        h.join().unwrap();\n    }\n    println!(\"{}\", *counter.lock().unwrap());\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "stdin": "4\n",
+          "expect": "4000"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "stdin": "1\n",
+          "expect": "1000"
+        },
+        {
+          "name": "tes 2",
+          "stdin": "8\n",
+          "expect": "8000"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 3000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "Arc untuk kepemilikan bersama, Mutex untuk akses eksklusif.",
+      "Arc::clone sebelum spawn.",
+      "join semua handle sebelum membaca hasil."
+    ],
+    "explanation": "Rc tidak Send, sehingga compiler menolak membagikannya antar thread.",
+    "srs": false,
+    "verified": "compiled-and-run-rustc-1.75"
+  },
+  {
+    "id": "rust-arc-mutex-send-sync-ex02",
+    "lessonId": "rust-arc-mutex-send-sync-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Mengapa `Rc<T>` tidak boleh dikirim antar thread?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Terlalu lambat"
+      },
+      {
+        "id": "b",
+        "text": "Tidak mengimplementasikan Send (hitungan referensinya non-atomik)"
+      },
+      {
+        "id": "c",
+        "text": "Hanya untuk async"
+      },
+      {
+        "id": "d",
+        "text": "Memakai heap"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Arc memakai penghitung atomik sehingga aman antar thread.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-async-tokio-ex01",
+    "lessonId": "rust-async-tokio-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "`async fn` di Rust mengembalikan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Hasil langsung"
+      },
+      {
+        "id": "b",
+        "text": "Future yang baru berjalan saat di-await/di-poll"
+      },
+      {
+        "id": "c",
+        "text": "Thread baru"
+      },
+      {
+        "id": "d",
+        "text": "Channel"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Future bersifat lazy; executor (mis. Tokio) yang mendorongnya maju.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-async-tokio-ex02",
+    "lessonId": "rust-async-tokio-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Mengapa operasi blocking (mis. std::thread::sleep) di dalam task Tokio itu bermasalah?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Compiler menolak"
+      },
+      {
+        "id": "b",
+        "text": "Ia memblokir thread worker sehingga task lain tertahan"
+      },
+      {
+        "id": "c",
+        "text": "Memori bocor"
+      },
+      {
+        "id": "d",
+        "text": "Tidak masalah"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gunakan tokio::time::sleep atau spawn_blocking untuk kerja berat.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-axum-serde-sqlx-ex01",
+    "lessonId": "rust-axum-serde-sqlx-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "`sqlx::query!` memeriksa apa saat kompilasi?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Hanya sintaks Rust"
+      },
+      {
+        "id": "b",
+        "text": "SQL terhadap skema database"
+      },
+      {
+        "id": "c",
+        "text": "Kecepatan query"
+      },
+      {
+        "id": "d",
+        "text": "Tidak ada"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Perlu DATABASE_URL atau data offline (`cargo sqlx prepare`) saat build.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-axum-serde-sqlx-ex02",
+    "lessonId": "rust-axum-serde-sqlx-01",
+    "track": "rust",
+    "kind": "fill-blank",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Di Axum, tipe {{1}} dipakai untuk mengekstrak dan mem-parse body JSON dari request.",
+    "answers": [
+      [
+        "Json",
+        "axum::Json"
+      ]
+    ],
+    "explanation": "Json<T> bekerja bersama serde::Deserialize.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "rust-wasm-ffi-unsafe-ex01",
+    "lessonId": "rust-wasm-ffi-unsafe-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "`unsafe` di Rust berarti…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Borrow checker dimatikan total"
+      },
+      {
+        "id": "b",
+        "text": "Programmer menjamin invarian yang tak bisa diperiksa compiler"
+      },
+      {
+        "id": "c",
+        "text": "Kode otomatis lebih cepat"
+      },
+      {
+        "id": "d",
+        "text": "Kode berjalan di kernel"
+      }
+    ],
+    "answer": "b",
+    "explanation": "unsafe hanya membuka beberapa kemampuan (deref raw pointer, FFI, dll.); aturan lainnya tetap berlaku.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "rust-wasm-ffi-unsafe-ex02",
+    "lessonId": "rust-wasm-ffi-unsafe-01",
+    "track": "rust",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Alat yang mengikat Rust ke JavaScript untuk WASM?",
+    "options": [
+      {
+        "id": "a",
+        "text": "wasm-bindgen"
+      },
+      {
+        "id": "b",
+        "text": "cargo-expand"
+      },
+      {
+        "id": "c",
+        "text": "rustfmt"
+      },
+      {
+        "id": "d",
+        "text": "clippy"
+      }
+    ],
+    "answer": "a",
+    "explanation": "wasm-pack membungkus wasm-bindgen dan membangun paket npm.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-val-var-null-ex01",
+    "lessonId": "kotlin-val-var-null-01",
+    "track": "kotlin",
+    "kind": "code",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 30,
+    "title": "Tamu Tak Dikenal",
+    "language": "kotlin",
+    "runner": "kotlin-playground",
+    "prompt": "Tulis `greet(name: String?): String` → \"Halo, <name>!\" atau \"Halo, tamu!\" jika null.",
+    "starter": "fun greet(name: String?): String {\n    // TODO\n    return \"\"\n}\n",
+    "solution": "fun greet(name: String?): String = \"Halo, ${name ?: \"tamu\"}!\"\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "greet(\"Rado\")",
+          "expect": "Halo, Rado!"
+        },
+        {
+          "name": "tes 2",
+          "call": "greet(null)",
+          "expect": "Halo, tamu!"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "greet(\"\")",
+          "expect": "Halo, !"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 10000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "Parameter bertipe String? boleh null.",
+      "Elvis operator ?: memberi nilai pengganti.",
+      "String template: ${...}"
+    ],
+    "explanation": "Null safety dipaksa di tipe: String dan String? adalah dua tipe berbeda.",
+    "srs": false,
+    "verified": "unverified (butuh kotlin-playground/DartPad)"
+  },
+  {
+    "id": "kotlin-val-var-null-ex02",
+    "lessonId": "kotlin-val-var-null-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Apa arti `val`?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Variabel yang bisa diubah"
+      },
+      {
+        "id": "b",
+        "text": "Referensi read-only (tidak bisa di-reassign)"
+      },
+      {
+        "id": "c",
+        "text": "Konstanta compile-time selalu"
+      },
+      {
+        "id": "d",
+        "text": "Tipe nullable"
+      }
+    ],
+    "answer": "b",
+    "explanation": "`var` bisa diubah; `val` tidak bisa di-reassign (objeknya sendiri bisa tetap mutable).",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-fungsi-alur-ex01",
+    "lessonId": "kotlin-fungsi-alur-01",
+    "track": "kotlin",
+    "kind": "code",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 30,
+    "title": "when Naik Kelas",
+    "language": "kotlin",
+    "runner": "kotlin-playground",
+    "prompt": "Tulis `fizzbuzz(n: Int): List<String>` memakai `when`.",
+    "starter": "fun fizzbuzz(n: Int): List<String> {\n    // TODO\n    return emptyList()\n}\n",
+    "solution": "fun fizzbuzz(n: Int): List<String> = (1..n).map {\n    when {\n        it % 15 == 0 -> \"FizzBuzz\"\n        it % 3 == 0 -> \"Fizz\"\n        it % 5 == 0 -> \"Buzz\"\n        else -> it.toString()\n    }\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "fizzbuzz(5)",
+          "expect": "[1, 2, Fizz, 4, Buzz]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "fizzbuzz(15).last()",
+          "expect": "FizzBuzz"
+        },
+        {
+          "name": "tes 2",
+          "call": "fizzbuzz(0)",
+          "expect": "[]"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 10000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "Rentang: 1..n.",
+      "when tanpa argumen berisi kondisi boolean.",
+      "Cabang 15 dulu."
+    ],
+    "explanation": "when adalah ekspresi yang mengembalikan nilai.",
+    "srs": false,
+    "verified": "unverified (butuh kotlin-playground/DartPad)"
+  },
+  {
+    "id": "kotlin-class-sealed-ex01",
+    "lessonId": "kotlin-class-sealed-01",
+    "track": "kotlin",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "Daftar Tertutup",
+    "language": "kotlin",
+    "runner": "kotlin-playground",
+    "prompt": "Lengkapi `area(s: Shape): Double` untuk Circle(r) dan Rect(w, h) memakai `when` tanpa else.",
+    "starter": "sealed interface Shape\ndata class Circle(val r: Double) : Shape\ndata class Rect(val w: Double, val h: Double) : Shape\n\nfun area(s: Shape): Double {\n    // TODO\n    return 0.0\n}\n",
+    "solution": "sealed interface Shape\ndata class Circle(val r: Double) : Shape\ndata class Rect(val w: Double, val h: Double) : Shape\n\nfun area(s: Shape): Double = when (s) {\n    is Circle -> Math.PI * s.r * s.r\n    is Rect -> s.w * s.h\n}\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "area(Rect(3.0, 4.0))",
+          "expect": "12.0"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "area(Circle(0.0))",
+          "expect": "0.0"
+        },
+        {
+          "name": "tes 2",
+          "call": "area(Rect(0.5, 4.0))",
+          "expect": "2.0"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 10000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "`is` mengecek tipe dan smart-cast.",
+      "Tak perlu else: sealed bersifat tertutup.",
+      "Math.PI tersedia di JVM."
+    ],
+    "explanation": "Menambah subtipe sealed baru membuat setiap `when` yang tak lengkap gagal kompilasi.",
+    "srs": false,
+    "verified": "unverified (butuh kotlin-playground/DartPad)"
+  },
+  {
+    "id": "kotlin-lambda-koleksi-ex01",
+    "lessonId": "kotlin-lambda-koleksi-01",
+    "track": "kotlin",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "LEGO Koleksi",
+    "language": "kotlin",
+    "runner": "kotlin-playground",
+    "prompt": "Tulis `longUpper(words: List<String>): List<String>`: ambil kata dengan panjang > 3, ubah ke huruf besar, urutkan abjad.",
+    "starter": "fun longUpper(words: List<String>): List<String> {\n    // TODO\n    return emptyList()\n}\n",
+    "solution": "fun longUpper(words: List<String>): List<String> =\n    words.filter { it.length > 3 }.map { it.uppercase() }.sorted()\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "longUpper(listOf(\"halo\", \"ya\", \"kotlin\", \"oke\"))",
+          "expect": "[HALO, KOTLIN]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "longUpper(emptyList())",
+          "expect": "[]"
+        },
+        {
+          "name": "tes 2",
+          "call": "longUpper(listOf(\"zebra\", \"apel\"))",
+          "expect": "[APEL, ZEBRA]"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 10000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "filter, map, sorted dirangkai.",
+      "it.length > 3",
+      "uppercase() (bukan toUpperCase)."
+    ],
+    "explanation": "Untuk koleksi besar, asSequence() menghindari list perantara.",
+    "srs": false,
+    "verified": "unverified (butuh kotlin-playground/DartPad)"
+  },
+  {
+    "id": "kotlin-generics-delegation-dsl-ex01",
+    "lessonId": "kotlin-generics-delegation-dsl-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "`List<out E>` pada Kotlin berarti List<String> adalah subtipe dari List<Any> karena…",
+    "options": [
+      {
+        "id": "a",
+        "text": "E dideklarasikan covariant (out): hanya diproduksi"
+      },
+      {
+        "id": "b",
+        "text": "Semua generics invarian"
+      },
+      {
+        "id": "c",
+        "text": "Ada boxing"
+      },
+      {
+        "id": "d",
+        "text": "Compiler berbaik hati"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`out` = producer (covariant), `in` = consumer (contravariant).",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-generics-delegation-dsl-ex02",
+    "lessonId": "kotlin-generics-delegation-dsl-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Fitur Kotlin yang membuat blok seperti `html { body { p(\"hi\") } }` mungkin?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Lambda with receiver"
+      },
+      {
+        "id": "b",
+        "text": "Reflection"
+      },
+      {
+        "id": "c",
+        "text": "Annotation processing"
+      },
+      {
+        "id": "d",
+        "text": "Macro"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Lambda dengan receiver mengubah `this` di dalam blok, menjadi dasar DSL.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-coroutines-flow-ex01",
+    "lessonId": "kotlin-coroutines-flow-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Beda `launch` dan `async`?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tidak ada beda"
+      },
+      {
+        "id": "b",
+        "text": "launch mengembalikan Job (fire-and-forget); async mengembalikan Deferred yang bisa di-await"
+      },
+      {
+        "id": "c",
+        "text": "async hanya untuk UI"
+      },
+      {
+        "id": "d",
+        "text": "launch memblokir thread"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gunakan async saat butuh hasil; launch saat hanya efek samping.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-coroutines-flow-ex02",
+    "lessonId": "kotlin-coroutines-flow-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Mengapa Flow disebut cold?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Karena lambat"
+      },
+      {
+        "id": "b",
+        "text": "Kode builder baru berjalan saat ada collector"
+      },
+      {
+        "id": "c",
+        "text": "Tidak bisa dibatalkan"
+      },
+      {
+        "id": "d",
+        "text": "Hanya sekali emit"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Setiap collector memicu eksekusi baru; StateFlow/SharedFlow adalah hot.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-testing-gradle-ktor-ex01",
+    "lessonId": "kotlin-testing-gradle-ktor-01",
+    "track": "kotlin",
+    "kind": "fill-blank",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Di Ktor, `get(\"/\") { call.{{1}}(\"Halo\") }` membalas dengan teks.",
+    "answers": [
+      [
+        "respondText"
+      ]
+    ],
+    "explanation": "call.respond(...) dipakai untuk objek yang diserialisasi.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "kotlin-testing-gradle-ktor-ex02",
+    "lessonId": "kotlin-testing-gradle-ktor-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Anotasi JUnit 5 untuk menandai metode tes?",
+    "options": [
+      {
+        "id": "a",
+        "text": "@Test"
+      },
+      {
+        "id": "b",
+        "text": "@Check"
+      },
+      {
+        "id": "c",
+        "text": "@Spec"
+      },
+      {
+        "id": "d",
+        "text": "@Run"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Pada JUnit 5 gunakan org.junit.jupiter.api.Test.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-kmp-bridge-ex01",
+    "lessonId": "kotlin-kmp-bridge-01",
+    "track": "kotlin",
+    "kind": "fill-blank",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Di Kotlin Multiplatform, deklarasi umum memakai {{1}} dan implementasi per platform memakai {{2}}.",
+    "answers": [
+      [
+        "expect"
+      ],
+      [
+        "actual"
+      ]
+    ],
+    "explanation": "Pola ini memisahkan kontrak dari implementasi spesifik platform.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "kotlin-kmp-bridge-ex02",
+    "lessonId": "kotlin-kmp-bridge-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Cara umum menghubungkan kode Kotlin native ke app Flutter?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Platform channel (MethodChannel)"
+      },
+      {
+        "id": "b",
+        "text": "Hot reload"
+      },
+      {
+        "id": "c",
+        "text": "Pub.dev saja"
+      },
+      {
+        "id": "d",
+        "text": "SQL"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Platform channel mengirim pesan antara Dart dan kode native.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-compose-dasar-ex01",
+    "lessonId": "kotlin-compose-dasar-01",
+    "track": "kotlin",
+    "kind": "ui-predict",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 22,
+    "framework": "compose",
+    "prompt": "Seperti apa tampilan kode ini?",
+    "code": "Column {\n    Text(\"A\")\n    Row {\n        Text(\"B\")\n        Text(\"C\")\n    }\n}",
+    "options": [
+      {
+        "id": "a",
+        "text": "A di baris atas; B dan C berdampingan di bawahnya"
+      },
+      {
+        "id": "b",
+        "text": "A, B, C berdampingan dalam satu baris"
+      },
+      {
+        "id": "c",
+        "text": "A, B, C bertumpuk vertikal"
+      },
+      {
+        "id": "d",
+        "text": "B dan C bertumpuk di bawah A"
+      }
+    ],
+    "answer": "a",
+    "image": null,
+    "explanation": "Column menumpuk vertikal; Row di dalamnya menyusun horizontal.",
+    "hints": [],
+    "srs": true,
+    "note": "opsi bisa diganti gambar render (image) saat aset tersedia"
+  },
+  {
+    "id": "kotlin-compose-dasar-ex02",
+    "lessonId": "kotlin-compose-dasar-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Fungsi Compose yang menggambar UI diberi anotasi…",
+    "options": [
+      {
+        "id": "a",
+        "text": "@Composable"
+      },
+      {
+        "id": "b",
+        "text": "@Widget"
+      },
+      {
+        "id": "c",
+        "text": "@View"
+      },
+      {
+        "id": "d",
+        "text": "@Render"
+      }
+    ],
+    "answer": "a",
+    "explanation": "@Composable menandai fungsi yang boleh memanggil composable lain.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-state-hoisting-ex01",
+    "lessonId": "kotlin-state-hoisting-01",
+    "track": "kotlin",
+    "kind": "ui-predict",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 30,
+    "framework": "compose",
+    "prompt": "Setelah 3 kali klik, apa teks tombolnya?",
+    "code": "@Composable\nfun Counter() {\n    var n by remember { mutableStateOf(0) }\n    Button(onClick = { n++ }) { Text(\"Klik: $n\") }\n}",
+    "options": [
+      {
+        "id": "a",
+        "text": "Klik: 0"
+      },
+      {
+        "id": "b",
+        "text": "Klik: 1"
+      },
+      {
+        "id": "c",
+        "text": "Klik: 3"
+      },
+      {
+        "id": "d",
+        "text": "Error kompilasi"
+      }
+    ],
+    "answer": "c",
+    "image": null,
+    "explanation": "Perubahan mutableState memicu recomposition dengan nilai terbaru.",
+    "hints": [],
+    "srs": true,
+    "note": "opsi bisa diganti gambar render (image) saat aset tersedia"
+  },
+  {
+    "id": "kotlin-state-hoisting-ex02",
+    "lessonId": "kotlin-state-hoisting-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "State hoisting artinya…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menaikkan state ke pemanggil dan menurunkan nilai + callback"
+      },
+      {
+        "id": "b",
+        "text": "Menyimpan state di database"
+      },
+      {
+        "id": "c",
+        "text": "Memakai global variable"
+      },
+      {
+        "id": "d",
+        "text": "Menghapus state"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Composable jadi stateless dan mudah dites/dipakai ulang.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-material3-navigasi-ex01",
+    "lessonId": "kotlin-material3-navigasi-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Komponen M3 yang menyediakan warna tema (colorScheme) ke seluruh pohon composable?",
+    "options": [
+      {
+        "id": "a",
+        "text": "MaterialTheme"
+      },
+      {
+        "id": "b",
+        "text": "Surface saja"
+      },
+      {
+        "id": "c",
+        "text": "Scaffold"
+      },
+      {
+        "id": "d",
+        "text": "NavHost"
+      }
+    ],
+    "answer": "a",
+    "explanation": "MaterialTheme menyediakan colorScheme, typography, shapes via CompositionLocal.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-material3-navigasi-ex02",
+    "lessonId": "kotlin-material3-navigasi-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Di Navigation Compose, komponen yang menampung grafik tujuan navigasi?",
+    "options": [
+      {
+        "id": "a",
+        "text": "NavHost"
+      },
+      {
+        "id": "b",
+        "text": "LazyColumn"
+      },
+      {
+        "id": "c",
+        "text": "Box"
+      },
+      {
+        "id": "d",
+        "text": "BackHandler"
+      }
+    ],
+    "answer": "a",
+    "explanation": "NavHost + NavController mengatur backstack.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-recomposition-perf-a11y-ex01",
+    "lessonId": "kotlin-recomposition-perf-a11y-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Memberi `key` stabil pada item LazyColumn membantu…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Compose melacak identitas item saat daftar berubah"
+      },
+      {
+        "id": "b",
+        "text": "Mempercepat compile"
+      },
+      {
+        "id": "c",
+        "text": "Mengenkripsi state"
+      },
+      {
+        "id": "d",
+        "text": "Mengganti ViewModel"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Tanpa key, penyisipan di tengah memicu recomposition tak perlu.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "kotlin-recomposition-perf-a11y-ex02",
+    "lessonId": "kotlin-recomposition-perf-a11y-01",
+    "track": "kotlin",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Ukuran target sentuh minimum yang direkomendasikan Material?",
+    "options": [
+      {
+        "id": "a",
+        "text": "24dp"
+      },
+      {
+        "id": "b",
+        "text": "32dp"
+      },
+      {
+        "id": "c",
+        "text": "48dp"
+      },
+      {
+        "id": "d",
+        "text": "64dp"
+      }
+    ],
+    "answer": "c",
+    "explanation": "48dp × 48dp; pakai Modifier.minimumInteractiveComponentSize().",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-dart-dasar-ex01",
+    "lessonId": "dart-flutter-dart-dasar-01",
+    "track": "dart-flutter",
+    "kind": "code",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 30,
+    "title": "Genap Saja",
+    "language": "dart",
+    "runner": "dartpad",
+    "prompt": "Tulis `int sumEvens(List<int> xs)` yang menjumlah bilangan genap.",
+    "starter": "int sumEvens(List<int> xs) {\n  // TODO\n  return 0;\n}\n",
+    "solution": "int sumEvens(List<int> xs) =>\n    xs.where((x) => x.isEven).fold(0, (a, b) => a + b);\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "sumEvens([1, 2, 3, 4])",
+          "expect": "6"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "sumEvens([])",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "call": "sumEvens([-2, 2, 5])",
+          "expect": "0"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 10000,
+      "memoryMb": 256
+    },
+    "hints": [
+      "where memfilter.",
+      "int.isEven tersedia.",
+      "fold(0, ...) menjumlah."
+    ],
+    "explanation": "Dart sound null safety: int dan int? adalah tipe berbeda.",
+    "srs": false,
+    "verified": "unverified (butuh kotlin-playground/DartPad)"
+  },
+  {
+    "id": "dart-flutter-dart-dasar-ex02",
+    "lessonId": "dart-flutter-dart-dasar-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Operator Dart untuk nilai default saat null?",
+    "options": [
+      {
+        "id": "a",
+        "text": "??"
+      },
+      {
+        "id": "b",
+        "text": "?:"
+      },
+      {
+        "id": "c",
+        "text": "||"
+      },
+      {
+        "id": "d",
+        "text": "!!"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`x ?? 0`; `x ??= 0` mengisi hanya bila null.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-dart-async-isolate-ex01",
+    "lessonId": "dart-flutter-dart-async-isolate-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Beda Future dan Stream?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Future menghasilkan satu nilai asinkron; Stream banyak nilai seiring waktu"
+      },
+      {
+        "id": "b",
+        "text": "Sama saja"
+      },
+      {
+        "id": "c",
+        "text": "Stream hanya satu nilai"
+      },
+      {
+        "id": "d",
+        "text": "Future lebih cepat"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Future ≈ satu hasil; Stream ≈ urutan event.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-dart-async-isolate-ex02",
+    "lessonId": "dart-flutter-dart-async-isolate-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Isolate di Dart…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Berbagi memori antar isolate"
+      },
+      {
+        "id": "b",
+        "text": "Punya heap sendiri dan berkomunikasi lewat message passing"
+      },
+      {
+        "id": "c",
+        "text": "Sama dengan thread di Java"
+      },
+      {
+        "id": "d",
+        "text": "Hanya untuk web"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Tidak ada shared memory sehingga data race klasik dihindari.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-widget-layout-ex01",
+    "lessonId": "dart-flutter-widget-layout-01",
+    "track": "dart-flutter",
+    "kind": "ui-predict",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 22,
+    "framework": "flutter",
+    "prompt": "Posisi A, B, C?",
+    "code": "Row(\n  mainAxisAlignment: MainAxisAlignment.spaceBetween,\n  children: [Text('A'), Text('B'), Text('C')],\n)",
+    "options": [
+      {
+        "id": "a",
+        "text": "Semua rapat di kiri"
+      },
+      {
+        "id": "b",
+        "text": "A di tepi kiri, C di tepi kanan, B di antaranya"
+      },
+      {
+        "id": "c",
+        "text": "Semua di tengah"
+      },
+      {
+        "id": "d",
+        "text": "Bertumpuk vertikal"
+      }
+    ],
+    "answer": "b",
+    "image": null,
+    "explanation": "spaceBetween: ruang sisa dibagi di antara anak; anak pertama dan terakhir menempel ke tepi.",
+    "hints": [],
+    "srs": true,
+    "note": "opsi bisa diganti gambar render (image) saat aset tersedia"
+  },
+  {
+    "id": "dart-flutter-widget-layout-ex02",
+    "lessonId": "dart-flutter-widget-layout-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Widget yang menumpuk anak di atas satu sama lain?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Stack"
+      },
+      {
+        "id": "b",
+        "text": "Column"
+      },
+      {
+        "id": "c",
+        "text": "ListView"
+      },
+      {
+        "id": "d",
+        "text": "Wrap"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gunakan Positioned untuk menempatkan anak di dalam Stack.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-state-navigasi-ex01",
+    "lessonId": "dart-flutter-state-navigasi-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 15,
+    "prompt": "`setState()` melakukan apa?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menyimpan ke disk"
+      },
+      {
+        "id": "b",
+        "text": "Menandai State kotor sehingga build() dijalankan ulang"
+      },
+      {
+        "id": "c",
+        "text": "Membuat widget baru selamanya"
+      },
+      {
+        "id": "d",
+        "text": "Menghentikan animasi"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Untuk state yang dibagi antar layar, pakai Provider/Riverpod/Bloc.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-state-navigasi-ex02",
+    "lessonId": "dart-flutter-state-navigasi-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Navigasi deklaratif di Flutter yang populer?",
+    "options": [
+      {
+        "id": "a",
+        "text": "go_router"
+      },
+      {
+        "id": "b",
+        "text": "dart:io"
+      },
+      {
+        "id": "c",
+        "text": "http"
+      },
+      {
+        "id": "d",
+        "text": "sqflite"
+      }
+    ],
+    "answer": "a",
+    "explanation": "go_router mendukung deep link dan URL web.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-http-storage-test-ex01",
+    "lessonId": "dart-flutter-http-storage-test-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Jenis tes Flutter yang menguji satu widget tanpa emulator penuh?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Widget test"
+      },
+      {
+        "id": "b",
+        "text": "Integration test"
+      },
+      {
+        "id": "c",
+        "text": "Golden pixel test saja"
+      },
+      {
+        "id": "d",
+        "text": "Manual test"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Widget test memakai WidgetTester dan berjalan cepat.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-http-storage-test-ex02",
+    "lessonId": "dart-flutter-http-storage-test-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Pola agar app tetap berguna saat offline?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menyimpan cache lokal dan sinkronisasi saat online"
+      },
+      {
+        "id": "b",
+        "text": "Menunggu koneksi"
+      },
+      {
+        "id": "c",
+        "text": "Menolak semua aksi"
+      },
+      {
+        "id": "d",
+        "text": "Memakai lebih banyak setState"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Offline-first: sumber kebenaran lokal, sinkronisasi di latar.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-clean-arch-ffi-ex01",
+    "lessonId": "dart-flutter-clean-arch-ffi-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Tugas utama Repository dalam clean architecture?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menyembunyikan sumber data (API/DB) di balik antarmuka"
+      },
+      {
+        "id": "b",
+        "text": "Menggambar UI"
+      },
+      {
+        "id": "c",
+        "text": "Mengatur navigasi"
+      },
+      {
+        "id": "d",
+        "text": "Menjalankan animasi"
+      }
+    ],
+    "answer": "a",
+    "explanation": "UI/domain tidak tahu apakah data dari jaringan atau cache.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-clean-arch-ffi-ex02",
+    "lessonId": "dart-flutter-clean-arch-ffi-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Pustaka Dart untuk memanggil kode C/Rust native langsung?",
+    "options": [
+      {
+        "id": "a",
+        "text": "dart:ffi"
+      },
+      {
+        "id": "b",
+        "text": "dart:html"
+      },
+      {
+        "id": "c",
+        "text": "dart:math"
+      },
+      {
+        "id": "d",
+        "text": "dart:convert"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Rust diekspos lewat C ABI (extern \"C\") lalu dipanggil via dart:ffi.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-layout-sliver-ex01",
+    "lessonId": "dart-flutter-layout-sliver-01",
+    "track": "dart-flutter",
+    "kind": "fill-blank",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Aturan layout Flutter: constraints go {{1}}, sizes go {{2}}, parent sets {{3}}.",
+    "answers": [
+      [
+        "down"
+      ],
+      [
+        "up"
+      ],
+      [
+        "position"
+      ]
+    ],
+    "explanation": "Parent memberi batas, anak memilih ukuran, parent menempatkan anak.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "dart-flutter-layout-sliver-ex02",
+    "lessonId": "dart-flutter-layout-sliver-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Widget scroll dengan efek kompleks (app bar yang mengecil) dibangun dengan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "CustomScrollView + Sliver"
+      },
+      {
+        "id": "b",
+        "text": "Column"
+      },
+      {
+        "id": "c",
+        "text": "Stack"
+      },
+      {
+        "id": "d",
+        "text": "Padding"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Sliver menggabungkan banyak potongan scrollable dalam satu viewport.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-animasi-painter-ex01",
+    "lessonId": "dart-flutter-animasi-painter-01",
+    "track": "dart-flutter",
+    "kind": "ui-predict",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 37,
+    "framework": "flutter",
+    "prompt": "Apa yang terjadi saat `selected` berubah dari false ke true?",
+    "code": "AnimatedContainer(\n  duration: Duration(milliseconds: 300),\n  width: selected ? 200 : 100,\n  height: 100,\n  color: Colors.blue,\n)",
+    "options": [
+      {
+        "id": "a",
+        "text": "Lebar berubah mulus dari 100 ke 200 selama 300 ms"
+      },
+      {
+        "id": "b",
+        "text": "Lebar langsung 200 tanpa animasi"
+      },
+      {
+        "id": "c",
+        "text": "Error"
+      },
+      {
+        "id": "d",
+        "text": "Warna berubah"
+      }
+    ],
+    "answer": "a",
+    "image": null,
+    "explanation": "Widget implicit animation menganimasikan perubahan properti otomatis.",
+    "hints": [],
+    "srs": true,
+    "note": "opsi bisa diganti gambar render (image) saat aset tersedia"
+  },
+  {
+    "id": "dart-flutter-animasi-painter-ex02",
+    "lessonId": "dart-flutter-animasi-painter-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Untuk kontrol penuh atas animasi (play/reverse/loop) gunakan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "AnimationController"
+      },
+      {
+        "id": "b",
+        "text": "setState saja"
+      },
+      {
+        "id": "c",
+        "text": "FutureBuilder"
+      },
+      {
+        "id": "d",
+        "text": "InheritedWidget"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Explicit animation butuh TickerProvider.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-adaptif-a11y-golden-ex01",
+    "lessonId": "dart-flutter-adaptif-a11y-golden-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Cara menghormati pengaturan ukuran teks pengguna?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Memakai TextScaler/skala teks sistem"
+      },
+      {
+        "id": "b",
+        "text": "Memakai ukuran px tetap"
+      },
+      {
+        "id": "c",
+        "text": "Menonaktifkan scroll"
+      },
+      {
+        "id": "d",
+        "text": "Menyembunyikan teks"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Uji layout dengan skala teks besar untuk menghindari overflow.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-adaptif-a11y-golden-ex02",
+    "lessonId": "dart-flutter-adaptif-a11y-golden-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Golden test membandingkan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Screenshot widget dengan gambar acuan"
+      },
+      {
+        "id": "b",
+        "text": "Kecepatan network"
+      },
+      {
+        "id": "c",
+        "text": "Isi database"
+      },
+      {
+        "id": "d",
+        "text": "Ukuran APK"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Berguna untuk mendeteksi regresi visual.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-tokens-komponen-ex01",
+    "lessonId": "dart-flutter-tokens-komponen-01",
+    "track": "dart-flutter",
+    "kind": "ui-predict",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 30,
+    "framework": "flutter",
+    "prompt": "Apa efek `ThemeExtension` berisi token spasi?",
+    "code": "class Spacing extends ThemeExtension<Spacing> { final double md; ... }",
+    "options": [
+      {
+        "id": "a",
+        "text": "Token bisa diakses lewat Theme.of(context) dan ikut berubah antar tema"
+      },
+      {
+        "id": "b",
+        "text": "Hanya untuk animasi"
+      },
+      {
+        "id": "c",
+        "text": "Menambah dependensi jaringan"
+      },
+      {
+        "id": "d",
+        "text": "Menggantikan widget"
+      }
+    ],
+    "answer": "a",
+    "image": null,
+    "explanation": "ThemeExtension memperluas ThemeData dengan token kustom yang bisa diinterpolasi.",
+    "hints": [],
+    "srs": true,
+    "note": "opsi bisa diganti gambar render (image) saat aset tersedia"
+  },
+  {
+    "id": "dart-flutter-tokens-komponen-ex02",
+    "lessonId": "dart-flutter-tokens-komponen-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Keuntungan utama design tokens?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sumber kebenaran tunggal untuk warna/spasi/tipografi"
+      },
+      {
+        "id": "b",
+        "text": "App lebih kecil"
+      },
+      {
+        "id": "c",
+        "text": "Tidak perlu tes"
+      },
+      {
+        "id": "d",
+        "text": "Tanpa desainer"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Ubah di satu tempat, konsisten di mana-mana.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-figma-to-code-ex01",
+    "lessonId": "dart-flutter-figma-to-code-01",
+    "track": "dart-flutter",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Tiga state UI yang wajib dirancang selain state 'berisi data'?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Loading, empty, error"
+      },
+      {
+        "id": "b",
+        "text": "Dark, light, auto"
+      },
+      {
+        "id": "c",
+        "text": "Portrait, landscape, tablet"
+      },
+      {
+        "id": "d",
+        "text": "Debug, profile, release"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Banyak bug UX berasal dari state yang tak pernah didesain.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dart-flutter-figma-to-code-ex02",
+    "lessonId": "dart-flutter-figma-to-code-01",
+    "track": "dart-flutter",
+    "kind": "ui-predict",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 37,
+    "framework": "flutter",
+    "prompt": "Layar apa yang ditampilkan?",
+    "code": "snapshot.hasError ? ErrorView() : snapshot.hasData ? ListView(...) : CircularProgressIndicator()",
+    "options": [
+      {
+        "id": "a",
+        "text": "Loading saat belum ada data/error, error jika gagal, daftar jika data siap"
+      },
+      {
+        "id": "b",
+        "text": "Selalu daftar"
+      },
+      {
+        "id": "c",
+        "text": "Selalu loading"
+      },
+      {
+        "id": "d",
+        "text": "Error terus"
+      }
+    ],
+    "answer": "a",
+    "image": null,
+    "explanation": "Ternary bersarang memetakan tiga state FutureBuilder.",
+    "hints": [],
+    "srs": true,
+    "note": "opsi bisa diganti gambar render (image) saat aset tersedia"
+  },
+  {
+    "id": "dsa-big-o-ex01",
+    "lessonId": "dsa-big-o-01",
+    "track": "dsa",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 10,
+    "prompt": "Kompleksitas waktu `for i in range(n): for j in range(i, n): ...`?",
+    "options": [
+      {
+        "id": "a",
+        "text": "O(n)"
+      },
+      {
+        "id": "b",
+        "text": "O(n log n)"
+      },
+      {
+        "id": "c",
+        "text": "O(n²)"
+      },
+      {
+        "id": "d",
+        "text": "O(2ⁿ)"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Total iterasi n + (n-1) + … + 1 = n(n+1)/2 → O(n²).",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dsa-big-o-ex02",
+    "lessonId": "dsa-big-o-01",
+    "track": "dsa",
+    "kind": "mcq",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Binary search pada array terurut berukuran n memiliki kompleksitas…",
+    "options": [
+      {
+        "id": "a",
+        "text": "O(log n)"
+      },
+      {
+        "id": "b",
+        "text": "O(n)"
+      },
+      {
+        "id": "c",
+        "text": "O(1)"
+      },
+      {
+        "id": "d",
+        "text": "O(n²)"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Ruang pencarian dibelah dua tiap langkah.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dsa-array-hash-ex01",
+    "lessonId": "dsa-array-hash-01",
+    "track": "dsa",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "Jarum di Jerami",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `two_sum(nums, target)`: kembalikan [i, j] (i < j) dengan nums[i] + nums[j] == target. Dijamin tepat satu solusi. Target O(n).",
+    "starter": "def two_sum(nums, target):\n    pass\n",
+    "solution": "def two_sum(nums, target):\n    seen = {}\n    for j, x in enumerate(nums):\n        if target - x in seen:\n            return [seen[target - x], j]\n        seen[x] = j\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "two_sum([2, 7, 11, 15], 9)",
+          "expect": "[0, 1]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "two_sum([3, 2, 4], 6)",
+          "expect": "[1, 2]"
+        },
+        {
+          "name": "tes 2",
+          "call": "two_sum([3, 3], 6)",
+          "expect": "[0, 1]"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Brute force O(n²): dua loop.",
+      "Simpan nilai yang sudah dilihat di dict.",
+      "Untuk tiap x cek apakah target-x sudah ada."
+    ],
+    "explanation": "Hash table menukar memori dengan waktu: lookup O(1) menghapus loop dalam.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "dsa-stack-queue-heap-ex01",
+    "lessonId": "dsa-stack-queue-heap-01",
+    "track": "dsa",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "Tumpukan Piring",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `evaluate_rpn(tokens)`: evaluasi Reverse Polish Notation (+ - * dan / pembagian ke nol). Token berupa string.",
+    "starter": "def evaluate_rpn(tokens):\n    pass\n",
+    "solution": "def evaluate_rpn(tokens):\n    st = []\n    for t in tokens:\n        if t in '+-*/' and len(t) == 1:\n            b, a = st.pop(), st.pop()\n            if t == '+': st.append(a + b)\n            elif t == '-': st.append(a - b)\n            elif t == '*': st.append(a * b)\n            else: st.append(int(a / b))\n        else:\n            st.append(int(t))\n    return st[0]\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "evaluate_rpn(['2', '3', '+', '4', '*'])",
+          "expect": "20"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "evaluate_rpn(['7', '2', '/'])",
+          "expect": "3"
+        },
+        {
+          "name": "tes 2",
+          "call": "evaluate_rpn(['5', '1', '2', '+', '4', '*', '+', '3', '-'])",
+          "expect": "14"
+        },
+        {
+          "name": "tes 3",
+          "call": "evaluate_rpn(['-7', '2', '/'])",
+          "expect": "-3"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Operan di-push; operator mem-pop dua operan.",
+      "Urutan pop: b dulu, baru a.",
+      "Bagi dengan int(a / b) agar membulat ke nol."
+    ],
+    "explanation": "Stack cocok untuk struktur bersarang dan evaluasi ekspresi.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "dsa-tree-graph-trie-uf-ex01",
+    "lessonId": "dsa-tree-graph-trie-uf-01",
+    "track": "dsa",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Pohon Keluarga",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tree dinyatakan sebagai tuple `(nilai, kiri, kanan)` atau None. Tulis `tree_height(t)` (None → 0, daun → 1).",
+    "starter": "def tree_height(t):\n    pass\n",
+    "solution": "def tree_height(t):\n    if t is None:\n        return 0\n    _, l, r = t\n    return 1 + max(tree_height(l), tree_height(r))\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "tree_height(None)",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "call": "tree_height((1, None, None))",
+          "expect": "1"
+        },
+        {
+          "name": "tes 3",
+          "call": "tree_height((1, (2, None, None), None))",
+          "expect": "2"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "tree_height((1, (2, (4, None, None), None), (3, None, None)))",
+          "expect": "3"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Kasus dasar: None → 0.",
+      "Tinggi = 1 + max(kiri, kanan).",
+      "Bongkar tuple: _, l, r = t."
+    ],
+    "explanation": "Rekursi pada struktur rekursif: definisi masalah = definisi data.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "dsa-two-pointers-window-ex01",
+    "lessonId": "dsa-two-pointers-window-01",
+    "track": "dsa",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "Jendela Geser",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `longest_unique(s)`: panjang substring terpanjang tanpa karakter berulang.",
+    "starter": "def longest_unique(s):\n    pass\n",
+    "solution": "def longest_unique(s):\n    last, start, best = {}, 0, 0\n    for i, c in enumerate(s):\n        if c in last and last[c] >= start:\n            start = last[c] + 1\n        last[c] = i\n        best = max(best, i - start + 1)\n    return best\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "longest_unique('abcabcbb')",
+          "expect": "3"
+        },
+        {
+          "name": "tes 2",
+          "call": "longest_unique('')",
+          "expect": "0"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "longest_unique('bbbb')",
+          "expect": "1"
+        },
+        {
+          "name": "tes 2",
+          "call": "longest_unique('pwwkew')",
+          "expect": "3"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Pertahankan jendela [start, i].",
+      "Simpan indeks terakhir tiap karakter.",
+      "Jika karakter ada di dalam jendela, geser start."
+    ],
+    "explanation": "Setiap indeks masuk dan keluar jendela paling banyak sekali → O(n).",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "dsa-binsearch-rekursi-ex01",
+    "lessonId": "dsa-binsearch-rekursi-01",
+    "track": "dsa",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Tebak Angka",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `lower_bound(nums, x)`: indeks pertama dengan nums[i] >= x (len(nums) jika tidak ada). nums terurut.",
+    "starter": "def lower_bound(nums, x):\n    pass\n",
+    "solution": "def lower_bound(nums, x):\n    lo, hi = 0, len(nums)\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if nums[mid] < x:\n            lo = mid + 1\n        else:\n            hi = mid\n    return lo\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "lower_bound([1, 2, 4, 4, 7], 4)",
+          "expect": "2"
+        },
+        {
+          "name": "tes 2",
+          "call": "lower_bound([1, 2, 4, 4, 7], 5)",
+          "expect": "4"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "lower_bound([1, 2, 4, 4, 7], 8)",
+          "expect": "5"
+        },
+        {
+          "name": "tes 2",
+          "call": "lower_bound([1, 2, 4, 4, 7], 0)",
+          "expect": "0"
+        },
+        {
+          "name": "tes 3",
+          "call": "lower_bound([], 1)",
+          "expect": "0"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Gunakan invarian: jawaban ada di [lo, hi].",
+      "hi = len(nums), bukan len-1.",
+      "Jika nums[mid] < x → lo = mid+1; selain itu hi = mid."
+    ],
+    "explanation": "Invarian yang konsisten menghapus bug off-by-one.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "dsa-dp-greedy-ex01",
+    "lessonId": "dsa-dp-greedy-01",
+    "track": "dsa",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Maling Pintar",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `rob_houses(nums)`: jumlah maksimum dengan memilih elemen yang tidak bersebelahan.",
+    "starter": "def rob_houses(nums):\n    pass\n",
+    "solution": "def rob_houses(nums):\n    take, skip = 0, 0\n    for x in nums:\n        take, skip = skip + x, max(take, skip)\n    return max(take, skip)\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "rob_houses([2, 7, 9, 3, 1])",
+          "expect": "12"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "rob_houses([])",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "call": "rob_houses([5])",
+          "expect": "5"
+        },
+        {
+          "name": "tes 3",
+          "call": "rob_houses([2, 1, 1, 2])",
+          "expect": "4"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "State: dp[i] = terbaik hingga rumah i.",
+      "dp[i] = max(dp[i-1], dp[i-2] + nums[i]).",
+      "Cukup simpan dua variabel."
+    ],
+    "explanation": "DP = rekursi + memoization, lalu dikompresi ruangnya.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "dsa-graph-algos-ex01",
+    "lessonId": "dsa-graph-algos-01",
+    "track": "dsa",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 75,
+    "title": "Rute Kota",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Graf berupa dict tetangga. Tulis `shortest_hops(graph, src, dst)`: jumlah sisi minimum atau -1.",
+    "starter": "from collections import deque\n\ndef shortest_hops(graph, src, dst):\n    pass\n",
+    "solution": "from collections import deque\n\ndef shortest_hops(graph, src, dst):\n    q, seen = deque([(src, 0)]), {src}\n    while q:\n        node, d = q.popleft()\n        if node == dst:\n            return d\n        for nb in graph.get(node, []):\n            if nb not in seen:\n                seen.add(nb)\n                q.append((nb, d + 1))\n    return -1\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "shortest_hops({'a': ['b', 'c'], 'b': ['d'], 'c': ['d'], 'd': []}, 'a', 'd')",
+          "expect": "2"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "shortest_hops({'a': []}, 'a', 'a')",
+          "expect": "0"
+        },
+        {
+          "name": "tes 2",
+          "call": "shortest_hops({'a': ['b'], 'b': []}, 'b', 'a')",
+          "expect": "-1"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "BFS memakai queue.",
+      "Tandai node yang sudah dikunjungi.",
+      "Simpan jarak bersama node di queue."
+    ],
+    "explanation": "BFS menjamin jarak terpendek pada graf tak berbobot.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "dsa-pola-soal-ex01",
+    "lessonId": "dsa-pola-soal-01",
+    "track": "dsa",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "\"Cari jumlah maksimum dari k elemen berurutan.\" Pola yang tepat?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sliding window"
+      },
+      {
+        "id": "b",
+        "text": "Topological sort"
+      },
+      {
+        "id": "c",
+        "text": "Union-find"
+      },
+      {
+        "id": "d",
+        "text": "Trie"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Ukuran jendela tetap + agregat → sliding window.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dsa-pola-soal-ex02",
+    "lessonId": "dsa-pola-soal-01",
+    "track": "dsa",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "\"Berapa kelompok terhubung dari daftar pertemanan?\" Pola yang tepat?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Heap"
+      },
+      {
+        "id": "b",
+        "text": "Union-find / DFS"
+      },
+      {
+        "id": "c",
+        "text": "Binary search"
+      },
+      {
+        "id": "d",
+        "text": "Two pointers"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Komponen terhubung → union-find atau DFS/BFS.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "dsa-live-coding-ex01",
+    "lessonId": "dsa-live-coding-01",
+    "track": "dsa",
+    "kind": "parsons",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 37,
+    "language": "text",
+    "prompt": "Susun fase interview coding yang ideal.",
+    "lines": [
+      {
+        "text": "Klarifikasi soal & constraint",
+        "indent": 0
+      },
+      {
+        "text": "Contoh & edge case",
+        "indent": 0
+      },
+      {
+        "text": "Brute force + kompleksitasnya",
+        "indent": 0
+      },
+      {
+        "text": "Optimasi",
+        "indent": 0
+      },
+      {
+        "text": "Tulis kode sambil bicara",
+        "indent": 0
+      },
+      {
+        "text": "Uji manual dengan contoh",
+        "indent": 0
+      },
+      {
+        "text": "Analisis kompleksitas akhir",
+        "indent": 0
+      }
+    ],
+    "shuffle": true,
+    "explanation": "Menyebut brute force dulu menunjukkan kamu paham masalah, bukan hanya hafal trik.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "dsa-live-coding-ex02",
+    "lessonId": "dsa-live-coding-01",
+    "track": "dsa",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Langkah pertama yang disarankan saat soal diberikan?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Langsung mengetik"
+      },
+      {
+        "id": "b",
+        "text": "Menanyakan constraint dan edge case"
+      },
+      {
+        "id": "c",
+        "text": "Meminta petunjuk"
+      },
+      {
+        "id": "d",
+        "text": "Menyebut Big-O"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Asumsi yang tak diklarifikasi adalah sumber kegagalan paling umum.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-estimasi-ex01",
+    "lessonId": "system-design-estimasi-01",
+    "track": "system-design",
+    "kind": "fill-blank",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 15,
+    "prompt": "10 juta DAU × 5 request/hari ÷ 86.400 detik ≈ {{1}} RPS rata-rata (bulatkan ke puluhan).",
+    "answers": [
+      [
+        "580",
+        "~580",
+        "579",
+        "578"
+      ]
+    ],
+    "explanation": "50 juta / 86.400 ≈ 579. Sistem harus tahan beban puncak 2–3× rata-rata.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "system-design-estimasi-ex02",
+    "lessonId": "system-design-estimasi-01",
+    "track": "system-design",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 45,
+    "title": "Anggaran Error",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `error_budget_minutes(slo_percent, days=30)`: menit downtime yang diizinkan, dibulatkan 2 desimal.",
+    "starter": "def error_budget_minutes(slo_percent, days=30):\n    pass\n",
+    "solution": "def error_budget_minutes(slo_percent, days=30):\n    return round(days * 24 * 60 * (100 - slo_percent) / 100, 2)\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "error_budget_minutes(99.9)",
+          "expect": "43.2"
+        },
+        {
+          "name": "tes 2",
+          "call": "error_budget_minutes(99.0)",
+          "expect": "432.0"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "error_budget_minutes(99.99)",
+          "expect": "4.32"
+        },
+        {
+          "name": "tes 2",
+          "call": "error_budget_minutes(100)",
+          "expect": "0.0"
+        },
+        {
+          "name": "tes 3",
+          "call": "error_budget_minutes(99.9, 7)",
+          "expect": "10.08"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Total menit = days×24×60.",
+      "Persentase gagal = 100 - SLO.",
+      "Gunakan round(x, 2)."
+    ],
+    "explanation": "Tiap sembilan tambahan memotong budget 10×: 99.9% ≈ 43 menit/bulan.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "system-design-lb-cdn-gateway-ex01",
+    "lessonId": "system-design-lb-cdn-gateway-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 15,
+    "prompt": "Algoritma LB paling cocok saat durasi request sangat bervariasi?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Round robin"
+      },
+      {
+        "id": "b",
+        "text": "Least connections"
+      },
+      {
+        "id": "c",
+        "text": "Random statis"
+      },
+      {
+        "id": "d",
+        "text": "IP hash tanpa health check"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Least connections menyalurkan beban ke server yang paling sedikit melayani koneksi aktif.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-lb-cdn-gateway-ex02",
+    "lessonId": "system-design-lb-cdn-gateway-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "CDN paling efektif untuk…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Query database dinamis personal"
+      },
+      {
+        "id": "b",
+        "text": "Aset statis dan konten yang bisa di-cache"
+      },
+      {
+        "id": "c",
+        "text": "Transaksi pembayaran"
+      },
+      {
+        "id": "d",
+        "text": "WebSocket privat"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Edge cache memangkas latensi dan beban origin.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-sql-index-replikasi-ex01",
+    "lessonId": "system-design-sql-index-replikasi-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Biaya utama menambah index?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tulis lebih lambat dan memakai ruang tambahan"
+      },
+      {
+        "id": "b",
+        "text": "Baca lebih lambat"
+      },
+      {
+        "id": "c",
+        "text": "Tidak ada"
+      },
+      {
+        "id": "d",
+        "text": "Data hilang"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Setiap INSERT/UPDATE juga memelihara index.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-sql-index-replikasi-ex02",
+    "lessonId": "system-design-sql-index-replikasi-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Replication lag menyebabkan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pembacaan dari replika bisa menampilkan data basi"
+      },
+      {
+        "id": "b",
+        "text": "Database mati"
+      },
+      {
+        "id": "c",
+        "text": "Index rusak"
+      },
+      {
+        "id": "d",
+        "text": "Query lebih cepat selalu"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Pada replikasi asinkron, replika tertinggal dari primary.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-sharding-consistent-hash-ex01",
+    "lessonId": "system-design-sharding-consistent-hash-01",
+    "track": "system-design",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 75,
+    "title": "Hash Ring",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Buat class `HashRing(nodes, vnodes=50)` dengan `add(node)` dan `get(key)`. Pakai md5 + bisect. Menambah node hanya memindahkan sebagian kecil key.",
+    "starter": "import bisect, hashlib\n\nclass HashRing:\n    def __init__(self, nodes=(), vnodes=50):\n        pass\n    def add(self, node):\n        pass\n    def get(self, key):\n        pass\n",
+    "solution": "import bisect, hashlib\n\ndef _h(s):\n    return int(hashlib.md5(s.encode()).hexdigest(), 16)\n\nclass HashRing:\n    def __init__(self, nodes=(), vnodes=50):\n        self.vnodes = vnodes\n        self._keys, self._map = [], {}\n        for n in nodes:\n            self.add(n)\n    def add(self, node):\n        for i in range(self.vnodes):\n            h = _h(f'{node}#{i}')\n            bisect.insort(self._keys, h)\n            self._map[h] = node\n    def get(self, key):\n        h = _h(key)\n        i = bisect.bisect(self._keys, h) % len(self._keys)\n        return self._map[self._keys[i]]\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "setup": "r=HashRing(['A','B','C'])",
+          "call": "all(r.get(f'k{i}') in 'ABC' for i in range(100))",
+          "expect": "True"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "setup": "r=HashRing(['A','B','C'])",
+          "call": "len({r.get(f'k{i}') for i in range(300)})",
+          "expect": "3"
+        },
+        {
+          "name": "tes 2",
+          "setup": "r=HashRing(['A','B','C']); before={f'k{i}': r.get(f'k{i}') for i in range(1000)}; r.add('D'); moved=sum(1 for k in before if r.get(k)!=before[k])",
+          "call": "moved < 450",
+          "expect": "True"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Tiap node punya banyak titik virtual di ring.",
+      "Cari titik pertama di ring dengan hash >= hash(key); lompat ke awal jika habis.",
+      "bisect.bisect pada list terurut."
+    ],
+    "explanation": "Modulo biasa memindahkan ~75% key saat 3→4 node; consistent hashing ≈ 25%.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "system-design-caching-ex01",
+    "lessonId": "system-design-caching-01",
+    "track": "system-design",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Cache Pelit",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Buat class `LRUCache(capacity)` dengan `get(key)` (→ -1 jika tak ada) dan `put(key, value)`, buang yang paling lama tak dipakai.",
+    "starter": "class LRUCache:\n    def __init__(self, capacity):\n        pass\n    def get(self, key):\n        pass\n    def put(self, key, value):\n        pass\n",
+    "solution": "from collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity):\n        self.cap = capacity\n        self.d = OrderedDict()\n    def get(self, key):\n        if key not in self.d:\n            return -1\n        self.d.move_to_end(key)\n        return self.d[key]\n    def put(self, key, value):\n        if key in self.d:\n            self.d.move_to_end(key)\n        self.d[key] = value\n        if len(self.d) > self.cap:\n            self.d.popitem(last=False)\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "setup": "c=LRUCache(2); c.put(1,1); c.put(2,2); c.get(1); c.put(3,3)",
+          "call": "c.get(2)",
+          "expect": "-1"
+        },
+        {
+          "name": "tes 2",
+          "setup": "c=LRUCache(2); c.put(1,1); c.put(2,2); c.get(1); c.put(3,3)",
+          "call": "c.get(1)",
+          "expect": "1"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "setup": "c=LRUCache(1); c.put(1,1); c.put(2,2)",
+          "call": "c.get(1)",
+          "expect": "-1"
+        },
+        {
+          "name": "tes 2",
+          "setup": "c=LRUCache(2); c.put(1,1); c.put(1,9)",
+          "call": "c.get(1)",
+          "expect": "9"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "OrderedDict menjaga urutan penggunaan.",
+      "move_to_end saat get/put.",
+      "popitem(last=False) membuang yang tertua."
+    ],
+    "explanation": "Implementasi produksi memakai hash map + doubly linked list untuk O(1).",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "system-design-caching-ex02",
+    "lessonId": "system-design-caching-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Cache stampede terjadi saat…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Banyak request serentak menghantam origin karena key populer kedaluwarsa"
+      },
+      {
+        "id": "b",
+        "text": "Cache penuh"
+      },
+      {
+        "id": "c",
+        "text": "DNS gagal"
+      },
+      {
+        "id": "d",
+        "text": "Index hilang"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Mitigasi: request coalescing, TTL berjitter, refresh dini.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-cap-konsistensi-ex01",
+    "lessonId": "system-design-cap-konsistensi-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Saat partisi jaringan, sistem CP memilih…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Terus melayani semua request dengan data lama"
+      },
+      {
+        "id": "b",
+        "text": "Menolak sebagian request demi konsistensi"
+      },
+      {
+        "id": "c",
+        "text": "Mematikan partisi"
+      },
+      {
+        "id": "d",
+        "text": "Menambah replika"
+      }
+    ],
+    "answer": "b",
+    "explanation": "CP mengorbankan availability selama partisi; AP sebaliknya.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-cap-konsistensi-ex02",
+    "lessonId": "system-design-cap-konsistensi-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "PACELC menambahkan pertimbangan apa dibanding CAP?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Latency vs Consistency saat tidak ada partisi"
+      },
+      {
+        "id": "b",
+        "text": "Biaya vs performa"
+      },
+      {
+        "id": "c",
+        "text": "Keamanan vs usability"
+      },
+      {
+        "id": "d",
+        "text": "Disk vs RAM"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Else (tanpa partisi) pun ada trade-off latensi vs konsistensi.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-idempotency-konsensus-ex01",
+    "lessonId": "system-design-idempotency-konsensus-01",
+    "track": "system-design",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 75,
+    "title": "Klik Bayar Dua Kali",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Buat `PaymentProcessor` dengan `charge(key, amount)` idempoten: key sama + amount sama → tak menagih lagi; key sama + amount beda → ValueError. Atribut `total` menjumlah tagihan unik.",
+    "starter": "class PaymentProcessor:\n    def __init__(self):\n        self.total = 0\n    def charge(self, key, amount):\n        pass\n",
+    "solution": "class PaymentProcessor:\n    def __init__(self):\n        self.total = 0\n        self._seen = {}\n    def charge(self, key, amount):\n        if key in self._seen:\n            if self._seen[key] != amount:\n                raise ValueError('idempotency key dipakai dengan amount berbeda')\n            return 'duplicate'\n        self._seen[key] = amount\n        self.total += amount\n        return 'charged'\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "setup": "p=PaymentProcessor(); p.charge('k1',100); p.charge('k1',100); p.charge('k2',50)",
+          "call": "p.total",
+          "expect": "150"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "setup": "p=PaymentProcessor(); p.charge('k1',100)",
+          "call": "p.charge('k1',999)",
+          "expect": "!ValueError"
+        },
+        {
+          "name": "tes 2",
+          "setup": "p=PaymentProcessor()",
+          "call": "p.total",
+          "expect": "0"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Simpan key yang sudah diproses.",
+      "Bandingkan amount untuk key yang sama.",
+      "Total hanya bertambah pada key baru."
+    ],
+    "explanation": "Di produksi, simpan key + hasil di DB dengan unique constraint agar aman lintas instans.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "system-design-api-komunikasi-ex01",
+    "lessonId": "system-design-api-komunikasi-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Untuk komunikasi antar-layanan internal berperforma tinggi dengan skema ketat?",
+    "options": [
+      {
+        "id": "a",
+        "text": "gRPC"
+      },
+      {
+        "id": "b",
+        "text": "SOAP"
+      },
+      {
+        "id": "c",
+        "text": "FTP"
+      },
+      {
+        "id": "d",
+        "text": "Polling HTML"
+      }
+    ],
+    "answer": "a",
+    "explanation": "gRPC memakai HTTP/2 + Protobuf.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-api-komunikasi-ex02",
+    "lessonId": "system-design-api-komunikasi-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Server push satu arah (notifikasi harga) paling sederhana dengan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "SSE"
+      },
+      {
+        "id": "b",
+        "text": "SMTP"
+      },
+      {
+        "id": "c",
+        "text": "gRPC bidirectional wajib"
+      },
+      {
+        "id": "d",
+        "text": "Cron"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Server-Sent Events: satu arah, sederhana, auto-reconnect.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-queue-streaming-ex01",
+    "lessonId": "system-design-queue-streaming-01",
+    "track": "system-design",
+    "kind": "fill-blank",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Garansi {{1}} bisa menghasilkan duplikat pesan, sehingga konsumen harus {{2}}.",
+    "answers": [
+      [
+        "at-least-once"
+      ],
+      [
+        "idempoten",
+        "idempotent"
+      ]
+    ],
+    "explanation": "Exactly-once efektif = at-least-once + konsumen idempoten.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "system-design-queue-streaming-ex02",
+    "lessonId": "system-design-queue-streaming-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Outbox pattern memecahkan masalah…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menulis ke DB dan menerbitkan event secara atomik"
+      },
+      {
+        "id": "b",
+        "text": "Cache stampede"
+      },
+      {
+        "id": "c",
+        "text": "DNS"
+      },
+      {
+        "id": "d",
+        "text": "Sharding"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Event ditulis di tabel outbox dalam transaksi yang sama, lalu di-relay.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-keandalan-ex01",
+    "lessonId": "system-design-keandalan-01",
+    "track": "system-design",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 75,
+    "title": "Jatuh dengan Anggun",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `backoff_delays(retries, base_ms, cap_ms)`: list jeda eksponensial (base, 2·base, 4·base…) dibatasi cap. Tanpa jitter.",
+    "starter": "def backoff_delays(retries, base_ms, cap_ms):\n    pass\n",
+    "solution": "def backoff_delays(retries, base_ms, cap_ms):\n    return [min(cap_ms, base_ms * 2 ** i) for i in range(retries)]\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "backoff_delays(5, 100, 2000)",
+          "expect": "[100, 200, 400, 800, 1600]"
+        },
+        {
+          "name": "tes 2",
+          "call": "backoff_delays(6, 100, 1000)",
+          "expect": "[100, 200, 400, 800, 1000, 1000]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "backoff_delays(0, 100, 1000)",
+          "expect": "[]"
+        },
+        {
+          "name": "tes 2",
+          "call": "backoff_delays(3, 500, 600)",
+          "expect": "[500, 600, 600]"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Jeda ke-i = base × 2^i.",
+      "Batasi dengan min(cap, …).",
+      "Di produksi, tambahkan jitter acak."
+    ],
+    "explanation": "Retry tanpa backoff+jitter membuat thundering herd saat layanan pulih.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "system-design-keandalan-ex02",
+    "lessonId": "system-design-keandalan-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Circuit breaker 'open' berarti…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Request langsung ditolak/fallback tanpa memanggil layanan gagal"
+      },
+      {
+        "id": "b",
+        "text": "Semua request diteruskan"
+      },
+      {
+        "id": "c",
+        "text": "Layanan dimatikan permanen"
+      },
+      {
+        "id": "d",
+        "text": "Cache dikosongkan"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Memberi waktu layanan hilir pulih dan mencegah kegagalan berantai.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-observability-ex01",
+    "lessonId": "system-design-observability-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "p50 = 50 ms tetapi p95 = 800 ms menunjukkan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Semua request lambat"
+      },
+      {
+        "id": "b",
+        "text": "Ekor latensi panjang pada sebagian request"
+      },
+      {
+        "id": "c",
+        "text": "Sistem sempurna"
+      },
+      {
+        "id": "d",
+        "text": "CPU rusak"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Rata-rata menyembunyikan ekor; pantau persentil.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-observability-ex02",
+    "lessonId": "system-design-observability-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Tiga pilar observability?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Log, metrik, trace"
+      },
+      {
+        "id": "b",
+        "text": "CPU, RAM, disk"
+      },
+      {
+        "id": "c",
+        "text": "Build, test, deploy"
+      },
+      {
+        "id": "d",
+        "text": "Alert, email, SMS"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Ketiganya saling melengkapi saat investigasi insiden.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-keamanan-ex01",
+    "lessonId": "system-design-keamanan-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Keunggulan sesi server dibanding JWT stateless?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mudah dicabut seketika"
+      },
+      {
+        "id": "b",
+        "text": "Lebih kecil"
+      },
+      {
+        "id": "c",
+        "text": "Tanpa penyimpanan"
+      },
+      {
+        "id": "d",
+        "text": "Lebih cepat di CDN"
+      }
+    ],
+    "answer": "a",
+    "explanation": "JWT sulit dicabut sebelum kedaluwarsa kecuali ada daftar cabut.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-keamanan-ex02",
+    "lessonId": "system-design-keamanan-01",
+    "track": "system-design",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Huruf 'S' pada STRIDE?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Spoofing"
+      },
+      {
+        "id": "b",
+        "text": "Scaling"
+      },
+      {
+        "id": "c",
+        "text": "Sharding"
+      },
+      {
+        "id": "d",
+        "text": "Sandboxing"
+      }
+    ],
+    "answer": "a",
+    "explanation": "STRIDE: Spoofing, Tampering, Repudiation, Information disclosure, DoS, Elevation of privilege.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "system-design-kasus-lengkap-ex01",
+    "lessonId": "system-design-kasus-lengkap-01",
+    "track": "system-design",
+    "kind": "sd-scenario",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 250,
+    "scenarioId": "url-shortener",
+    "prompt": "Selesaikan skenario url-shortener di kanvas.",
+    "explanation": "Dinilai dengan rubrik skenario + kualitas mini-ADR.",
+    "hints": [],
+    "srs": false
+  },
+  {
+    "id": "system-design-kasus-lengkap-ex02",
+    "lessonId": "system-design-kasus-lengkap-01",
+    "track": "system-design",
+    "kind": "sd-scenario",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 250,
+    "scenarioId": "rate-limiter",
+    "prompt": "Selesaikan skenario rate-limiter di kanvas.",
+    "explanation": "Dinilai dengan rubrik skenario + kualitas mini-ADR.",
+    "hints": [],
+    "srs": false
+  },
+  {
+    "id": "system-design-kasus-lengkap-ex03",
+    "lessonId": "system-design-kasus-lengkap-01",
+    "track": "system-design",
+    "kind": "sd-scenario",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 250,
+    "scenarioId": "chat-1-1",
+    "prompt": "Selesaikan skenario chat-1-1 di kanvas.",
+    "explanation": "Dinilai dengan rubrik skenario + kualitas mini-ADR.",
+    "hints": [],
+    "srs": false
+  },
+  {
+    "id": "system-design-kasus-lengkap-ex04",
+    "lessonId": "system-design-kasus-lengkap-01",
+    "track": "system-design",
+    "kind": "sd-scenario",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 250,
+    "scenarioId": "news-feed",
+    "prompt": "Selesaikan skenario news-feed di kanvas.",
+    "explanation": "Dinilai dengan rubrik skenario + kualitas mini-ADR.",
+    "hints": [],
+    "srs": false
+  },
+  {
+    "id": "system-design-kasus-lengkap-ex05",
+    "lessonId": "system-design-kasus-lengkap-01",
+    "track": "system-design",
+    "kind": "sd-scenario",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 250,
+    "scenarioId": "file-sync",
+    "prompt": "Selesaikan skenario file-sync di kanvas.",
+    "explanation": "Dinilai dengan rubrik skenario + kualitas mini-ADR.",
+    "hints": [],
+    "srs": false
+  },
+  {
+    "id": "system-design-kasus-lengkap-ex06",
+    "lessonId": "system-design-kasus-lengkap-01",
+    "track": "system-design",
+    "kind": "sd-scenario",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 250,
+    "scenarioId": "ticketing",
+    "prompt": "Selesaikan skenario ticketing di kanvas.",
+    "explanation": "Dinilai dengan rubrik skenario + kualitas mini-ADR.",
+    "hints": [],
+    "srs": false
+  },
+  {
+    "id": "system-design-kasus-lengkap-ex07",
+    "lessonId": "system-design-kasus-lengkap-01",
+    "track": "system-design",
+    "kind": "sd-scenario",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 250,
+    "scenarioId": "payments",
+    "prompt": "Selesaikan skenario payments di kanvas.",
+    "explanation": "Dinilai dengan rubrik skenario + kualitas mini-ADR.",
+    "hints": [],
+    "srs": false
+  },
+  {
+    "id": "system-design-kasus-lengkap-ex08",
+    "lessonId": "system-design-kasus-lengkap-01",
+    "track": "system-design",
+    "kind": "sd-scenario",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 250,
+    "scenarioId": "video-pipeline",
+    "prompt": "Selesaikan skenario video-pipeline di kanvas.",
+    "explanation": "Dinilai dengan rubrik skenario + kualitas mini-ADR.",
+    "hints": [],
+    "srs": false
+  },
+  {
+    "id": "arsitek-peran-ex01",
+    "lessonId": "arsitek-peran-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 15,
+    "prompt": "Peran yang memetakan strategi bisnis ke portofolio sistem organisasi?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Enterprise Architect"
+      },
+      {
+        "id": "b",
+        "text": "Solution Architect"
+      },
+      {
+        "id": "c",
+        "text": "Tech Lead"
+      },
+      {
+        "id": "d",
+        "text": "QA"
+      }
+    ],
+    "answer": "a",
+    "explanation": "EA bekerja lintas portofolio; SA per proyek/solusi; Software Architect pada struktur teknis.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-peran-ex02",
+    "lessonId": "arsitek-peran-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Solution Architect paling sering memutuskan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pilihan vendor/cloud dan integrasi untuk satu solusi"
+      },
+      {
+        "id": "b",
+        "text": "Strategi bisnis perusahaan"
+      },
+      {
+        "id": "c",
+        "text": "Warna tombol"
+      },
+      {
+        "id": "d",
+        "text": "Gaji tim"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Fokus pada solusi end-to-end yang memenuhi kebutuhan proyek.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-c4-adr-ex01",
+    "lessonId": "arsitek-c4-adr-01",
+    "track": "arsitek",
+    "kind": "parsons",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 30,
+    "language": "text",
+    "prompt": "Susun level C4 dari paling luas ke paling detail.",
+    "lines": [
+      {
+        "text": "Context",
+        "indent": 0
+      },
+      {
+        "text": "Container",
+        "indent": 0
+      },
+      {
+        "text": "Component",
+        "indent": 0
+      },
+      {
+        "text": "Code",
+        "indent": 0
+      }
+    ],
+    "shuffle": true,
+    "explanation": "Zoom in: konteks sistem → container → komponen → kode.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "arsitek-c4-adr-ex02",
+    "lessonId": "arsitek-c4-adr-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Bagian inti sebuah ADR?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Konteks, keputusan, konsekuensi"
+      },
+      {
+        "id": "b",
+        "text": "Hanya keputusan"
+      },
+      {
+        "id": "c",
+        "text": "Kode sumber"
+      },
+      {
+        "id": "d",
+        "text": "Jadwal rapat"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ADR mencatat alasan, bukan hanya pilihan.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-gaya-arsitektur-ex01",
+    "lessonId": "arsitek-gaya-arsitektur-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Kapan sebaiknya mempertahankan monolit modular?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tim kecil, domain belum stabil"
+      },
+      {
+        "id": "b",
+        "text": "Tim 500 orang"
+      },
+      {
+        "id": "c",
+        "text": "Tiap fitur butuh skala berbeda drastis"
+      },
+      {
+        "id": "d",
+        "text": "Selalu microservices"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Microservices menambah kompleksitas operasional; pecah setelah ada rasa sakit nyata.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-gaya-arsitektur-ex02",
+    "lessonId": "arsitek-gaya-arsitektur-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "CQRS memisahkan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Model baca dan model tulis"
+      },
+      {
+        "id": "b",
+        "text": "Frontend dan backend"
+      },
+      {
+        "id": "c",
+        "text": "Dev dan prod"
+      },
+      {
+        "id": "d",
+        "text": "SQL dan NoSQL"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Berguna saat kebutuhan baca dan tulis sangat berbeda.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-ddd-api-ex01",
+    "lessonId": "arsitek-ddd-api-01",
+    "track": "arsitek",
+    "kind": "fill-blank",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Aggregate root menjaga {{1}} dari seluruh aggregate-nya.",
+    "answers": [
+      [
+        "invarian",
+        "invariant"
+      ]
+    ],
+    "explanation": "Perubahan hanya lewat aggregate root agar aturan bisnis konsisten.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "arsitek-ddd-api-ex02",
+    "lessonId": "arsitek-ddd-api-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Bounded context adalah…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Batas eksplisit tempat satu model/bahasa domain berlaku"
+      },
+      {
+        "id": "b",
+        "text": "Satu tabel database"
+      },
+      {
+        "id": "c",
+        "text": "Satu microservice wajib"
+      },
+      {
+        "id": "d",
+        "text": "Satu tim wajib"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Istilah yang sama bisa berarti lain di konteks berbeda.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-nfr-tradeoff-ex01",
+    "lessonId": "arsitek-nfr-tradeoff-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "NFR yang baik ditulis…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Terukur (mis. p95 < 300 ms pada 2.000 RPS)"
+      },
+      {
+        "id": "b",
+        "text": "Cepat dan aman"
+      },
+      {
+        "id": "c",
+        "text": "Sebaik mungkin"
+      },
+      {
+        "id": "d",
+        "text": "Mengikuti tren"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Tanpa angka, NFR tak bisa diuji dan di-trade-off.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-nfr-tradeoff-ex02",
+    "lessonId": "arsitek-nfr-tradeoff-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "ATAM digunakan untuk…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menganalisis trade-off arsitektur terhadap atribut kualitas"
+      },
+      {
+        "id": "b",
+        "text": "Menulis kode"
+      },
+      {
+        "id": "c",
+        "text": "Menghitung gaji"
+      },
+      {
+        "id": "d",
+        "text": "Memilih warna"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Mengungkap risiko, sensitivity point, dan trade-off antar atribut.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-platform-rilis-ex01",
+    "lessonId": "arsitek-platform-rilis-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Keuntungan canary release?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Risiko terbatas: rilis ke sebagian kecil trafik dulu"
+      },
+      {
+        "id": "b",
+        "text": "Tanpa tes"
+      },
+      {
+        "id": "c",
+        "text": "Downtime wajib"
+      },
+      {
+        "id": "d",
+        "text": "Tanpa monitoring"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Pantau metrik, lalu naikkan persentase atau rollback.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-platform-rilis-ex02",
+    "lessonId": "arsitek-platform-rilis-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Blue/green deployment…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dua lingkungan identik; trafik dialihkan sekaligus"
+      },
+      {
+        "id": "b",
+        "text": "Dua tim"
+      },
+      {
+        "id": "c",
+        "text": "Dua database wajib"
+      },
+      {
+        "id": "d",
+        "text": "Dua bahasa"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Rollback cepat dengan mengalihkan balik.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-cloud-finops-ex01",
+    "lessonId": "arsitek-cloud-finops-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Dalam shared responsibility model IaaS, siapa mengamankan OS tamu dan aplikasi?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pelanggan"
+      },
+      {
+        "id": "b",
+        "text": "Penyedia cloud"
+      },
+      {
+        "id": "c",
+        "text": "ISP"
+      },
+      {
+        "id": "d",
+        "text": "Pemerintah"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Penyedia mengamankan infrastruktur fisik; pelanggan mengamankan apa yang ia jalankan.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-cloud-finops-ex02",
+    "lessonId": "arsitek-cloud-finops-01",
+    "track": "arsitek",
+    "kind": "fill-blank",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "RPO adalah batas {{1}} data yang bisa hilang; RTO adalah batas {{2}} sampai layanan pulih.",
+    "answers": [
+      [
+        "waktu"
+      ],
+      [
+        "waktu"
+      ]
+    ],
+    "explanation": "RPO: seberapa lama data terakhir; RTO: seberapa lama pemulihan.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "arsitek-kepemimpinan-ex01",
+    "lessonId": "arsitek-kepemimpinan-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Cara sehat mengelola utang teknis?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mencatat, mengukur dampaknya, dan menjadwalkan pelunasan"
+      },
+      {
+        "id": "b",
+        "text": "Mengabaikannya"
+      },
+      {
+        "id": "c",
+        "text": "Menulis ulang semuanya"
+      },
+      {
+        "id": "d",
+        "text": "Menyalahkan tim"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Utang disengaja bisa berguna jika terlihat dan dibayar.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "arsitek-kepemimpinan-ex02",
+    "lessonId": "arsitek-kepemimpinan-01",
+    "track": "arsitek",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Tujuan utama design review?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menguji ide dan asumsi bersama sebelum mahal diubah"
+      },
+      {
+        "id": "b",
+        "text": "Mencari siapa yang salah"
+      },
+      {
+        "id": "c",
+        "text": "Memperlambat tim"
+      },
+      {
+        "id": "d",
+        "text": "Mengganti arsitek"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Review yang baik berfokus pada keputusan, bukan orang.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ml-cv-matematika-ex01",
+    "lessonId": "ml-cv-matematika-01",
+    "track": "ml-cv",
+    "kind": "code",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 45,
+    "title": "Seberapa Mirip?",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `cosine_similarity(a, b)` (list angka sama panjang), bulatkan 6 desimal.",
+    "starter": "import math\n\ndef cosine_similarity(a, b):\n    pass\n",
+    "solution": "import math\n\ndef cosine_similarity(a, b):\n    dot = sum(x * y for x, y in zip(a, b))\n    na = math.sqrt(sum(x * x for x in a))\n    nb = math.sqrt(sum(y * y for y in b))\n    return round(dot / (na * nb), 6)\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "cosine_similarity([1, 0], [0, 1])",
+          "expect": "0.0"
+        },
+        {
+          "name": "tes 2",
+          "call": "cosine_similarity([1, 2], [2, 4])",
+          "expect": "1.0"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "cosine_similarity([1, 0], [-1, 0])",
+          "expect": "-1.0"
+        },
+        {
+          "name": "tes 2",
+          "call": "cosine_similarity([1, 1], [1, 0])",
+          "expect": "0.707107"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "cos θ = (a·b)/(|a||b|).",
+      "Dot product: sum(x*y).",
+      "Norma: sqrt(sum(x*x))."
+    ],
+    "explanation": "Cosine similarity mengukur arah, bukan panjang: dasar pencarian semantik.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "ml-cv-ml-klasik-ex01",
+    "lessonId": "ml-cv-ml-klasik-01",
+    "track": "ml-cv",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Alarm Kebakaran",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `precision_recall(y_true, y_pred)` → (precision, recall) dibulatkan 3 desimal; 0.0 jika pembagi nol.",
+    "starter": "def precision_recall(y_true, y_pred):\n    pass\n",
+    "solution": "def precision_recall(y_true, y_pred):\n    tp = sum(1 for t, p in zip(y_true, y_pred) if t == 1 and p == 1)\n    fp = sum(1 for t, p in zip(y_true, y_pred) if t == 0 and p == 1)\n    fn = sum(1 for t, p in zip(y_true, y_pred) if t == 1 and p == 0)\n    prec = tp / (tp + fp) if tp + fp else 0.0\n    rec = tp / (tp + fn) if tp + fn else 0.0\n    return (round(prec, 3), round(rec, 3))\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "precision_recall([1, 0, 1, 1, 0], [1, 1, 1, 0, 0])",
+          "expect": "(0.667, 0.667)"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "precision_recall([0, 0], [0, 0])",
+          "expect": "(0.0, 0.0)"
+        },
+        {
+          "name": "tes 2",
+          "call": "precision_recall([1, 1], [1, 1])",
+          "expect": "(1.0, 1.0)"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "TP: benar 1 diprediksi 1.",
+      "Precision = TP/(TP+FP); Recall = TP/(TP+FN).",
+      "Tangani pembagi nol."
+    ],
+    "explanation": "Alarm yang terlalu sensitif: recall tinggi, precision rendah. Pilih sesuai biaya kesalahan.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "ml-cv-deep-learning-ex01",
+    "lessonId": "ml-cv-deep-learning-01",
+    "track": "ml-cv",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 75,
+    "title": "Neuron Menebak",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `softmax(xs)` stabil secara numerik (kurangi max), bulatkan 3 desimal.",
+    "starter": "import math\n\ndef softmax(xs):\n    pass\n",
+    "solution": "import math\n\ndef softmax(xs):\n    m = max(xs)\n    exps = [math.exp(x - m) for x in xs]\n    s = sum(exps)\n    return [round(e / s, 3) for e in exps]\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "softmax([1, 2, 3])",
+          "expect": "[0.09, 0.245, 0.665]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "softmax([0, 0])",
+          "expect": "[0.5, 0.5]"
+        },
+        {
+          "name": "tes 2",
+          "call": "softmax([1000, 1000])",
+          "expect": "[0.5, 0.5]"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "softmax(x_i) = e^x_i / Σ e^x_j.",
+      "Kurangi max agar e^x tak meluap.",
+      "Bulatkan di akhir."
+    ],
+    "explanation": "Mengurangi konstanta tidak mengubah hasil softmax tetapi mencegah overflow.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "ml-cv-cv-dasar-ex01",
+    "lessonId": "ml-cv-cv-dasar-01",
+    "track": "ml-cv",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Sketsa Sobel",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `apply_kernel(img, k)`: korelasi 2D mode 'valid' pada list-of-list (tanpa padding).",
+    "starter": "def apply_kernel(img, k):\n    pass\n",
+    "solution": "def apply_kernel(img, k):\n    h, w = len(img), len(img[0])\n    kh, kw = len(k), len(k[0])\n    out = []\n    for i in range(h - kh + 1):\n        row = []\n        for j in range(w - kw + 1):\n            row.append(sum(img[i + a][j + b] * k[a][b] for a in range(kh) for b in range(kw)))\n        out.append(row)\n    return out\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "apply_kernel([[1,2,3],[4,5,6],[7,8,9]], [[0,0,0],[0,1,0],[0,0,0]])",
+          "expect": "[[5]]"
+        },
+        {
+          "name": "tes 2",
+          "call": "apply_kernel([[1,2,3],[4,5,6],[7,8,9]], [[1,0],[0,1]])",
+          "expect": "[[6, 8], [12, 14]]"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "apply_kernel([[1,1],[1,1]], [[1]])",
+          "expect": "[[1, 1], [1, 1]]"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Ukuran output (h-kh+1) × (w-kw+1).",
+      "Geser kernel di tiap posisi.",
+      "Jumlahkan hasil kali elemen."
+    ],
+    "explanation": "CNN mempelajari nilai kernel; filter klasik seperti Sobel memakai nilai tetap.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "ml-cv-cv-deteksi-ex01",
+    "lessonId": "ml-cv-cv-deteksi-01",
+    "track": "ml-cv",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 75,
+    "title": "Pas Kotak Tebakan",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `iou(a, b)` untuk kotak (x1, y1, x2, y2), bulatkan 4 desimal.",
+    "starter": "def iou(a, b):\n    pass\n",
+    "solution": "def iou(a, b):\n    ix1, iy1 = max(a[0], b[0]), max(a[1], b[1])\n    ix2, iy2 = min(a[2], b[2]), min(a[3], b[3])\n    inter = max(0, ix2 - ix1) * max(0, iy2 - iy1)\n    area = lambda r: (r[2] - r[0]) * (r[3] - r[1])\n    union = area(a) + area(b) - inter\n    return round(inter / union, 4) if union else 0.0\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "iou((0, 0, 2, 2), (1, 1, 3, 3))",
+          "expect": "0.1429"
+        },
+        {
+          "name": "tes 2",
+          "call": "iou((0, 0, 1, 1), (0, 0, 1, 1))",
+          "expect": "1.0"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "iou((0, 0, 1, 1), (2, 2, 3, 3))",
+          "expect": "0.0"
+        },
+        {
+          "name": "tes 2",
+          "call": "iou((0, 0, 4, 4), (1, 1, 3, 3))",
+          "expect": "0.25"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Irisan: ambil max kiri/atas, min kanan/bawah.",
+      "Luas negatif → 0.",
+      "union = A + B − irisan."
+    ],
+    "explanation": "NMS memakai IoU untuk membuang kotak ganda pada objek yang sama.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "ml-cv-mlops-onnx-ex01",
+    "lessonId": "ml-cv-mlops-onnx-01",
+    "track": "ml-cv",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Kuantisasi model (mis. FP32 → INT8) bertujuan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Memperkecil model dan mempercepat inferensi dengan sedikit penurunan akurasi"
+      },
+      {
+        "id": "b",
+        "text": "Menambah akurasi"
+      },
+      {
+        "id": "c",
+        "text": "Melatih ulang"
+      },
+      {
+        "id": "d",
+        "text": "Mengenkripsi"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Penting untuk inferensi di browser/mobile.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ml-cv-mlops-onnx-ex02",
+    "lessonId": "ml-cv-mlops-onnx-01",
+    "track": "ml-cv",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Data drift adalah…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Distribusi data produksi bergeser dari data latih"
+      },
+      {
+        "id": "b",
+        "text": "Bug GPU"
+      },
+      {
+        "id": "c",
+        "text": "Model terlalu besar"
+      },
+      {
+        "id": "d",
+        "text": "Label hilang"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Pantau dan latih ulang saat performa menurun.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ml-cv-mlops-onnx-ex03",
+    "lessonId": "ml-cv-mlops-onnx-01",
+    "track": "ml-cv",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 25,
+    "prompt": "Alur praktis ML di browser?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Latih di Python → ekspor ONNX → jalankan dengan onnxruntime-web"
+      },
+      {
+        "id": "b",
+        "text": "Latih di browser dengan PyTorch penuh"
+      },
+      {
+        "id": "c",
+        "text": "Kirim model lewat email"
+      },
+      {
+        "id": "d",
+        "text": "Tulis ulang tiap model di JS"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Sesuai PRD: pelatihan tidak dilakukan di app.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "interview-alur-ex01",
+    "lessonId": "interview-alur-01",
+    "track": "interview",
+    "kind": "parsons",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 30,
+    "language": "text",
+    "prompt": "Susun fase interview system design.",
+    "lines": [
+      {
+        "text": "Klarifikasi kebutuhan & skala",
+        "indent": 0
+      },
+      {
+        "text": "Estimasi kapasitas",
+        "indent": 0
+      },
+      {
+        "text": "Desain tingkat tinggi",
+        "indent": 0
+      },
+      {
+        "text": "Deep dive komponen kritis",
+        "indent": 0
+      },
+      {
+        "text": "Bottleneck, kegagalan, trade-off",
+        "indent": 0
+      },
+      {
+        "text": "Ringkasan",
+        "indent": 0
+      }
+    ],
+    "shuffle": true,
+    "explanation": "Mulai dari kebutuhan, bukan dari kotak-kotak.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "interview-alur-ex02",
+    "lessonId": "interview-alur-01",
+    "track": "interview",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Hal yang paling dinilai di interview system design?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Proses berpikir dan trade-off yang dijelaskan"
+      },
+      {
+        "id": "b",
+        "text": "Menghafal arsitektur"
+      },
+      {
+        "id": "c",
+        "text": "Kecepatan menggambar"
+      },
+      {
+        "id": "d",
+        "text": "Jumlah teknologi disebut"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Tak ada jawaban tunggal; alasan adalah kuncinya.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "interview-behavioral-ex01",
+    "lessonId": "interview-behavioral-01",
+    "track": "interview",
+    "kind": "fill-blank",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "STAR = Situation, {{1}}, Action, {{2}}.",
+    "answers": [
+      [
+        "Task"
+      ],
+      [
+        "Result"
+      ]
+    ],
+    "explanation": "Akhiri dengan hasil terukur dan pelajaran.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "interview-behavioral-ex02",
+    "lessonId": "interview-behavioral-01",
+    "track": "interview",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Saat ditanya kegagalan, jawaban terbaik…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Jujur, tanggung jawab, dan apa yang dipelajari"
+      },
+      {
+        "id": "b",
+        "text": "Menyalahkan tim"
+      },
+      {
+        "id": "c",
+        "text": "Mengaku tak pernah gagal"
+      },
+      {
+        "id": "d",
+        "text": "Menghindar"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Pewawancara mencari refleksi dan pertumbuhan.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "interview-simulasi-ex01",
+    "lessonId": "interview-simulasi-01",
+    "track": "interview",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 4,
+    "points": 25,
+    "prompt": "Dalam sesi 45 menit coding, kapan idealnya mulai menulis kode?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Setelah klarifikasi + pendekatan disetujui (±menit 10–15)"
+      },
+      {
+        "id": "b",
+        "text": "Detik pertama"
+      },
+      {
+        "id": "c",
+        "text": "Menit 40"
+      },
+      {
+        "id": "d",
+        "text": "Tak perlu"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Menyisakan waktu untuk uji dan analisis kompleksitas.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "interview-simulasi-ex02",
+    "lessonId": "interview-simulasi-01",
+    "track": "interview",
+    "kind": "sd-scenario",
+    "level": "advanced",
+    "tier": 4,
+    "difficulty": 5,
+    "points": 250,
+    "scenarioId": "url-shortener",
+    "prompt": "Selesaikan skenario url-shortener di kanvas.",
+    "explanation": "Simulasi penuh: gunakan timer dan fase wawancara.",
+    "hints": [],
+    "srs": false
+  },
+  {
+    "id": "ui-ux-visual-ex01",
+    "lessonId": "ui-ux-visual-01",
+    "track": "ui-ux",
+    "kind": "code",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 1,
+    "points": 30,
+    "title": "Tombol yang Hilang",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `contrast_ratio(hex1, hex2)` WCAG, bulatkan 2 desimal. Luminansi: kanal sRGB c/255 → c<=0.03928 ? c/12.92 : ((c+0.055)/1.055)^2.4; L = 0.2126R + 0.7152G + 0.0722B; rasio = (Lterang+0.05)/(Lgelap+0.05).",
+    "starter": "def contrast_ratio(hex1, hex2):\n    pass\n",
+    "solution": "def _lum(h):\n    h = h.lstrip('#')\n    r, g, b = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]\n    f = lambda c: c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4\n    return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b)\n\ndef contrast_ratio(hex1, hex2):\n    a, b = _lum(hex1), _lum(hex2)\n    hi, lo = max(a, b), min(a, b)\n    return round((hi + 0.05) / (lo + 0.05), 2)\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "contrast_ratio('#000000', '#ffffff')",
+          "expect": "21.0"
+        },
+        {
+          "name": "tes 2",
+          "call": "contrast_ratio('#ffffff', '#ffffff')",
+          "expect": "1.0"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "contrast_ratio('#777777', '#ffffff')",
+          "expect": "4.48"
+        },
+        {
+          "name": "tes 2",
+          "call": "contrast_ratio('#767676', '#ffffff')",
+          "expect": "4.54"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Ubah hex ke tiga kanal 0..1.",
+      "Linearkan tiap kanal sesuai rumus sRGB.",
+      "Terang dibagi gelap, masing-masing + 0.05."
+    ],
+    "explanation": "WCAG AA butuh ≥ 4.5:1 untuk teks normal; #777 di atas putih gagal sedikit.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "ui-ux-visual-ex02",
+    "lessonId": "ui-ux-visual-01",
+    "track": "ui-ux",
+    "kind": "fill-blank",
+    "level": "beginner",
+    "tier": 1,
+    "difficulty": 2,
+    "points": 10,
+    "prompt": "Grid spasi umum memakai kelipatan {{1}}pt/dp.",
+    "answers": [
+      [
+        "4",
+        "8"
+      ]
+    ],
+    "explanation": "Kelipatan 4/8 menjaga ritme visual dan mempermudah handoff.",
+    "hints": [],
+    "srs": true
+  },
+  {
+    "id": "ui-ux-interaksi-ex01",
+    "lessonId": "ui-ux-interaksi-01",
+    "track": "ui-ux",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 2,
+    "points": 15,
+    "prompt": "Selain state berisi data, state yang wajib didesain?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Loading, empty, error"
+      },
+      {
+        "id": "b",
+        "text": "Hanya error"
+      },
+      {
+        "id": "c",
+        "text": "Hanya loading"
+      },
+      {
+        "id": "d",
+        "text": "Tak ada"
+      }
+    ],
+    "answer": "a",
+    "explanation": "State kosong adalah peluang onboarding, bukan layar kosong.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ui-ux-interaksi-ex02",
+    "lessonId": "ui-ux-interaksi-01",
+    "track": "ui-ux",
+    "kind": "mcq",
+    "level": "intermediate",
+    "tier": 2,
+    "difficulty": 3,
+    "points": 15,
+    "prompt": "Microcopy error yang baik…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menjelaskan masalah dan langkah perbaikan"
+      },
+      {
+        "id": "b",
+        "text": "Menyalahkan pengguna"
+      },
+      {
+        "id": "c",
+        "text": "Memakai kode error saja"
+      },
+      {
+        "id": "d",
+        "text": "Sebanyak mungkin istilah teknis"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Contoh: \"Kata sandi kurang dari 8 karakter. Tambahkan beberapa karakter lagi.\"",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ui-ux-sistem-desain-ex01",
+    "lessonId": "ui-ux-sistem-desain-01",
+    "track": "ui-ux",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Token semantik yang baik diberi nama…",
+    "options": [
+      {
+        "id": "a",
+        "text": "color.surface.primary"
+      },
+      {
+        "id": "b",
+        "text": "blue500 saja"
+      },
+      {
+        "id": "c",
+        "text": "warna1"
+      },
+      {
+        "id": "d",
+        "text": "kiri-atas"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Nama semantik menjelaskan peran, memudahkan tema gelap.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ui-ux-sistem-desain-ex02",
+    "lessonId": "ui-ux-sistem-desain-01",
+    "track": "ui-ux",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Varian komponen (mis. Button: primary/secondary/disabled) sebaiknya…",
+    "options": [
+      {
+        "id": "a",
+        "text": "Berbagi satu komponen dengan properti varian"
+      },
+      {
+        "id": "b",
+        "text": "Dibuat sebagai komponen berbeda tiap kali"
+      },
+      {
+        "id": "c",
+        "text": "Disalin manual"
+      },
+      {
+        "id": "d",
+        "text": "Dihindari"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Menjaga konsistensi dan mengurangi duplikasi.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ui-ux-figma-ex01",
+    "lessonId": "ui-ux-figma-01",
+    "track": "ui-ux",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Fitur Figma yang membuat layout responsif terhadap isi?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Auto layout"
+      },
+      {
+        "id": "b",
+        "text": "Boolean ops"
+      },
+      {
+        "id": "c",
+        "text": "Mask"
+      },
+      {
+        "id": "d",
+        "text": "Blend mode"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Auto layout ≈ Flexbox/Row-Column di Compose/Flutter.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ui-ux-figma-ex02",
+    "lessonId": "ui-ux-figma-01",
+    "track": "ui-ux",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Tujuan handoff yang baik?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Developer memahami spesifikasi, tokens, dan state tanpa menebak"
+      },
+      {
+        "id": "b",
+        "text": "Menghemat file"
+      },
+      {
+        "id": "c",
+        "text": "Menyembunyikan desain"
+      },
+      {
+        "id": "d",
+        "text": "Menghindari komunikasi"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Sertakan state, spasi, tipografi, dan perilaku interaksi.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ui-ux-platform-ex01",
+    "lessonId": "ui-ux-platform-01",
+    "track": "ui-ux",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 20,
+    "prompt": "Perbedaan konvensi navigasi umum Material 3 vs HIG iOS?",
+    "options": [
+      {
+        "id": "a",
+        "text": "M3: navigation bar/drawer, back sistem; iOS: tab bar bawah + swipe back"
+      },
+      {
+        "id": "b",
+        "text": "Sama persis"
+      },
+      {
+        "id": "c",
+        "text": "iOS tanpa navigasi"
+      },
+      {
+        "id": "d",
+        "text": "M3 tanpa warna"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Hormati kebiasaan platform tanpa kehilangan identitas.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ui-ux-platform-ex02",
+    "lessonId": "ui-ux-platform-01",
+    "track": "ui-ux",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Hal yang perlu diuji saat lokalisasi ID ↔ EN?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Panjang teks, format tanggal/angka, truncation"
+      },
+      {
+        "id": "b",
+        "text": "Hanya warna"
+      },
+      {
+        "id": "c",
+        "text": "Hanya ikon"
+      },
+      {
+        "id": "d",
+        "text": "Tak ada"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Teks Indonesia sering lebih panjang dari Inggris.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  },
+  {
+    "id": "ui-ux-evaluasi-ex01",
+    "lessonId": "ui-ux-evaluasi-01",
+    "track": "ui-ux",
+    "kind": "code",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 3,
+    "points": 60,
+    "title": "Lima Pengguna",
+    "language": "python",
+    "runner": "pyodide",
+    "prompt": "Tulis `sus_score(responses)`: 10 jawaban skala 1–5 SUS. Item ganjil: r−1; genap: 5−r; jumlahkan × 2.5.",
+    "starter": "def sus_score(responses):\n    pass\n",
+    "solution": "def sus_score(responses):\n    total = 0\n    for i, r in enumerate(responses, start=1):\n        total += (r - 1) if i % 2 == 1 else (5 - r)\n    return total * 2.5\n",
+    "tests": {
+      "visible": [
+        {
+          "name": "tes 1",
+          "call": "sus_score([3] * 10)",
+          "expect": "50.0"
+        },
+        {
+          "name": "tes 2",
+          "call": "sus_score([5, 1, 5, 1, 5, 1, 5, 1, 5, 1])",
+          "expect": "100.0"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "tes 1",
+          "call": "sus_score([1, 5, 1, 5, 1, 5, 1, 5, 1, 5])",
+          "expect": "0.0"
+        },
+        {
+          "name": "tes 2",
+          "call": "sus_score([4, 2, 4, 2, 4, 2, 4, 2, 4, 2])",
+          "expect": "75.0"
+        }
+      ]
+    },
+    "limits": {
+      "timeMs": 5000,
+      "memoryMb": 128
+    },
+    "hints": [
+      "Posisi mulai dari 1: ganjil vs genap.",
+      "Ganjil: r-1; genap: 5-r.",
+      "Kalikan jumlah dengan 2.5."
+    ],
+    "explanation": "SUS ≥ 68 dianggap di atas rata-rata.",
+    "srs": false,
+    "verified": "executed-python-3.12"
+  },
+  {
+    "id": "ui-ux-evaluasi-ex02",
+    "lessonId": "ui-ux-evaluasi-01",
+    "track": "ui-ux",
+    "kind": "mcq",
+    "level": "advanced",
+    "tier": 3,
+    "difficulty": 4,
+    "points": 20,
+    "prompt": "Berapa pengguna yang biasanya cukup menemukan ~85% masalah kegunaan utama dalam satu putaran?",
+    "options": [
+      {
+        "id": "a",
+        "text": "5"
+      },
+      {
+        "id": "b",
+        "text": "50"
+      },
+      {
+        "id": "c",
+        "text": "500"
+      },
+      {
+        "id": "d",
+        "text": "1"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Nielsen: 5 pengguna; lebih baik iterasi berkali-kali dengan kelompok kecil.",
+    "hints": [],
+    "srs": true,
+    "tags": []
+  }
+]
